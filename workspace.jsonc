@@ -1,52 +1,88 @@
 /**
  * this is the main configuration file of your bit workspace.
  * for full documentation, please see: https://docs.bit.dev/configuration
- **/
-{
-  "$schema": "https://static.bit.dev/teambit/schemas/schema.json",
+**/ {
+  "$schema": "",
   /**
    * main configuration of the Bit workspace.
-   **/
+  **/
   "teambit.workspace/workspace": {
     /**
-     * the name of the component workspace. used for development purposes.
+     * set the default scope when there is no matching for the component in the components array.
      **/
-    "name": "my-workspace-name",
+    "defaultScope": "teambit.design",
     /**
-     * set the icon to be shown on the Bit server.
+     * set the default directory when there is no matching for the component in the components array.
      **/
-    "icon": "https://static.bit.dev/bit-logo.svg",
-    /**
-     * default scope for all components in workspace.
-     **/
-    "defaultScope": "teambit.design"
+    "defaultDirectory": "components",
+    "vendorDirectory": "vendor"
   },
   /**
    * main configuration for component dependency resolution.
-   **/
+  **/
   "teambit.dependencies/dependency-resolver": {
     /**
-     * choose the package manager for Bit to use. you can choose between 'yarn', 'pnpm'
-     */
+     * choose the package manager for Bit to use. you can choose between 'npm', 'yarn', 'pnpm'
+    */
     "packageManager": "teambit.dependencies/pnpm",
     "policy": {
-      "dependencies": {}
-    }
+      "dependencies": {
+        "@testing-library/jest-dom": "^5.11.1",
+        "@testing-library/react": "^10.4.7",
+        "@testing-library/user-event": "^12.0.11",
+        "@types/react": "^16.8.0",
+        "@types/react-dom": "^16.8.0",
+        "classnames": "^2.2.6",
+        "core-js": "3.7.0",
+        "typescript": "^4.0.0"
+      },
+      "peerDependencies": {
+        "react": "^16.8.0",
+        "react-dom": "^16.8.0"
+      }
+    },
+    "packageManagerArgs": [],
+    "devFilePatterns": [
+      "**/*.spec.ts"
+    ],
+    // "devFilePatterns": [
+    //   "*.spec.ts"
+    // ],
+    /**
+    * If true, then Bit will add the "--strict-peer-dependencies" option when invoking package managers.
+    * This causes "bit install" to fail if there are unsatisfied peer dependencies, which is
+    * an invalid state that can cause build failures or incompatible dependency versions.
+    * (For historical reasons, JavaScript package managers generally do not treat this invalid
+    * state as an error.)
+    *
+    * The default value is false to avoid legacy compatibility issues.
+    * It is strongly recommended to set strictPeerDependencies=true.
+    */
+    "strictPeerDependencies": true,
+    /**
+     * map of extra arguments to pass to the configured package manager upon the installation
+     * of dependencies.
+    */
+    "extraArgs": []
   },
   /**
    * workspace variants allow to set different subsets of configuration for components in your workspace.
    * this is extremely useful for upgrading, aligning and building components with a
    * new set of dependencies.
-   **/
+  **/
   "teambit.workspace/variants": {
-    /**
-     * "*" is a special rule which applied on all components in the workspace.
-     **/
     "*": {
-      /**
-       * uncomment to apply the react environment on all components.
-       **/
-      "teambit.react/react": { }
+      "teambit.dependencies/dependency-resolver": {},
+      "teambit.pkg/pkg": {
+        "packageManagerPublishArgs": [
+          "--access public"
+        ],
+        "packageJson": {
+          "name": "@teambit/design.{name}",
+          "private": false
+        }
+      },
+      "teambit.react/react": {}
     }
   }
 }
