@@ -40,7 +40,6 @@
         "@teambit/base-ui.theme.fonts.roboto": "0.6.10",
         "@teambit/base-ui.theme.theme-provider": "0.6.13",
         "@teambit/base-ui.time.duration": "0.0.17",
-        "@teambit/design.theme.icons-font": "0.0.6",
         "@teambit/design.ui.avatar": "0.0.380",
         "@teambit/design.ui.icon-button": "0.1.0",
         "@teambit/documenter.theme.theme-compositions": "3.0.14",
