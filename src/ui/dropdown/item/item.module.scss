@@ -1,0 +1,27 @@
+
+.item {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 12px 24px;
+    > div:first-child {
+        margin-right: 12px;
+        flex-shrink: 0;
+    }
+}
+
+.active {
+    background-color: var( --muted-color, #ECEAFF);
+    cursor: unset;
+    &:hover {
+        background-color: var( --muted-color, #ECEAFF);   
+    }
+}
+
+.orgImg {
+    background-color: var( --bg-base, #ffffff);
+    border: 1px solid var(--border-color, #ededed);
+    > span {
+        display: flex;
+    }
+}

@@ -1,0 +1,11 @@
+.duration {
+    display: flex;
+    align-items: center;
+    color: var(--text-muted, #6C707C);
+    font-size: 13px;
+    > span:first-child {
+        margin-right: 8px;
+        font-size: 16px;
+    }
+
+}

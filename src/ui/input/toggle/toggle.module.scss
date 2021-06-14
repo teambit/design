@@ -1,0 +1,54 @@
+.label {
+  display: inline-block;
+  width: 2em;
+  height: 1em;
+  font-size: 16px;
+}
+
+.slider {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  cursor: pointer;
+  background-color: var(--separator-color, #babec9);
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 1em;
+  &:hover {
+    background-color: var(--steel-color, #878c9a);
+  }
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 0.75em;
+  width: 0.75em;
+  left: 0.125em;
+  bottom: 0.125em;
+  background-color: var(--bg-color, #ffffff);
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:disabled + .slider {
+  background-color: var(--border-color, #ededed);
+  cursor: not-allowed;
+}
+
+input:checked + .slider {
+  background-color: var(--base-color, #6c5ce7);
+}
+
+input:checked:disabled + .slider {
+  background-color: var(--muted-color, #eceaff);
+}
+
+input:checked + .slider:before {
+  transform: translateX(1em);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 0 0.125em var(--muted-color, #eceaff);
+}

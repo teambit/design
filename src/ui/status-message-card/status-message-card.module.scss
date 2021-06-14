@@ -1,0 +1,19 @@
+
+.success {
+    color: var(--passing, #2E945A)
+}
+.failure {
+    color: var(--failing, #D31948)
+}
+.pending {
+    color: var(--pending, #414141)
+}
+.processing {
+    color: var(--processing, #0984E3)
+}
+.skipped {
+    color: var(--skipped, #FF8B00)
+}
+.unknown {
+    color: var(--unknown, #6C707C)
+}
