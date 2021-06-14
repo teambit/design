@@ -6,7 +6,7 @@ labels: ['react', 'typescript', 'input', 'switch', 'toggle']
 import { Toggle } from './toggle';
 
 A switch toggle component with all the native options, based on [checkbox from base-ui](https://bit.dev/teambit/base-ui/input/checkbox/label) scope.  
-The size is based on `em` so we can change the size by changing the font-size.   
+The size is based on `em` so we can change the size by changing the font-size.  
 Basic example:
 
 ```js live

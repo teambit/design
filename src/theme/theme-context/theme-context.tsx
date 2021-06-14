@@ -21,4 +21,3 @@ export function ThemeContext({ children, className, ...rest }: ThemeContextProps
     </Theme>
   );
 }
-

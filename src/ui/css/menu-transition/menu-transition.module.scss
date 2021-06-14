@@ -4,9 +4,9 @@
   opacity: 0;
 
   [data-open='true'] & {
-      transition: transform 100ms, visibility 100ms, opacity 100ms ease-in-out;
-      transform: scale(1);
-      opacity: 1;
+    transition: transform 100ms, visibility 100ms, opacity 100ms ease-in-out;
+    transform: scale(1);
+    opacity: 1;
   }
 }
 .menuTransition {

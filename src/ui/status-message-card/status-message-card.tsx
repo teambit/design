@@ -12,7 +12,7 @@ export type StatusMessageCardProps = {
 /**
  * A card to display status information to the user
  */
-export function StatusMessageCard({status, ...rest}: StatusMessageCardProps) {
+export function StatusMessageCard({ status, ...rest }: StatusMessageCardProps) {
   const lowerCaseStatus = status.toLowerCase();
   const iconProps = getStatusIcon(lowerCaseStatus);
   return <MessageCard {...iconProps} {...rest} />;

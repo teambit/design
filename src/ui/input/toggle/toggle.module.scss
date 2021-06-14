@@ -12,8 +12,8 @@
   display: inline-block;
   cursor: pointer;
   background-color: var(--separator-color, #babec9);
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
   border-radius: 1em;
   &:hover {
     background-color: var(--steel-color, #878c9a);
@@ -22,13 +22,13 @@
 
 .slider:before {
   position: absolute;
-  content: "";
+  content: '';
   height: 0.75em;
   width: 0.75em;
   left: 0.125em;
   bottom: 0.125em;
   background-color: var(--bg-color, #ffffff);
-  transition: .4s;
+  transition: 0.4s;
   border-radius: 50%;
 }
 

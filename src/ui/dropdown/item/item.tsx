@@ -14,7 +14,7 @@ export type ItemProps = {
 export function Item({ image, name, className, isActive, accountType = 'user', ...rest }: ItemProps) {
   return (
     <div {...rest} className={classNames(styles.item, isActive && styles.active, className)}>
-      {accountType === "organization" ? (
+      {accountType === 'organization' ? (
         <OrgAvatar size={20} account={{ profileImage: image }} className={styles.orgImg} />
       ) : (
         <UserAvatar size={20} account={{ profileImage: image }} />

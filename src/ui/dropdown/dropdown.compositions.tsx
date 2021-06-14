@@ -6,7 +6,7 @@ import { Dropdown } from './dropdown';
 import { Item } from './item';
 import { dropdownList, dropdownListWithLongNames } from './dropdown.mock';
 
-const classname = 'width: 800px'
+const classname = 'width: 800px';
 
 const activeOption = {
   image: 'https://static.bit.dev/bit-logo.svg',
@@ -46,7 +46,12 @@ export function DropdownExampleDisabled() {
 
 export function DropdownExampleWithLongNames() {
   return (
-    <Dropdown menuClass={classNames(menuTransition, classname)} style={{maxWidth: '100%'}} placeholder={false} placeholderTitle={<Item {...activeOption} />}>
+    <Dropdown
+      menuClass={classNames(menuTransition, classname)}
+      style={{ maxWidth: '100%' }}
+      placeholder={false}
+      placeholderTitle={<Item {...activeOption} />}
+    >
       {dropdownListWithLongNames.map((listItem, index) => (
         <Item
           key={index}
@@ -60,12 +65,11 @@ export function DropdownExampleWithLongNames() {
   );
 }
 
-
 DropdownExample.canvas = {
-    height: 200,
-    alignItems: 'flex-start',
-}
+  height: 200,
+  alignItems: 'flex-start',
+};
 DropdownExampleWithLongNames.canvas = {
-    height: 200,
-    alignItems: 'flex-start',
-}
+  height: 200,
+  alignItems: 'flex-start',
+};

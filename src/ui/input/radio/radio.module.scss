@@ -30,32 +30,32 @@
 .label {
   input:checked + .out {
     border-color: var(--base-color, #6c5ce7);
-  
+
     .innerCircle {
       background-color: var(--base-color, #6c5ce7);
     }
   }
-  
+
   input:checked + .out:hover {
     box-shadow: 0 0 0 0.125em var(--muted-color, #eceaff);
   }
-  
+
   input:disabled + .out {
     background-color: var(--bg-dent, #f6f6f6);
     border-color: var(--border-color, #ededed);
     cursor: not-allowed;
   }
-  
+
   input:checked:disabled + .out {
     border-color: var(--muted-color, #eceaff);
     box-shadow: none;
-      
+
     .innerCircle {
       background-color: var(--muted-color, #eceaff);
     }
   }
-  
+
   input:focus + .out {
     box-shadow: 0 0 0 0.125em var(--muted-color, #eceaff);
-  }  
+  }
 }

@@ -1,19 +1,18 @@
-
 .success {
-    color: var(--passing, #2E945A)
+  color: var(--passing, #2e945a);
 }
 .failure {
-    color: var(--failing, #D31948)
+  color: var(--failing, #d31948);
 }
 .pending {
-    color: var(--pending, #414141)
+  color: var(--pending, #414141);
 }
 .processing {
-    color: var(--processing, #0984E3)
+  color: var(--processing, #0984e3);
 }
 .skipped {
-    color: var(--skipped, #FF8B00)
+  color: var(--skipped, #ff8b00);
 }
 .unknown {
-    color: var(--unknown, #6C707C)
+  color: var(--unknown, #6c707c);
 }

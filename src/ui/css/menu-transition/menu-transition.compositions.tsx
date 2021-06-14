@@ -35,7 +35,6 @@ export {};
 //   );
 // }
 
-
 // MenuTransitionLeft.canvas = {
 //     alignItems: 'flex-start',
 //     height: 200
