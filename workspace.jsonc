@@ -1,7 +1,7 @@
 /**
  * this is the main configuration file of your bit workspace.
  * for full documentation, please see: https://docs.bit.dev/configuration
-**/ {
+**/{
   "$schema": "",
   /**
    * main configuration of the Bit workspace.
@@ -14,7 +14,7 @@
     /**
      * set the default directory when there is no matching for the component in the components array.
      **/
-    "defaultDirectory": "components",
+    "defaultDirectory": "src/{name}",
     "vendorDirectory": "vendor"
   },
   /**
@@ -27,18 +27,44 @@
     "packageManager": "teambit.dependencies/pnpm",
     "policy": {
       "dependencies": {
-        "@testing-library/jest-dom": "^5.11.1",
-        "@testing-library/react": "^10.4.7",
-        "@testing-library/user-event": "^12.0.11",
-        "@types/react": "^16.8.0",
-        "@types/react-dom": "^16.8.0",
+        "@babel/runtime": "7.14.5",
+        "@teambit/base-ui.elements.icon": "0.6.11",
+        "@teambit/base-ui.input.button": "0.7.1",
+        "@teambit/base-ui.input.checkbox.label": "0.6.11",
+        "@teambit/base-ui.styles.flex-center": "0.0.2",
+        "@teambit/base-ui.surfaces.abs-container": "0.6.11",
+        "@teambit/base-ui.surfaces.card": "0.7.0",
+        "@teambit/base-ui.surfaces.drawer": "0.6.14",
+        "@teambit/base-ui.text.heading": "0.7.1",
+        "@teambit/base-ui.theme.accent-color": "0.1.1",
+        "@teambit/base-ui.theme.fonts.roboto": "0.6.10",
+        "@teambit/base-ui.theme.theme-provider": "0.6.13",
+        "@teambit/base-ui.time.duration": "0.0.17",
+        "@teambit/design.theme.icons-font": "0.0.6",
+        "@teambit/design.ui.avatar": "0.0.380",
+        "@teambit/design.ui.icon-button": "0.1.0",
+        "@teambit/documenter.theme.theme-compositions": "3.0.14",
+        "@teambit/evangelist.elements.icon": "0.6.0",
+        "@teambit/symphony.envs.node": "0.0.5",
+        "@teambit/toolbox.date.duration": "0.0.6",
+        "@teambit/ui.styles.ellipsis": "0.0.283",
+        "@testing-library/react": "11.2.2",
+        "@types/classnames": "^2.2.11",
+        "@types/jest": "^26.0.0",
+        "@types/node": "15.12.2",
+        "@types/react": "^17.0.8",
+        "@types/react-router-dom": "5.1.7",
+        "@types/react-tabs": "2.3.2",
+        "@types/testing-library__jest-dom": "5.9.5",
         "classnames": "^2.2.6",
         "core-js": "3.7.0",
+        "react-tabs": "3.2.0",
+        "reset-css": "5.0.1",
         "typescript": "^4.0.0"
       },
       "peerDependencies": {
-        "react": "^16.8.0",
-        "react-dom": "^16.8.0"
+        "react": "^16.8.0 || ^17.0.0",
+        "react-dom": "^16.8.0 || ^17.0.0"
       }
     },
     "packageManagerArgs": [],
@@ -72,17 +98,28 @@
   **/
   "teambit.workspace/variants": {
     "*": {
-      "teambit.dependencies/dependency-resolver": {},
+      "teambit.react/react": {}
+    },
+    "{envs/**}": {
+      "teambit.harmony/aspect": {}
+    },
+    "src/ui": {
+      "teambit.dependencies/dependency-resolver": {}, // (remove leftover deps config from symphony)
+      "teambit.design/envs/react": {},
+      "teambit.envs/envs": {
+        "env": "teambit.design/envs/react"
+      },
+      "teambit.symphony/envs/symphony-react": "-",
+      "teambit.symphony/envs/node": "-",
       "teambit.pkg/pkg": {
         "packageManagerPublishArgs": [
           "--access public"
         ],
         "packageJson": {
-          "name": "@teambit/design.{name}",
+          "name": "@teambit/{scope}.{name}",
           "private": false
         }
-      },
-      "teambit.react/react": {}
+      }
     }
   }
 }

@@ -1,0 +1,61 @@
+.out {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  font-size: inherit;
+  cursor: pointer;
+  transition: 0.4s;
+  border-radius: 50%;
+  box-sizing: border-box;
+  border: 2px solid var(--steel-color, #878c9a);
+  background-color: var(--bg-color, #ffffff);
+  &:hover {
+    border-color: var(--base-color, #6c5ce7);
+    background-color: var(--bg-dent, #f6f6f6);
+  }
+}
+
+.inner {
+  padding: 2px;
+  height: 100%;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+
+.innerCircle {
+  height: 100%;
+  border-radius: 50%;
+}
+
+.label {
+  input:checked + .out {
+    border-color: var(--base-color, #6c5ce7);
+
+    .innerCircle {
+      background-color: var(--base-color, #6c5ce7);
+    }
+  }
+
+  input:checked + .out:hover {
+    box-shadow: 0 0 0 0.125em var(--muted-color, #eceaff);
+  }
+
+  input:disabled + .out {
+    background-color: var(--bg-dent, #f6f6f6);
+    border-color: var(--border-color, #ededed);
+    cursor: not-allowed;
+  }
+
+  input:checked:disabled + .out {
+    border-color: var(--muted-color, #eceaff);
+    box-shadow: none;
+
+    .innerCircle {
+      background-color: var(--muted-color, #eceaff);
+    }
+  }
+
+  input:focus + .out {
+    box-shadow: 0 0 0 0.125em var(--muted-color, #eceaff);
+  }
+}

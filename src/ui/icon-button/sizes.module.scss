@@ -1,0 +1,11 @@
+.buttonSizes {
+  &[data-size='m'] {
+    height: 32px;
+    font-size: 14px;
+  }
+
+  &[data-size='l'] {
+    height: 40px;
+    font-size: 14px;
+  }
+}

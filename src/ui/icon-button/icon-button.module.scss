@@ -1,0 +1,59 @@
+.iconButton {
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  padding: 7px 16px;
+  transition: background-color 300ms ease-in-out;
+  &.iconOnly {
+    padding: 6px 8px;
+  }
+  &[data-priority='ghost'] {
+    background-color: var(--bit-bg-color, #ffffff);
+    border: 1px solid var(--bit-border-color-lightest, #ededed);
+    color: var(--bit-text-color-heavy, #2b2b2b);
+    &.active {
+      color: var(--bit-accent-color, #6c5ce7);
+      border-color: var(--bit-accent-color, #6c5ce7);
+    }
+    &:hover {
+      background-color: var(--bit-bg-heavy, #f6f6f6);
+    }
+    &:active {
+      background-color: var(--bit-bg-heaviest, #ededed);
+    }
+    &:disabled {
+      &:hover {
+        background-color: var(--bit-bg-color, #ffffff);
+      }
+    }
+  }
+  &[data-priority='cta'] {
+    background-color: var(--bit-accent-color, #6c5ce7);
+    border: 1px solid var(--bit-accent-color, #6c5ce7);
+    // @uri please find a color for this
+    color: var(--bit-bg-color, #ffffff);
+    &:hover:not(:disabled) {
+      background-color: var(--bit-accent-heavy, #5d4aec);
+      border: 1px solid var(--bit-accent-heavy, #5d4aec);
+    }
+    &:disabled {
+      border-color: var(--bit-bg-heavy, #f6f6f6);
+      background-color: var(--bit-bg-heavy, #f6f6f6);
+    }
+  }
+  &:disabled {
+    color: var(--bit-border-color, #babec9);
+    cursor: not-allowed;
+  }
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.125em var(--bit-accent-bg, #eceaff);
+  }
+}
+.icon {
+  font-size: 16px;
+  color: inherit;
+}
+.margin {
+  margin-right: 8px;
+}
