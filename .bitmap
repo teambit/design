@@ -3,15 +3,15 @@
 {
     "theme/icon-font": {
         "scope": "teambit.design",
-        "version": "0.0.4",
+        "version": "0.0.5",
         "mainFile": "index.ts",
-        "rootDir": "components/theme/icon-font"
+        "rootDir": "src/theme/icon-font"
     },
     "theme/theme-context": {
         "scope": "teambit.design",
-        "version": "0.0.6",
+        "version": "0.0.7",
         "mainFile": "index.ts",
-        "rootDir": "components/theme/theme-context"
+        "rootDir": "src/theme/theme-context"
     },
     "$schema-version": "14.9.0"
 }
