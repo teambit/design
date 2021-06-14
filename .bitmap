@@ -13,5 +13,11 @@
         "mainFile": "index.ts",
         "rootDir": "src/theme/theme-context"
     },
+    "ui/icon-button": {
+        "scope": "teambit.design",
+        "version": "0.0.18",
+        "mainFile": "index.ts",
+        "rootDir": "src/ui/icon-button"
+    },
     "$schema-version": "14.9.0"
 }
