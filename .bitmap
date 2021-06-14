@@ -2,7 +2,7 @@
 
 {
     "elements/icon": {
-        "scope": "",
+        "scope": "teambit.design",
         "version": "0.0.1",
         "mainFile": "index.tsx",
         "rootDir": "src/ui/elements/icon"
