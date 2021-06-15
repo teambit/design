@@ -10,16 +10,16 @@
 }
 
 .active {
-  background-color: var(--muted-color, #eceaff);
+  background-color: var(--bit-accent-bg, #eceaff);
   cursor: unset;
   &:hover {
-    background-color: var(--muted-color, #eceaff);
+    background-color: var(--bit-accent-bg, #eceaff);
   }
 }
 
 .orgImg {
-  background-color: var(--bg-base, #ffffff);
-  border: 1px solid var(--border-color, #ededed);
+  background-color: var(--bit-bg-color, #ffffff);
+  border: 1px solid var(--bit-border-color-lightest, #ededed);
   > span {
     display: flex;
   }

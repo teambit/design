@@ -7,11 +7,11 @@
   transition: 0.4s;
   border-radius: 50%;
   box-sizing: border-box;
-  border: 2px solid var(--steel-color, #878c9a);
-  background-color: var(--bg-color, #ffffff);
+  border: 2px solid var(--bit-border-color-heavy, #878c9a);
+  background-color: var(--bit-bg-color, #ffffff);
   &:hover {
-    border-color: var(--base-color, #6c5ce7);
-    background-color: var(--bg-dent, #f6f6f6);
+    border-color: var(--bit-accent-color, #6c5ce7);
+    background-color: var(--bit-bg-dent, #f6f6f6);
   }
 }
 
@@ -25,37 +25,39 @@
 .innerCircle {
   height: 100%;
   border-radius: 50%;
+  
+  transition: background-color 185ms;
 }
 
 .label {
   input:checked + .out {
-    border-color: var(--base-color, #6c5ce7);
+    border-color: var(--bit-accent-color, #6c5ce7);
 
     .innerCircle {
-      background-color: var(--base-color, #6c5ce7);
+      background-color: var(--bit-accent-color, #6c5ce7);
     }
   }
 
   input:checked + .out:hover {
-    box-shadow: 0 0 0 0.125em var(--muted-color, #eceaff);
+    box-shadow: 0 0 0 0.125em var(--bit-accent-bg, #eceaff);
   }
 
   input:disabled + .out {
-    background-color: var(--bg-dent, #f6f6f6);
-    border-color: var(--border-color, #ededed);
+    background-color: var(--bit-bg-dent, #f6f6f6);
+    border-color: var(--bit-border-color-lightest, #ededed);
     cursor: not-allowed;
   }
 
   input:checked:disabled + .out {
-    border-color: var(--muted-color, #eceaff);
+    border-color: var(--bit-accent-bg, #eceaff);
     box-shadow: none;
 
     .innerCircle {
-      background-color: var(--muted-color, #eceaff);
+      background-color: var(--bit-accent-bg, #eceaff);
     }
   }
 
   input:focus + .out {
-    box-shadow: 0 0 0 0.125em var(--muted-color, #eceaff);
+    box-shadow: 0 0 0 0.125em var(--bit-accent-bg, #eceaff);
   }
 }

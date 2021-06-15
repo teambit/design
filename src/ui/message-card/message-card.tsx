@@ -1,6 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
-import { Icon } from '@teambit/evangelist.elements.icon';
+import { Icon } from '@teambit/design.elements.icon';
 import { Card, CardProps } from '@teambit/base-ui.surfaces.card';
 import styles from './message-card.module.scss';
 

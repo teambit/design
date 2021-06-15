@@ -9,6 +9,9 @@ import colors from './colors.module.scss';
 
 export type ThemeContextProps = {} & HTMLAttributes<HTMLDivElement>;
 
+/**
+ * Fully fledged theme for compositions
+ */
 export function ThemeContext({ children, className, ...rest }: ThemeContextProps) {
   return (
     <Theme {...rest} className={classNames(className, sizes.heading, global.overrides, colors.status)}>
