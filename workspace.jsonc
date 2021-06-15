@@ -44,7 +44,6 @@
         "@teambit/toolbox.date.duration": "0.0.6",
         "@teambit/ui.styles.ellipsis": "0.0.283",
         "@testing-library/react": "11.2.2",
-        "@types/classnames": "^2.2.11",
         "@types/jest": "^26.0.0",
         "@types/node": "15.12.2",
         "@types/react": "^17.0.8",
