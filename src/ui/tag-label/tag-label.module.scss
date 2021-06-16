@@ -4,9 +4,9 @@
   padding: 4px 8px;
   border-radius: 8px;
   cursor: pointer;
+
   &.active {
     color: var(--bit-accent-color, #6c5ce7);
-
     background-color: var(--bit-accent-bg, #eceaff);
   }
 }

@@ -99,7 +99,7 @@
     },
     "ui/tag-label": {
         "scope": "teambit.design",
-        "version": "0.0.2",
+        "version": "1.0.0",
         "mainFile": "index.ts",
         "rootDir": "src/ui/tag-label"
     },
