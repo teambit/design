@@ -97,6 +97,12 @@
         "mainFile": "index.ts",
         "rootDir": "src/ui/status-message-card"
     },
+    "ui/tag-label": {
+        "scope": "teambit.design",
+        "version": "0.0.2",
+        "mainFile": "index.ts",
+        "rootDir": "src/ui/tag-label"
+    },
     "ui/time/duration": {
         "scope": "teambit.design",
         "version": "1.0.1",

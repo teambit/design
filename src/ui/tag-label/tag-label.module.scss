@@ -1,12 +1,12 @@
 .tagLabel {
-	box-sizing: border-box;
-	background-color: var(--border-color, #ededed);
-	padding: 4px 8px;
-	border-radius: 8px;
-	cursor: pointer;
-	&.active {
-		color: var(--base-color, #6c5ce7);
+  box-sizing: border-box;
+  background-color: var(--border-color, #ededed);
+  padding: 4px 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  &.active {
+    color: var(--base-color, #6c5ce7);
 
-		background-color: var(--muted-color, #eceaff);
-	}
+    background-color: var(--muted-color, #eceaff);
+  }
 }

@@ -12,7 +12,6 @@ describe('tag-label', () => {
   it('should render with active class', () => {
     const { getByText } = render(<ActiveTagLabel />);
     const rendered = getByText('active');
-    expect(rendered.classList.contains('active')).toBe(true)
-
+    expect(rendered.classList.contains('active')).toBe(true);
   });
 });
