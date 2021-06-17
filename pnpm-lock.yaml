@@ -9,14 +9,14 @@ importers:
       '@teambit/base-ui.surfaces.card': registry.npmjs.org/@teambit/base-ui.surfaces.card/1.0.0_react-dom@17.0.2+react@17.0.2
       '@teambit/base-ui.surfaces.drawer': registry.npmjs.org/@teambit/base-ui.surfaces.drawer/1.0.0_react-dom@17.0.2+react@17.0.2
       '@teambit/base-ui.text.heading': registry.npmjs.org/@teambit/base-ui.text.heading/1.0.1_react-dom@17.0.2+react@17.0.2
+      '@teambit/base-ui.text.text-sizes': registry.npmjs.org/@teambit/base-ui.text.text-sizes/0.0.2_a55926348206001d7fb78e6f7a786395
       '@teambit/base-ui.theme.fonts.roboto': registry.npmjs.org/@teambit/base-ui.theme.fonts.roboto/1.0.0_react-dom@17.0.2+react@17.0.2
       '@teambit/base-ui.theme.theme-provider': registry.npmjs.org/@teambit/base-ui.theme.theme-provider/1.0.1_react-dom@17.0.2+react@17.0.2
       '@teambit/base-ui.time.duration': registry.npmjs.org/@teambit/base-ui.time.duration/0.0.17_react-dom@17.0.2+react@17.0.2
       '@teambit/design.ui.avatar': registry.npmjs.org/@teambit/design.ui.avatar/0.0.380_react-dom@17.0.2+react@17.0.2
+      '@teambit/design.ui.styles.ellipsis': registry.npmjs.org/@teambit/design.ui.styles.ellipsis/0.0.344_react-dom@17.0.2+react@17.0.2
       '@teambit/harmony': registry.npmjs.org/@teambit/harmony/0.2.11
       '@teambit/toolbox.date.duration': 0.0.6
-      '@teambit/ui.styles.ellipsis': registry.npmjs.org/@teambit/ui.styles.ellipsis/0.0.283_react-dom@17.0.2+react@17.0.2
-      '@types/classnames': registry.npmjs.org/@types/classnames/2.3.1
       '@types/react-router-dom': registry.npmjs.org/@types/react-router-dom/5.1.7
       '@types/react-tabs': registry.npmjs.org/@types/react-tabs/2.3.2
       classnames: registry.npmjs.org/classnames/2.3.1
@@ -25,7 +25,7 @@ importers:
       react-dom: registry.npmjs.org/react-dom/17.0.2_react@17.0.2
       react-tabs: registry.npmjs.org/react-tabs/3.2.0_react@17.0.2
       reset-css: registry.npmjs.org/reset-css/5.0.1
-      typescript: registry.npmjs.org/typescript/4.3.2
+      typescript: registry.npmjs.org/typescript/4.3.3
     devDependencies:
       '@babel/runtime': registry.npmjs.org/@babel/runtime/7.12.18
       '@teambit/base-ui.theme.accent-color': registry.npmjs.org/@teambit/base-ui.theme.accent-color/0.1.0_react-dom@17.0.2+react@17.0.2
@@ -46,17 +46,17 @@ importers:
       '@teambit/base-ui.surfaces.card': ^1.0.0
       '@teambit/base-ui.surfaces.drawer': ^1.0.0
       '@teambit/base-ui.text.heading': ^1.0.1
+      '@teambit/base-ui.text.text-sizes': 0.0.2
       '@teambit/base-ui.theme.accent-color': 0.1.0
       '@teambit/base-ui.theme.fonts.roboto': ^1.0.0
-      '@teambit/base-ui.theme.theme-provider': 1.0.1
+      '@teambit/base-ui.theme.theme-provider': ^1.0.1
       '@teambit/base-ui.time.duration': 0.0.17
       '@teambit/design.ui.avatar': 0.0.380
+      '@teambit/design.ui.styles.ellipsis': 0.0.344
       '@teambit/harmony': 0.2.11
       '@teambit/symphony.envs.node': 0.0.5
       '@teambit/toolbox.date.duration': 0.0.6
-      '@teambit/ui.styles.ellipsis': 0.0.283
       '@testing-library/react': 11.2.2
-      '@types/classnames': ^2.3.1
       '@types/jest': ^26.0.23
       '@types/node': 12.20.4
       '@types/react': ^17.0.11
@@ -70,7 +70,7 @@ importers:
       react-dom: ^17.0.2
       react-tabs: 3.2.0
       reset-css: 5.0.1
-      typescript: ^4.3.2
+      typescript: ^4.3.3
   src/envs/react:
     specifiers: {}
   src/theme/icons-font:
@@ -102,6 +102,8 @@ importers:
   src/ui/settings-button:
     specifiers: {}
   src/ui/status-message-card:
+    specifiers: {}
+  src/ui/tag-label:
     specifiers: {}
   src/ui/time/duration:
     specifiers: {}
@@ -470,6 +472,23 @@ packages:
       registry: https://node.bit.dev/
       tarball: https://registry.npmjs.org/@teambit/base-ui.text.heading/-/base-ui.text.heading-1.0.1.tgz
     version: 1.0.1
+  registry.npmjs.org/@teambit/base-ui.text.text-sizes/0.0.2_a55926348206001d7fb78e6f7a786395:
+    dependencies:
+      core-js: registry.npmjs.org/core-js/3.14.0
+      react: registry.npmjs.org/react/17.0.2
+      react-dom: registry.npmjs.org/react-dom/17.0.2_react@17.0.2
+    dev: false
+    id: registry.npmjs.org/@teambit/base-ui.text.text-sizes/0.0.2
+    name: '@teambit/base-ui.text.text-sizes'
+    peerDependencies:
+      core-js: ^3.0.0
+      react: ^16.8.0 || ^17.0.0
+      react-dom: ^16.8.0 || ^17.0.0
+    resolution:
+      integrity: sha512-Cc9lgfbwT5tnHaBkjelp2CJY4UssBwTFzcV4D9k/GwBmswLhGFufYHohBzTUHN/4HXdgF5zyC8Jzv6wZkwm4hg==
+      registry: https://node.bit.dev/
+      tarball: https://registry.npmjs.org/@teambit/base-ui.text.text-sizes/-/base-ui.text.text-sizes-0.0.2.tgz
+    version: 0.0.2
   registry.npmjs.org/@teambit/base-ui.text.text/0.0.17_react-dom@17.0.2+react@17.0.2:
     dependencies:
       '@testing-library/react': registry.npmjs.org/@testing-library/react/11.2.2_react-dom@17.0.2+react@17.0.2
@@ -753,6 +772,25 @@ packages:
       registry: https://node.bit.dev/
       tarball: https://registry.npmjs.org/@teambit/design.ui.styles.ellipsis/-/design.ui.styles.ellipsis-0.0.343.tgz
     version: 0.0.343
+  registry.npmjs.org/@teambit/design.ui.styles.ellipsis/0.0.344_react-dom@17.0.2+react@17.0.2:
+    dependencies:
+      classnames: registry.npmjs.org/classnames/2.2.6
+      core-js: registry.npmjs.org/core-js/3.14.0
+      react: registry.npmjs.org/react/17.0.2
+      react-dom: registry.npmjs.org/react-dom/17.0.2_react@17.0.2
+    dev: false
+    engines:
+      node: '>=12.15.0'
+    id: registry.npmjs.org/@teambit/design.ui.styles.ellipsis/0.0.344
+    name: '@teambit/design.ui.styles.ellipsis'
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0
+      react-dom: ^16.8.0 || ^17.0.0
+    resolution:
+      integrity: sha512-SwTlVagmcCvedxD9hrq+1pt9MxkYY+GfYAyF4BUsTjKYAv37ZqOX8dqNgmkKhKlTBXSAw70rfGDQ5BBE8Ptipw==
+      registry: https://node.bit.dev/
+      tarball: https://registry.npmjs.org/@teambit/design.ui.styles.ellipsis/-/design.ui.styles.ellipsis-0.0.344.tgz
+    version: 0.0.344
   registry.npmjs.org/@teambit/evangelist.elements.icon/0.5.41_react-dom@17.0.2+react@17.0.2:
     dependencies:
       '@teambit/base-ui.elements.icon': registry.npmjs.org/@teambit/base-ui.elements.icon/0.6.11_react-dom@17.0.2+react@17.0.2
@@ -810,26 +848,6 @@ packages:
       registry: https://node.bit.dev/
       tarball: https://registry.npmjs.org/@teambit/toolbox.url.add-avatar-query-params/-/toolbox.url.add-avatar-query-params-0.0.371.tgz
     version: 0.0.371
-  registry.npmjs.org/@teambit/ui.styles.ellipsis/0.0.283_react-dom@17.0.2+react@17.0.2:
-    dependencies:
-      classnames: registry.npmjs.org/classnames/2.2.6
-      core-js: registry.npmjs.org/core-js/3.8.3
-      react: registry.npmjs.org/react/17.0.2
-      react-dom: registry.npmjs.org/react-dom/17.0.2_react@17.0.2
-    dev: false
-    engines:
-      node: '>=12.15.0'
-    id: registry.npmjs.org/@teambit/ui.styles.ellipsis/0.0.283
-    name: '@teambit/ui.styles.ellipsis'
-    peerDependencies:
-      '@teambit/legacy': 1.0.13
-      react: 16.13.1
-      react-dom: 16.13.1
-    resolution:
-      integrity: sha512-J+HNNdxDsdOcInhR3HIDEWmh1mq6whxPJmt1HiGE0q+GOCMssnnAYvr1sbcfvAIE9S72oI1FQXIM1bzF1Ql4ZA==
-      registry: https://node.bit.dev/
-      tarball: https://registry.npmjs.org/@teambit/ui.styles.ellipsis/-/ui.styles.ellipsis-0.0.283.tgz
-    version: 0.0.283
   registry.npmjs.org/@testing-library/dom/7.31.2:
     dependencies:
       '@babel/code-frame': registry.npmjs.org/@babel/code-frame/7.14.5
@@ -873,17 +891,6 @@ packages:
       registry: https://node.bit.dev/
       tarball: https://registry.npmjs.org/@types/aria-query/-/aria-query-4.2.1.tgz
     version: 4.2.1
-  registry.npmjs.org/@types/classnames/2.3.1:
-    dependencies:
-      classnames: registry.npmjs.org/classnames/2.3.1
-    deprecated: This is a stub types definition. classnames provides its own type definitions, so you do not need this installed.
-    dev: false
-    name: '@types/classnames'
-    resolution:
-      integrity: sha512-zeOWb0JGBoVmlQoznvqXbE0tEC/HONsnoUNH19Hc96NFsTAwTXbTqb8FMYkru1F/iqp7a18Ws3nWJvtA1sHD1A==
-      registry: https://node.bit.dev/
-      tarball: https://registry.npmjs.org/@types/classnames/-/classnames-2.3.1.tgz
-    version: 2.3.1
   registry.npmjs.org/@types/history/4.7.8:
     dev: false
     name: '@types/history'
@@ -1209,15 +1216,6 @@ packages:
       registry: https://node.bit.dev/
       tarball: https://registry.npmjs.org/core-js/-/core-js-3.14.0.tgz
     version: 3.14.0
-  registry.npmjs.org/core-js/3.8.3:
-    dev: false
-    name: core-js
-    requiresBuild: true
-    resolution:
-      integrity: sha512-KPYXeVZYemC2TkNEkX/01I+7yd+nX3KddKwZ1Ww7SKWdI2wQprSgLmrTddT8nw92AjEklTsPBoSdQBhbI1bQ6Q==
-      registry: https://node.bit.dev/
-      tarball: https://registry.npmjs.org/core-js/-/core-js-3.8.3.tgz
-    version: 3.8.3
   registry.npmjs.org/core-util-is/1.0.2:
     dev: false
     name: core-util-is
@@ -1635,17 +1633,17 @@ packages:
       registry: https://node.bit.dev/
       tarball: https://registry.npmjs.org/supports-color/-/supports-color-7.2.0.tgz
     version: 7.2.0
-  registry.npmjs.org/typescript/4.3.2:
+  registry.npmjs.org/typescript/4.3.3:
     dev: false
     engines:
       node: '>=4.2.0'
     hasBin: true
     name: typescript
     resolution:
-      integrity: sha512-zZ4hShnmnoVnAHpVHWpTcxdv7dWP60S2FsydQLV8V5PbS3FifjWFFRiHSWpDJahly88PRyV5teTSLoq4eG7mKw==
+      integrity: sha512-rUvLW0WtF7PF2b9yenwWUi9Da9euvDRhmH7BLyBG4DCFfOJ850LGNknmRpp8Z8kXNUPObdZQEfKOiHtXuQHHKA==
       registry: https://node.bit.dev/
-      tarball: https://registry.npmjs.org/typescript/-/typescript-4.3.2.tgz
-    version: 4.3.2
+      tarball: https://registry.npmjs.org/typescript/-/typescript-4.3.3.tgz
+    version: 4.3.3
   registry.npmjs.org/universalify/0.1.2:
     dev: false
     engines:

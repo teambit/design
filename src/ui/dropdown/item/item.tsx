@@ -1,6 +1,6 @@
 import React, { HTMLAttributes } from 'react';
 import classNames from 'classnames';
-import { Ellipsis } from '@teambit/ui.styles.ellipsis';
+import { Ellipsis } from '@teambit/design.ui.styles.ellipsis';
 import { UserAvatar, OrgAvatar } from '@teambit/design.ui.avatar';
 import styles from './item.module.scss';
 

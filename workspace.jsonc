@@ -42,7 +42,7 @@
         "@teambit/base-ui.time.duration": "0.0.17",
         "@teambit/design.ui.avatar": "0.0.380",
         "@teambit/toolbox.date.duration": "0.0.6",
-        "@teambit/ui.styles.ellipsis": "0.0.283",
+        "@teambit/design.ui.styles.ellipsis": "0.0.344",
         "@testing-library/react": "11.2.2",
         "@types/jest": "^26.0.0",
         "@types/node": "15.12.2",

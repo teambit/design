@@ -33,13 +33,13 @@
     },
     "ui/css/menu-transition": {
         "scope": "teambit.design",
-        "version": "1.0.1",
+        "version": "1.0.2",
         "mainFile": "index.ts",
         "rootDir": "src/ui/css/menu-transition"
     },
     "ui/dropdown": {
         "scope": "teambit.design",
-        "version": "1.0.1",
+        "version": "1.0.2",
         "mainFile": "index.ts",
         "rootDir": "src/ui/dropdown"
     },
@@ -105,7 +105,7 @@
     },
     "ui/time/duration": {
         "scope": "teambit.design",
-        "version": "1.0.1",
+        "version": "1.0.2",
         "mainFile": "index.ts",
         "rootDir": "src/ui/time/duration"
     },
