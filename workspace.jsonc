@@ -30,7 +30,7 @@
         "@babel/runtime": "7.14.5",
         "@teambit/base-ui.elements.icon": "^1.0.0",
         "@teambit/base-ui.input.button": "^1.0.0",
-        "@teambit/base-ui.input.checkbox.label": "1.0.1",
+        "@teambit/base-ui.input.checkbox.label": "^1.0.1",
         "@teambit/base-ui.styles.flex-center": "^1.0.0",
         "@teambit/base-ui.surfaces.abs-container": "^1.0.0",
         "@teambit/base-ui.surfaces.card": "^1.0.0",

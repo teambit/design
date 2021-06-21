@@ -5,10 +5,6 @@ import styles from './color-picker.module.scss';
 
 export type ColorPickerProps = {
   /**
-   * Text to show for selecting a color.
-   */
-  text?: string;
-  /**
    * The color to show in the color box, and also the color value for the Input.
    */
   colorValue?: string;
@@ -17,17 +13,17 @@ export type ColorPickerProps = {
 export const DEFAULT_COLOR = '#babec9';
 
 export function ColorPicker({
-  text = 'Select color',
   colorValue = DEFAULT_COLOR,
   onInputChanged,
   disabled,
   className,
+  children = 'Select color',
   ...rest
 }: ColorPickerProps) {
   const input = <Input type="color" onChange={onInputChanged} disabled={disabled} value={colorValue} />;
   const indicator = (
     <div className={styles.indicator}>
-      <div className={styles.textBox}>{text}</div>
+      <div className={styles.textBox}>{children}</div>
       <div className={styles.colorBox} style={{ backgroundColor: colorValue }} />
     </div>
   );
