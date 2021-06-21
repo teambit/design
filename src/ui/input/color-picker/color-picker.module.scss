@@ -1,0 +1,31 @@
+.label {
+  display: flex;
+  height: 40px;
+  position: relative;
+
+  input {
+    position: absolute;
+    top: 42px;
+  }
+}
+.indicator {
+  display: flex;
+
+  .textBox,
+  .colorBox {
+    border: 1px solid var(--bit-border-color-lightest, #ededed);
+    box-sizing: border-box;
+  }
+  .textBox {
+    border-right: none;
+    border-radius: 8px 0 0 8px;
+    display: flex;
+    align-items: center;
+    padding: 11px 16px;
+    font-size: 14px;
+  }
+  .colorBox {
+    width: 40px;
+    border-radius: 0 8px 8px 0;
+  }
+}

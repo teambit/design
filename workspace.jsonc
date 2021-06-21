@@ -1,11 +1,11 @@
 /**
  * this is the main configuration file of your bit workspace.
  * for full documentation, please see: https://docs.bit.dev/configuration
-**/{
+ **/{
   "$schema": "",
   /**
    * main configuration of the Bit workspace.
-  **/
+   **/
   "teambit.workspace/workspace": {
     /**
      * set the default scope when there is no matching for the component in the components array.
@@ -19,18 +19,18 @@
   },
   /**
    * main configuration for component dependency resolution.
-  **/
+   **/
   "teambit.dependencies/dependency-resolver": {
     /**
      * choose the package manager for Bit to use. you can choose between 'npm', 'yarn', 'pnpm'
-    */
+     */
     "packageManager": "teambit.dependencies/pnpm",
     "policy": {
       "dependencies": {
         "@babel/runtime": "7.14.5",
         "@teambit/base-ui.elements.icon": "^1.0.0",
         "@teambit/base-ui.input.button": "^1.0.0",
-        "@teambit/base-ui.input.checkbox.label": "^1.0.0",
+        "@teambit/base-ui.input.checkbox.label": "1.0.1",
         "@teambit/base-ui.styles.flex-center": "^1.0.0",
         "@teambit/base-ui.surfaces.abs-container": "^1.0.0",
         "@teambit/base-ui.surfaces.card": "^1.0.0",
@@ -41,8 +41,8 @@
         "@teambit/base-ui.theme.theme-provider": "^1.0.0",
         "@teambit/base-ui.time.duration": "0.0.17",
         "@teambit/design.ui.avatar": "0.0.380",
-        "@teambit/toolbox.date.duration": "0.0.6",
         "@teambit/design.ui.styles.ellipsis": "0.0.344",
+        "@teambit/toolbox.date.duration": "0.0.6",
         "@testing-library/react": "11.2.2",
         "@types/jest": "^26.0.0",
         "@types/node": "15.12.2",
@@ -69,30 +69,33 @@
     //   "*.spec.ts"
     // ],
     /**
-    * If true, then Bit will add the "--strict-peer-dependencies" option when invoking package managers.
-    * This causes "bit install" to fail if there are unsatisfied peer dependencies, which is
-    * an invalid state that can cause build failures or incompatible dependency versions.
-    * (For historical reasons, JavaScript package managers generally do not treat this invalid
-    * state as an error.)
-    *
-    * The default value is false to avoid legacy compatibility issues.
-    * It is strongly recommended to set strictPeerDependencies=true.
-    */
+     * If true, then Bit will add the "--strict-peer-dependencies" option when invoking package managers.
+     * This causes "bit install" to fail if there are unsatisfied peer dependencies, which is
+     * an invalid state that can cause build failures or incompatible dependency versions.
+     * (For historical reasons, JavaScript package managers generally do not treat this invalid
+     * state as an error.)
+     *
+     * The default value is false to avoid legacy compatibility issues.
+     * It is strongly recommended to set strictPeerDependencies=true.
+     */
     "strictPeerDependencies": true,
+    "installFromBitDevRegistry": true,
     /**
      * map of extra arguments to pass to the configured package manager upon the installation
      * of dependencies.
-    */
+     */
     "extraArgs": []
   },
   /**
    * workspace variants allow to set different subsets of configuration for components in your workspace.
    * this is extremely useful for upgrading, aligning and building components with a
    * new set of dependencies.
-  **/
+   **/
   "teambit.workspace/variants": {
     "*": {
-      "teambit.react/react": {}
+      "teambit.react/react": {},
+      "teambit.symphony/envs/symphony-react": "-",
+      "teambit.symphony/envs/node": "-"
     },
     "{envs/**}": {
       "teambit.harmony/aspect": {}
