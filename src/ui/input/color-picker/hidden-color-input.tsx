@@ -31,6 +31,14 @@ export class HiddenColorInput extends PureComponent<HiddenColorInputProps, Hidde
 
   render() {
     const { type } = this.state;
-    return <Input type={type} {...this.props} onChange={this.handleOnChange} onClick={this.handleOnClick} />;
+    return (
+      <Input
+        {...this.props}
+        type={type}
+        onChange={this.handleOnChange}
+        onClick={this.handleOnClick}
+        onBlur={this.handleOnClick}
+      />
+    );
   }
 }
