@@ -13,14 +13,14 @@ export function PreviewColorPicker() {
 
 export function DisabledColorPicker() {
   return (
-    <ColorPicker disabled size="l">
+    <ColorPicker disabled size="l" value="#d507c4">
       Select color
     </ColorPicker>
   );
 }
 
 export function ColorPickerWithNoText() {
-  const [color, setColor] = useState(DEFAULT_COLOR);
+  const [color, setColor] = useState('#23c76a');
   return <ColorPicker value={color} onInputChanged={(e) => setColor(e.target.value)} size="l" />;
 }
 
