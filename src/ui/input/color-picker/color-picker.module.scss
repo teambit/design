@@ -1,0 +1,62 @@
+$borderRadius: 8px;
+.label {
+  display: inline-flex;
+  position: relative;
+
+  input {
+    position: absolute;
+    bottom: -2px;
+  }
+
+  input:hover + .indicator {
+    .textBox {
+      background-color: var(--bit-bg-heavy, #f6f6f6);
+    }
+  }
+  input:active + .indicator {
+    .textBox {
+      background-color: var(--bit-bg-heaviest, #ededed);
+    }
+  }
+  input:disabled + .indicator {
+    cursor: not-allowed;
+    .textBox {
+      color: var(--bit-border-color, #babec9);
+    }
+    &:hover {
+      .textBox {
+        background-color: var(--bit-bg-color, #ffffff);
+      }
+    }
+  }
+  input:focus + .indicator {
+    border-radius: $borderRadius;
+    box-shadow: 0 0 0 0.125em var(--bit-accent-bg, #eceaff);
+  }
+}
+.indicator {
+  display: flex;
+  cursor: pointer;
+
+  .textBox,
+  .colorBox {
+    border: 1px solid var(--bit-border-color-lightest, #ededed);
+    box-sizing: border-box;
+  }
+  .textBox {
+    border-right: none;
+    border-radius: $borderRadius 0 0 $borderRadius;
+    display: flex;
+    align-items: center;
+    padding: 11px 16px;
+    background-color: var(--bit-bg-color, #ffffff);
+    color: var(--bit-text-color-heavy, #2b2b2b);
+  }
+  .colorBox {
+    width: 2.85em;
+    border-radius: 0 $borderRadius $borderRadius 0;
+    &:only-child {
+      border-radius: $borderRadius;
+    }
+  }
+}

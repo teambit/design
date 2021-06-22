@@ -61,15 +61,21 @@
         "mainFile": "index.ts",
         "rootDir": "src/ui/icon-button"
     },
+    "ui/input/color-picker": {
+        "scope": "teambit.design",
+        "version": "0.0.5",
+        "mainFile": "index.ts",
+        "rootDir": "src/ui/input/color-picker"
+    },
     "ui/input/radio": {
         "scope": "teambit.design",
-        "version": "1.0.1",
+        "version": "1.0.2",
         "mainFile": "index.ts",
         "rootDir": "src/ui/input/radio"
     },
     "ui/input/toggle": {
         "scope": "teambit.design",
-        "version": "1.0.1",
+        "version": "1.0.2",
         "mainFile": "index.ts",
         "rootDir": "src/ui/input/toggle"
     },
