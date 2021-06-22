@@ -1,11 +1,11 @@
+$borderRadius: 8px;
 .label {
-  display: flex;
-  height: 40px;
+  display: inline-flex;
   position: relative;
 
   input {
     position: absolute;
-    top: 42px;
+    bottom: -2px;
   }
 
   input:hover + .indicator {
@@ -29,6 +29,10 @@
       }
     }
   }
+  input:focus + .indicator {
+    border-radius: $borderRadius;
+    box-shadow: 0 0 0 0.125em var(--bit-accent-bg, #eceaff);
+  }
 }
 .indicator {
   display: flex;
@@ -41,14 +45,18 @@
   }
   .textBox {
     border-right: none;
-    border-radius: 8px 0 0 8px;
+    border-radius: $borderRadius 0 0 $borderRadius;
     display: flex;
     align-items: center;
     padding: 11px 16px;
-    font-size: 14px;
+    background-color: var(--bit-bg-color, #ffffff);
+    color: var(--bit-text-color-heavy, #2b2b2b);
   }
   .colorBox {
-    width: 40px;
-    border-radius: 0 8px 8px 0;
+    width: 2.85em;
+    border-radius: 0 $borderRadius $borderRadius 0;
+    &:only-child {
+      border-radius: $borderRadius;
+    }
   }
 }

@@ -10,6 +10,7 @@ importers:
       '@teambit/base-ui.surfaces.drawer': registry.npmjs.org/@teambit/base-ui.surfaces.drawer/1.0.0_react-dom@17.0.2+react@17.0.2
       '@teambit/base-ui.text.heading': registry.npmjs.org/@teambit/base-ui.text.heading/1.0.1_react-dom@17.0.2+react@17.0.2
       '@teambit/base-ui.text.text-sizes': registry.npmjs.org/@teambit/base-ui.text.text-sizes/0.0.2_60c19815128953b35e748ab83863da80
+      '@teambit/base-ui.theme.dark-theme': registry.npmjs.org/@teambit/base-ui.theme.dark-theme/1.0.1_react-dom@17.0.2+react@17.0.2
       '@teambit/base-ui.theme.fonts.roboto': registry.npmjs.org/@teambit/base-ui.theme.fonts.roboto/1.0.0_react-dom@17.0.2+react@17.0.2
       '@teambit/base-ui.theme.theme-provider': registry.npmjs.org/@teambit/base-ui.theme.theme-provider/1.0.1_react-dom@17.0.2+react@17.0.2
       '@teambit/base-ui.time.duration': registry.npmjs.org/@teambit/base-ui.time.duration/0.0.17_react-dom@17.0.2+react@17.0.2
@@ -18,7 +19,6 @@ importers:
       '@teambit/harmony': registry.npmjs.org/@teambit/harmony/0.2.11
       '@teambit/toolbox.date.duration': 0.0.6
       '@types/react-router-dom': registry.npmjs.org/@types/react-router-dom/5.1.7
-      '@types/react-tabs': registry.npmjs.org/@types/react-tabs/2.3.2
       classnames: registry.npmjs.org/classnames/2.3.1
       core-js: registry.npmjs.org/core-js/3.15.0
       react: registry.npmjs.org/react/17.0.2
@@ -34,12 +34,13 @@ importers:
       '@types/node': registry.npmjs.org/@types/node/12.20.4
       '@types/react': registry.npmjs.org/@types/react/17.0.11
       '@types/react-dom': registry.npmjs.org/@types/react-dom/17.0.8
+      '@types/react-tabs': registry.npmjs.org/@types/react-tabs/2.3.2
       '@types/testing-library__jest-dom': registry.npmjs.org/@types/testing-library__jest-dom/5.9.5
     specifiers:
       '@babel/runtime': 7.12.18
       '@teambit/base-ui.elements.icon': ^1.0.0
       '@teambit/base-ui.input.button': ^1.0.1
-      '@teambit/base-ui.input.checkbox.label': 1.0.1
+      '@teambit/base-ui.input.checkbox.label': ^1.0.1
       '@teambit/base-ui.styles.flex-center': ^1.0.0
       '@teambit/base-ui.surfaces.abs-container': ^1.0.0
       '@teambit/base-ui.surfaces.card': ^1.0.0
@@ -47,6 +48,7 @@ importers:
       '@teambit/base-ui.text.heading': ^1.0.1
       '@teambit/base-ui.text.text-sizes': 0.0.2
       '@teambit/base-ui.theme.accent-color': 0.1.0
+      '@teambit/base-ui.theme.dark-theme': 1.0.1
       '@teambit/base-ui.theme.fonts.roboto': ^1.0.0
       '@teambit/base-ui.theme.theme-provider': ^1.0.1
       '@teambit/base-ui.time.duration': 0.0.17
@@ -576,6 +578,23 @@ packages:
       registry: https://node.bit.dev/
       tarball: https://registry.npmjs.org/@teambit/base-ui.theme.colors/-/base-ui.theme.colors-1.0.0.tgz
     version: 1.0.0
+  registry.npmjs.org/@teambit/base-ui.theme.dark-theme/1.0.1_react-dom@17.0.2+react@17.0.2:
+    dependencies:
+      '@teambit/base-ui.theme.colors': registry.npmjs.org/@teambit/base-ui.theme.colors/1.0.0_react-dom@17.0.2+react@17.0.2
+      core-js: registry.npmjs.org/core-js/3.15.0
+      react: registry.npmjs.org/react/17.0.2
+      react-dom: registry.npmjs.org/react-dom/17.0.2_react@17.0.2
+    dev: false
+    id: registry.npmjs.org/@teambit/base-ui.theme.dark-theme/1.0.1
+    name: '@teambit/base-ui.theme.dark-theme'
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0
+      react-dom: ^16.8.0 || ^17.0.0
+    resolution:
+      integrity: sha512-ZzpueHuGvQyyS0gPa8QGvZArA/vzMWHFu5wQGw8OlMwW/l5mZrIgLHni3EMiHkcxKKJEpXYvuSYzKZf7ynAlWg==
+      registry: https://node.bit.dev/
+      tarball: https://registry.npmjs.org/@teambit/base-ui.theme.dark-theme/-/base-ui.theme.dark-theme-1.0.1.tgz
+    version: 1.0.1
   registry.npmjs.org/@teambit/base-ui.theme.fonts.book/1.0.0_react-dom@17.0.2+react@17.0.2:
     dependencies:
       core-js: registry.npmjs.org/core-js/3.15.0
@@ -973,7 +992,7 @@ packages:
   registry.npmjs.org/@types/react-tabs/2.3.2:
     dependencies:
       '@types/react': registry.npmjs.org/@types/react/17.0.11
-    dev: false
+    dev: true
     name: '@types/react-tabs'
     resolution:
       integrity: sha512-QfMelaJSdMcp+CenKhATp12XFFqqUcLXILgwpX3dgWfVYNZPtsLXZDDCRsVn+kwmBOWB+DFPKpQorxbUhnXINw==
