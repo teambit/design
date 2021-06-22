@@ -63,7 +63,7 @@
     },
     "ui/input/color-picker": {
         "scope": "teambit.design",
-        "version": "0.0.3",
+        "version": "0.0.4",
         "mainFile": "index.ts",
         "rootDir": "src/ui/input/color-picker"
     },
