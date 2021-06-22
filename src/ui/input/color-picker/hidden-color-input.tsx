@@ -14,19 +14,27 @@ export class HiddenColorInput extends PureComponent<HiddenColorInputProps, Hidde
     type: 'color',
   };
 
-  handleOnChange = (e: ChangeEvent<HTMLInputElement>) => {
-    const { onChange } = this.props;
-    onChange && onChange(e);
-  };
-
   handleOnClick = (e: any) => {
-    const { isOpen } = this.state;
+    const { isOpen, type } = this.state;
+    // if the user click on the color box to close it, this code will close it.
     if (isOpen) {
-      this.setState({ isOpen: false, type: 'text' });
-      setTimeout(() => this.setState({ type: 'color' }), 500);
-    } else {
+      this.handleOnClose();
+    } else if (type === 'color') {
       this.setState({ isOpen: true });
     }
+  };
+
+  hanldeOnBlur = () => {
+    const { isOpen } = this.state;
+    // if the user click outisde of the box, the color will be closed but we the state need to be updated.
+    if (isOpen) {
+      this.handleOnClose();
+    }
+  };
+
+  handleOnClose = () => {
+    this.setState({ isOpen: false, type: 'text' });
+    setTimeout(() => this.setState({ type: 'color' }), 500);
   };
 
   render() {
@@ -35,9 +43,9 @@ export class HiddenColorInput extends PureComponent<HiddenColorInputProps, Hidde
       <Input
         {...this.props}
         type={type}
-        onChange={this.handleOnChange}
+        onChange={this.props.onChange}
         onClick={this.handleOnClick}
-        onBlur={this.handleOnClick}
+        onBlur={this.hanldeOnBlur}
       />
     );
   }
