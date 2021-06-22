@@ -2,31 +2,37 @@
   display: flex;
   height: 40px;
   position: relative;
-  cursor: pointer;
-
-  &:hover {
-    background-color: var(--bit-bg-heavy, #f6f6f6);
-  }
-  &:active {
-    background-color: var(--bit-bg-heaviest, #ededed);
-  }
-  // &:disabled {
-  //   &:hover {
-  //     background-color: var(--bit-bg-color, #ffffff);
-  //   }
-  // }
-  &:focus {
-    outline: none;
-    box-shadow: 0 0 0 0.125em var(--bit-accent-bg, #eceaff);
-  }
 
   input {
     position: absolute;
     top: 42px;
   }
+
+  input:hover + .indicator {
+    .textBox {
+      background-color: var(--bit-bg-heavy, #f6f6f6);
+    }
+  }
+  input:active + .indicator {
+    .textBox {
+      background-color: var(--bit-bg-heaviest, #ededed);
+    }
+  }
+  input:disabled + .indicator {
+    cursor: not-allowed;
+    .textBox {
+      color: var(--bit-border-color, #babec9);
+    }
+    &:hover {
+      .textBox {
+        background-color: var(--bit-bg-color, #ffffff);
+      }
+    }
+  }
 }
 .indicator {
   display: flex;
+  cursor: pointer;
 
   .textBox,
   .colorBox {
