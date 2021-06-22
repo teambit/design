@@ -15,9 +15,9 @@ export function Item({ image, name, className, isActive, accountType = 'user', .
   return (
     <div {...rest} className={classNames(styles.item, isActive && styles.active, className)}>
       {accountType === 'organization' ? (
-        <OrgAvatar size={20} account={{ profileImage: image }} className={styles.orgImg} />
+        <OrgAvatar size={20} account={{ profileImage: image, name }} className={styles.orgImg} />
       ) : (
-        <UserAvatar size={20} account={{ profileImage: image }} />
+        <UserAvatar size={20} account={{ profileImage: image, name }} />
       )}
       <Ellipsis>{name}</Ellipsis>
     </div>
