@@ -9,7 +9,6 @@ it('should render with text, and L size', () => {
 
   expect(inputElement).not.toBeNull();
   expect(inputElement?.disabled).toEqual(false);
-  expect(inputElement?.checked).toEqual(false);
   expect(text).toBeInTheDocument();
 });
 
