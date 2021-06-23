@@ -57,13 +57,13 @@
     },
     "ui/icon-button": {
         "scope": "teambit.design",
-        "version": "1.0.1",
+        "version": "1.0.2",
         "mainFile": "index.ts",
         "rootDir": "src/ui/icon-button"
     },
     "ui/input/color-picker": {
         "scope": "teambit.design",
-        "version": "0.0.5",
+        "version": "0.0.6",
         "mainFile": "index.ts",
         "rootDir": "src/ui/input/color-picker"
     },
@@ -93,7 +93,7 @@
     },
     "ui/settings-button": {
         "scope": "teambit.design",
-        "version": "1.0.1",
+        "version": "1.0.2",
         "mainFile": "index.ts",
         "rootDir": "src/ui/settings-button"
     },
@@ -105,7 +105,7 @@
     },
     "ui/tag-label": {
         "scope": "teambit.design",
-        "version": "1.0.0",
+        "version": "1.0.1",
         "mainFile": "index.ts",
         "rootDir": "src/ui/tag-label"
     },

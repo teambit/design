@@ -31,7 +31,7 @@ export function DisabledColorPickerWithNoText() {
 export function DarkThemePreviewColorPicker() {
   const [color, setColor] = useState(DEFAULT_COLOR);
   return (
-    <div className={darkMode}>
+    <div className={darkMode} style={{ padding: 16, borderRadius: 4, background: "#0c0c0c" }}>
       <ColorPicker value={color} onInputChanged={(e) => setColor(e.target.value)} size="l">
         Select color
       </ColorPicker>

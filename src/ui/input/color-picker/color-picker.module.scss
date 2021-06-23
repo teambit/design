@@ -1,4 +1,5 @@
 $borderRadius: 8px;
+
 .label {
   display: inline-flex;
   position: relative;
@@ -30,16 +31,36 @@ $borderRadius: 8px;
     }
   }
   input:focus + .indicator {
-    border-radius: $borderRadius;
     box-shadow: 0 0 0 0.125em var(--bit-accent-bg, #eceaff);
   }
 }
+
 .indicator {
   display: flex;
   cursor: pointer;
+  border-radius: $borderRadius;
+  transition: 80ms background-color, 80ms border-color, 80ms box-shadow;
+
+  &:hover {
+    .colorBox {
+      border-color: var(--bit-border-color, #babec9);
+    }
+    .textBox {
+      border-color: var(--bit-border-color, #babec9);
+    }
+  }
+  &:active {
+    .colorBox {
+      border-color: var(--bit-border-color-heavy, #878c9a);
+    }
+    .textBox {
+      border-color: var(--bit-border-color-heavy, #878c9a);
+    }
+  }
 
   .textBox,
   .colorBox {
+    transition: 80ms background-color, 80ms border-color, 80ms box-shadow;
     border: 1px solid var(--bit-border-color-lightest, #ededed);
     box-sizing: border-box;
   }
@@ -52,9 +73,11 @@ $borderRadius: 8px;
     background-color: var(--bit-bg-color, #ffffff);
     color: var(--bit-text-color-heavy, #2b2b2b);
   }
+
   .colorBox {
     width: 2.85em;
     border-radius: 0 $borderRadius $borderRadius 0;
+
     &:only-child {
       border-radius: $borderRadius;
     }
