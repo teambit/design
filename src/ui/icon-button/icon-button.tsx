@@ -25,7 +25,7 @@ export type IconButtonProps = {
   /**
    * button sizes
    */
-  size?: 'm' | 'l';
+  size?: 'm' | 'l' | null;
 } & ButtonProps;
 
 /**

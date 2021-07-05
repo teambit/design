@@ -57,7 +57,7 @@
     },
     "ui/icon-button": {
         "scope": "teambit.design",
-        "version": "1.0.2",
+        "version": "1.0.3",
         "mainFile": "index.ts",
         "rootDir": "src/ui/icon-button"
     },
@@ -93,7 +93,7 @@
     },
     "ui/settings-button": {
         "scope": "teambit.design",
-        "version": "1.0.2",
+        "version": "1.0.3",
         "mainFile": "index.ts",
         "rootDir": "src/ui/settings-button"
     },
