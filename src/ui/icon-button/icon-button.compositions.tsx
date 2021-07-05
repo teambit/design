@@ -42,6 +42,10 @@ export function ActiveWithIconButtonExample() {
   );
 }
 
+export function SmallActiveIconOnlyWithOverrideSize() {
+  return <IconButton icon="plus" active size={null} style={{ width: 24, height: 24, justifyContent: 'center' }} />;
+}
+
 export function DefaultButton() {
   return <IconButton priority="ghost">Update</IconButton>;
 }
