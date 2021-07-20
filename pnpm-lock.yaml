@@ -19,6 +19,7 @@ importers:
       '@teambit/harmony': registry.npmjs.org/@teambit/harmony/0.2.11
       '@teambit/toolbox.date.duration': 0.0.6
       '@types/react-router-dom': registry.npmjs.org/@types/react-router-dom/5.1.7
+      '@types/react-tabs': registry.npmjs.org/@types/react-tabs/2.3.2
       classnames: registry.npmjs.org/classnames/2.3.1
       core-js: registry.npmjs.org/core-js/3.15.2
       react: registry.npmjs.org/react/17.0.2
@@ -28,13 +29,12 @@ importers:
       typescript: registry.npmjs.org/typescript/4.3.5
     devDependencies:
       '@teambit/base-ui.theme.accent-color': registry.npmjs.org/@teambit/base-ui.theme.accent-color/0.1.0_react-dom@17.0.2+react@17.0.2
-      '@teambit/base-ui.theme.dark-theme': registry.npmjs.org/@teambit/base-ui.theme.dark-theme/1.0.1_react-dom@17.0.2+react@17.0.2
+      '@teambit/base-ui.theme.dark-theme': registry.npmjs.org/@teambit/base-ui.theme.dark-theme/1.0.2_react-dom@17.0.2+react@17.0.2
       '@testing-library/react': registry.npmjs.org/@testing-library/react/11.2.2_react-dom@17.0.2+react@17.0.2
-      '@types/jest': registry.npmjs.org/@types/jest/26.0.23
+      '@types/jest': registry.npmjs.org/@types/jest/26.0.24
       '@types/node': registry.npmjs.org/@types/node/12.20.4
-      '@types/react': registry.npmjs.org/@types/react/17.0.13
-      '@types/react-dom': registry.npmjs.org/@types/react-dom/17.0.8
-      '@types/react-tabs': registry.npmjs.org/@types/react-tabs/2.3.2
+      '@types/react': registry.npmjs.org/@types/react/17.0.14
+      '@types/react-dom': registry.npmjs.org/@types/react-dom/17.0.9
       '@types/testing-library__jest-dom': registry.npmjs.org/@types/testing-library__jest-dom/5.9.5
     specifiers:
       '@babel/runtime': 7.12.18
@@ -48,7 +48,7 @@ importers:
       '@teambit/base-ui.text.heading': ^1.0.1
       '@teambit/base-ui.text.text-sizes': ^1.0.0
       '@teambit/base-ui.theme.accent-color': 0.1.0
-      '@teambit/base-ui.theme.dark-theme': 1.0.1
+      '@teambit/base-ui.theme.dark-theme': 1.0.2
       '@teambit/base-ui.theme.fonts.roboto': ^1.0.0
       '@teambit/base-ui.theme.theme-provider': ^1.0.1
       '@teambit/base-ui.time.duration': 0.0.17
@@ -57,10 +57,10 @@ importers:
       '@teambit/harmony': 0.2.11
       '@teambit/toolbox.date.duration': 0.0.6
       '@testing-library/react': 11.2.2
-      '@types/jest': ^26.0.23
+      '@types/jest': ^26.0.24
       '@types/node': 12.20.4
-      '@types/react': ^17.0.13
-      '@types/react-dom': ^17.0.8
+      '@types/react': ^17.0.14
+      '@types/react-dom': ^17.0.9
       '@types/react-router-dom': 5.1.7
       '@types/react-tabs': 2.3.2
       '@types/testing-library__jest-dom': 5.9.5
@@ -576,23 +576,23 @@ packages:
       registry: https://node.bit.dev/
       tarball: https://registry.npmjs.org/@teambit/base-ui.theme.colors/-/base-ui.theme.colors-1.0.0.tgz
     version: 1.0.0
-  registry.npmjs.org/@teambit/base-ui.theme.dark-theme/1.0.1_react-dom@17.0.2+react@17.0.2:
+  registry.npmjs.org/@teambit/base-ui.theme.dark-theme/1.0.2_react-dom@17.0.2+react@17.0.2:
     dependencies:
       '@teambit/base-ui.theme.colors': registry.npmjs.org/@teambit/base-ui.theme.colors/1.0.0_react-dom@17.0.2+react@17.0.2
       core-js: registry.npmjs.org/core-js/3.15.2
       react: registry.npmjs.org/react/17.0.2
       react-dom: registry.npmjs.org/react-dom/17.0.2_react@17.0.2
     dev: true
-    id: registry.npmjs.org/@teambit/base-ui.theme.dark-theme/1.0.1
+    id: registry.npmjs.org/@teambit/base-ui.theme.dark-theme/1.0.2
     name: '@teambit/base-ui.theme.dark-theme'
     peerDependencies:
       react: ^16.8.0 || ^17.0.0
       react-dom: ^16.8.0 || ^17.0.0
     resolution:
-      integrity: sha512-ZzpueHuGvQyyS0gPa8QGvZArA/vzMWHFu5wQGw8OlMwW/l5mZrIgLHni3EMiHkcxKKJEpXYvuSYzKZf7ynAlWg==
+      integrity: sha512-Y/fLbxyb8XW7qZ4wAgl2cEmWXceOfaXN/GcfrVZEBqmM6YerlAkNq9RW3bcN9OuhSVekDjApwbDtELsE9WStdA==
       registry: https://node.bit.dev/
-      tarball: https://registry.npmjs.org/@teambit/base-ui.theme.dark-theme/-/base-ui.theme.dark-theme-1.0.1.tgz
-    version: 1.0.1
+      tarball: https://registry.npmjs.org/@teambit/base-ui.theme.dark-theme/-/base-ui.theme.dark-theme-1.0.2.tgz
+    version: 1.0.2
   registry.npmjs.org/@teambit/base-ui.theme.fonts.book/1.0.0_react-dom@17.0.2+react@17.0.2:
     dependencies:
       core-js: registry.npmjs.org/core-js/3.15.2
@@ -940,6 +940,17 @@ packages:
       registry: https://node.bit.dev/
       tarball: https://registry.npmjs.org/@types/jest/-/jest-26.0.23.tgz
     version: 26.0.23
+  registry.npmjs.org/@types/jest/26.0.24:
+    dependencies:
+      jest-diff: registry.npmjs.org/jest-diff/26.6.2
+      pretty-format: registry.npmjs.org/pretty-format/26.6.2
+    dev: true
+    name: '@types/jest'
+    resolution:
+      integrity: sha512-E/X5Vib8BWqZNRlDxj9vYXhsDwPYbPINqKF9BsnSoon4RQ0D9moEuLD8txgyypFLH7J4+Lho9Nr/c8H0Fi+17w==
+      registry: https://node.bit.dev/
+      tarball: https://registry.npmjs.org/@types/jest/-/jest-26.0.24.tgz
+    version: 26.0.24
   registry.npmjs.org/@types/node/12.20.4:
     name: '@types/node'
     resolution:
@@ -948,22 +959,31 @@ packages:
       tarball: https://registry.npmjs.org/@types/node/-/node-12.20.4.tgz
     version: 12.20.4
   registry.npmjs.org/@types/prop-types/15.7.3:
+    dev: false
     name: '@types/prop-types'
     resolution:
       integrity: sha512-KfRL3PuHmqQLOG+2tGpRO26Ctg+Cq1E01D2DMriKEATHgWLfeNDmq9e29Q9WIky0dQ3NPkd1mzYH8Lm936Z9qw==
       registry: https://node.bit.dev/
       tarball: https://registry.npmjs.org/@types/prop-types/-/prop-types-15.7.3.tgz
     version: 15.7.3
-  registry.npmjs.org/@types/react-dom/17.0.8:
+  registry.npmjs.org/@types/prop-types/15.7.4:
+    dev: true
+    name: '@types/prop-types'
+    resolution:
+      integrity: sha512-rZ5drC/jWjrArrS8BR6SIr4cWpW09RNTYt9AMZo3Jwwif+iacXAqgVjm0B0Bv/S1jhDXKHqRVNCbACkJ89RAnQ==
+      registry: https://node.bit.dev/
+      tarball: https://registry.npmjs.org/@types/prop-types/-/prop-types-15.7.4.tgz
+    version: 15.7.4
+  registry.npmjs.org/@types/react-dom/17.0.9:
     dependencies:
-      '@types/react': registry.npmjs.org/@types/react/17.0.13
+      '@types/react': registry.npmjs.org/@types/react/17.0.14
     dev: true
     name: '@types/react-dom'
     resolution:
-      integrity: sha512-0ohAiJAx1DAUEcY9UopnfwCE9sSMDGnY/oXjWMax6g3RpzmTt2GMyMVAXcbn0mo8XAff0SbQJl2/SBU+hjSZ1A==
+      integrity: sha512-wIvGxLfgpVDSAMH5utdL9Ngm5Owu0VsGmldro3ORLXV8CShrL8awVj06NuEXFQ5xyaYfdca7Sgbk/50Ri1GdPg==
       registry: https://node.bit.dev/
-      tarball: https://registry.npmjs.org/@types/react-dom/-/react-dom-17.0.8.tgz
-    version: 17.0.8
+      tarball: https://registry.npmjs.org/@types/react-dom/-/react-dom-17.0.9.tgz
+    version: 17.0.9
   registry.npmjs.org/@types/react-router-dom/5.1.7:
     dependencies:
       '@types/history': registry.npmjs.org/@types/history/4.7.8
@@ -990,7 +1010,7 @@ packages:
   registry.npmjs.org/@types/react-tabs/2.3.2:
     dependencies:
       '@types/react': registry.npmjs.org/@types/react/17.0.11
-    dev: true
+    dev: false
     name: '@types/react-tabs'
     resolution:
       integrity: sha512-QfMelaJSdMcp+CenKhATp12XFFqqUcLXILgwpX3dgWfVYNZPtsLXZDDCRsVn+kwmBOWB+DFPKpQorxbUhnXINw==
@@ -1002,31 +1022,41 @@ packages:
       '@types/prop-types': registry.npmjs.org/@types/prop-types/15.7.3
       '@types/scheduler': registry.npmjs.org/@types/scheduler/0.16.1
       csstype: registry.npmjs.org/csstype/3.0.8
+    dev: false
     name: '@types/react'
     resolution:
       integrity: sha512-yFRQbD+whVonItSk7ZzP/L+gPTJVBkL/7shLEF+i9GC/1cV3JmUxEQz6+9ylhUpWSDuqo1N9qEvqS6vTj4USUA==
       registry: https://node.bit.dev/
       tarball: https://registry.npmjs.org/@types/react/-/react-17.0.11.tgz
     version: 17.0.11
-  registry.npmjs.org/@types/react/17.0.13:
+  registry.npmjs.org/@types/react/17.0.14:
     dependencies:
-      '@types/prop-types': registry.npmjs.org/@types/prop-types/15.7.3
-      '@types/scheduler': registry.npmjs.org/@types/scheduler/0.16.1
+      '@types/prop-types': registry.npmjs.org/@types/prop-types/15.7.4
+      '@types/scheduler': registry.npmjs.org/@types/scheduler/0.16.2
       csstype: registry.npmjs.org/csstype/3.0.8
     dev: true
     name: '@types/react'
     resolution:
-      integrity: sha512-D/G3PiuqTfE3IMNjLn/DCp6umjVCSvtZTPdtAFy5+Ved6CsdRvivfKeCzw79W4AatShtU4nGqgvOv5Gro534vQ==
+      integrity: sha512-0WwKHUbWuQWOce61UexYuWTGuGY/8JvtUe/dtQ6lR4sZ3UiylHotJeWpf3ArP9+DSGUoLY3wbU59VyMrJps5VQ==
       registry: https://node.bit.dev/
-      tarball: https://registry.npmjs.org/@types/react/-/react-17.0.13.tgz
-    version: 17.0.13
+      tarball: https://registry.npmjs.org/@types/react/-/react-17.0.14.tgz
+    version: 17.0.14
   registry.npmjs.org/@types/scheduler/0.16.1:
+    dev: false
     name: '@types/scheduler'
     resolution:
       integrity: sha512-EaCxbanVeyxDRTQBkdLb3Bvl/HK7PBK6UJjsSixB0iHKoWxE5uu2Q/DgtpOhPIojN0Zl1whvOd7PoHs2P0s5eA==
       registry: https://node.bit.dev/
       tarball: https://registry.npmjs.org/@types/scheduler/-/scheduler-0.16.1.tgz
     version: 0.16.1
+  registry.npmjs.org/@types/scheduler/0.16.2:
+    dev: true
+    name: '@types/scheduler'
+    resolution:
+      integrity: sha512-hppQEBDmlwhFAXKJX2KnWLYu5yMfi91yazPb2l+lbJiwW+wdo1gNeRA+3RgNSO39WYX2euey41KEwnqesU2Jew==
+      registry: https://node.bit.dev/
+      tarball: https://registry.npmjs.org/@types/scheduler/-/scheduler-0.16.2.tgz
+    version: 0.16.2
   registry.npmjs.org/@types/testing-library__jest-dom/5.9.5:
     dependencies:
       '@types/jest': registry.npmjs.org/@types/jest/26.0.23
