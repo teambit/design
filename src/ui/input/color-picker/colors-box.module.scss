@@ -1,6 +1,7 @@
 $borderRadius: 8px;
 
 .colorsBox {
+  z-index: 1;
   position: absolute;
   top: calc(100% + 4px);
   display: grid;
