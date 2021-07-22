@@ -1,0 +1,27 @@
+.option {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  font: inherit;
+  border: none;
+  background-color: inherit;
+  margin: unset;
+  padding: unset;
+  margin: 1px;
+  overflow: hidden;
+  &.selected {
+    border: 2px solid var(--bit-text-color-light, #6c707c);
+    background-color: var(--bit-border-color-lightest, #ededed);
+  }
+  &:hover {
+    background-color: var(--bit-border-color-lightest, #ededed);
+  }
+  &:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 0.125em var(--bit-accent-bg, #eceaff);
+  }
+}

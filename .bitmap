@@ -13,6 +13,12 @@
         "mainFile": "index.ts",
         "rootDir": "src/envs/react"
     },
+    "surfaces/selectable": {
+        "scope": "teambit.design",
+        "version": "0.0.1",
+        "mainFile": "index.ts",
+        "rootDir": "src/surfaces/selectable"
+    },
     "theme/icons-font": {
         "scope": "teambit.design",
         "version": "1.0.0",
@@ -63,7 +69,7 @@
     },
     "ui/input/color-picker": {
         "scope": "teambit.design",
-        "version": "0.0.8",
+        "version": "0.0.9",
         "mainFile": "index.ts",
         "rootDir": "src/ui/input/color-picker"
     },

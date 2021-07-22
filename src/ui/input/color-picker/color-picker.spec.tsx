@@ -4,18 +4,15 @@ import { PreviewColorPicker, DisabledColorPicker } from './color-picker.composit
 
 it('should render with text, and L size', () => {
   const { container, getByText } = render(<PreviewColorPicker />);
-  const inputElement = container.querySelector('input');
   const text = getByText('Select color');
 
-  expect(inputElement).not.toBeNull();
-  expect(inputElement?.disabled).toEqual(false);
   expect(text).toBeInTheDocument();
 });
 
 it('should render with disabled option', () => {
   const { container } = render(<DisabledColorPicker />);
-  const inputElement = container.querySelector('input');
+  const element = container.querySelector('.colorPicker');
 
-  expect(inputElement).not.toBeNull();
-  expect(inputElement?.disabled).toEqual(true);
+  expect(element).not.toBeNull();
+  expect(element?.classList).toContain('disabled');
 });
