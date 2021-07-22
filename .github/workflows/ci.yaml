@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: teambit/setup-action@v1
         with:
-          name: symphony_backend
+          name: design_scope
           BIT_TOKEN: ${{ env.BIT_TOKEN }}
       - uses: actions/checkout@v2
       - name: Install dependencies
