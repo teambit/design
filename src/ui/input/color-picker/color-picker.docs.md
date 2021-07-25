@@ -13,7 +13,7 @@ Basic example:
 () => {
   const [color, setColor] = useState(DEFAULT_COLOR);
   return (
-    <ColorPicker selectedColor={color} onSelect={(newColor) => setColor(newColor)} size="l">
+    <ColorPicker value={color} onSelect={(value) => setColor(value)} size="l">
       Color
     </ColorPicker>
   );

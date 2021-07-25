@@ -28,6 +28,8 @@ export class ColorPicker extends PureComponent<ColorPickerProps, ColorPickerStat
   };
 
   handleOpen = () => {
+    const { disabled } = this.props;
+    if (disabled) return;
     const { isHidden } = this.state;
     this.setState({ isHidden: !isHidden });
   };
@@ -59,7 +61,7 @@ export class ColorPicker extends PureComponent<ColorPickerProps, ColorPickerStat
       >
         {children && <div className={styles.textBox}>{children}</div>}
         <div className={classNames(styles.colorBox, !children && styles.noText)} style={{ backgroundColor: value }} />
-        <ColorsBox value={value} onSelect={onSelect} hidden={isHidden} />
+        {!disabled && <ColorsBox value={value} onSelect={onSelect} hidden={isHidden} />}
       </div>
     );
   }

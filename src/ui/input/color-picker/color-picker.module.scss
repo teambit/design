@@ -37,7 +37,7 @@ $borderRadius: 8px;
     }
     .colorBox,
     .textBox {
-      border: 1px solid var(--bit-border-color-lightest, #ededed);
+      border-color: var(--bit-border-color-lightest, #ededed);
     }
   }
   &.isOpen {

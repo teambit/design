@@ -20,7 +20,7 @@ export function DisabledColorPicker() {
 }
 
 export function ColorPickerWithNoText() {
-  const [color, setColor] = useState('#23c76a');
+  const [color, setColor] = useState('#23C76A');
   return <ColorPicker value={color} onSelect={(value) => setColor(value.toString())} size="l" />;
 }
 
