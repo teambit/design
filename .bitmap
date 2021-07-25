@@ -3,25 +3,25 @@
 {
     "elements/icon": {
         "scope": "teambit.design",
-        "version": "1.0.3",
+        "version": "1.0.4",
         "mainFile": "index.tsx",
         "rootDir": "src/ui/elements/icon"
     },
     "envs/react": {
         "scope": "teambit.design",
-        "version": "1.0.3",
+        "version": "1.0.4",
         "mainFile": "index.ts",
         "rootDir": "src/envs/react"
     },
     "surfaces/dropdown": {
-        "scope": "",
-        "version": "",
+        "scope": "teambit.design",
+        "version": "0.0.1",
         "mainFile": "index.ts",
         "rootDir": "src/surfaces/dropdown"
     },
     "surfaces/selectable": {
         "scope": "teambit.design",
-        "version": "0.0.1",
+        "version": "0.0.2",
         "mainFile": "index.ts",
         "rootDir": "src/surfaces/selectable"
     },
@@ -39,97 +39,97 @@
     },
     "ui/color-border": {
         "scope": "teambit.design",
-        "version": "1.0.3",
+        "version": "1.0.4",
         "mainFile": "index.ts",
         "rootDir": "src/ui/color-border"
     },
     "ui/css/menu-transition": {
         "scope": "teambit.design",
-        "version": "1.0.5",
+        "version": "1.0.6",
         "mainFile": "index.ts",
         "rootDir": "src/ui/css/menu-transition"
     },
     "ui/dropdown": {
         "scope": "teambit.design",
-        "version": "1.0.5",
+        "version": "1.0.6",
         "mainFile": "index.ts",
         "rootDir": "src/ui/dropdown"
     },
     "ui/heading": {
         "scope": "teambit.design",
-        "version": "1.0.3",
+        "version": "1.0.4",
         "mainFile": "index.tsx",
         "rootDir": "src/ui/heading"
     },
     "ui/hoverable": {
         "scope": "teambit.design",
-        "version": "1.0.3",
+        "version": "1.0.4",
         "mainFile": "index.ts",
         "rootDir": "src/ui/hoverable"
     },
     "ui/icon-button": {
         "scope": "teambit.design",
-        "version": "1.0.5",
+        "version": "1.0.6",
         "mainFile": "index.ts",
         "rootDir": "src/ui/icon-button"
     },
     "ui/input/color-picker": {
         "scope": "teambit.design",
-        "version": "0.0.11",
+        "version": "0.0.12",
         "mainFile": "index.ts",
         "rootDir": "src/ui/input/color-picker"
     },
     "ui/input/radio": {
         "scope": "teambit.design",
-        "version": "1.0.4",
+        "version": "1.0.5",
         "mainFile": "index.ts",
         "rootDir": "src/ui/input/radio"
     },
     "ui/input/toggle": {
         "scope": "teambit.design",
-        "version": "1.0.4",
+        "version": "1.0.5",
         "mainFile": "index.ts",
         "rootDir": "src/ui/input/toggle"
     },
     "ui/message-card": {
         "scope": "teambit.design",
-        "version": "1.0.3",
+        "version": "1.0.4",
         "mainFile": "index.ts",
         "rootDir": "src/ui/message-card"
     },
     "ui/panels/tabs": {
         "scope": "teambit.design",
-        "version": "1.0.3",
+        "version": "1.0.4",
         "mainFile": "index.ts",
         "rootDir": "src/ui/panels/tabs"
     },
     "ui/settings-button": {
         "scope": "teambit.design",
-        "version": "1.0.5",
+        "version": "1.0.6",
         "mainFile": "index.ts",
         "rootDir": "src/ui/settings-button"
     },
     "ui/status-message-card": {
         "scope": "teambit.design",
-        "version": "1.0.3",
+        "version": "1.0.4",
         "mainFile": "index.ts",
         "rootDir": "src/ui/status-message-card"
     },
     "ui/tag-label": {
         "scope": "teambit.design",
-        "version": "1.0.3",
+        "version": "1.0.4",
         "mainFile": "index.ts",
         "rootDir": "src/ui/tag-label"
     },
     "ui/time/duration": {
         "scope": "teambit.design",
-        "version": "1.0.4",
+        "version": "1.0.5",
         "mainFile": "index.ts",
         "rootDir": "src/ui/time/duration"
     },
     "ui/visibility": {
         "scope": "teambit.design",
-        "version": "1.0.3",
+        "version": "1.0.4",
         "mainFile": "index.ts",
         "rootDir": "src/ui/visibility"
     },
