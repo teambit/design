@@ -3,7 +3,7 @@ import { render } from '@testing-library/react';
 import { PreviewColorPicker, DisabledColorPicker } from './color-picker.composition';
 
 it('should render with text, and L size', () => {
-  const { container, getByText } = render(<PreviewColorPicker />);
+  const { getByText } = render(<PreviewColorPicker />);
   const text = getByText('Select color');
 
   expect(text).toBeInTheDocument();

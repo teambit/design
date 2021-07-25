@@ -1,25 +1,16 @@
 $borderRadius: 8px;
 
 .colorsBox {
-  z-index: 1;
-  position: absolute;
-  top: calc(100% + 4px);
   display: grid;
-  grid-template-columns: repeat(auto-fill, 24px);
+  grid-template-columns: repeat(6, 24px);
   grid-gap: 8px;
-  width: 234px;
-  padding: 24px;
-  background-color: var(--bit-bg-color, #ffffff);
-  border: 1px solid var(--bit-border-color-lightest, #ededed);
-  border-radius: $borderRadius;
 
   .selectableColor {
+    margin: 1px;
     transition: all 0.2s ease-in-out;
+    font-size: 24px;
     &:hover {
       transform: scale(1.2);
     }
   }
-}
-.hidden {
-  display: none;
 }

@@ -3,15 +3,14 @@
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
-  width: 24px;
-  height: 24px;
+  width: 1em;
+  height: 1em;
   cursor: pointer;
   font: inherit;
   border: none;
   background-color: inherit;
   margin: unset;
   padding: unset;
-  margin: 1px;
   overflow: hidden;
   &.selected {
     border: 2px solid var(--bit-text-color-light, #6c707c);

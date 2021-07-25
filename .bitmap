@@ -13,6 +13,12 @@
         "mainFile": "index.ts",
         "rootDir": "src/envs/react"
     },
+    "surfaces/dropdown": {
+        "scope": "",
+        "version": "",
+        "mainFile": "index.ts",
+        "rootDir": "src/surfaces/dropdown"
+    },
     "surfaces/selectable": {
         "scope": "teambit.design",
         "version": "0.0.1",

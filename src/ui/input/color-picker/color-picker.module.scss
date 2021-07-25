@@ -1,5 +1,12 @@
 $borderRadius: 8px;
 
+.dropDown {
+  --bit-drawer-margin: 4px;
+  display: inline-block;
+}
+.dropClass {
+  padding: 24px;
+}
 .colorPicker {
   display: inline-flex;
   cursor: pointer;
@@ -38,12 +45,6 @@ $borderRadius: 8px;
     .colorBox,
     .textBox {
       border-color: var(--bit-border-color-lightest, #ededed);
-    }
-  }
-  &.isOpen {
-    cursor: default;
-    .textBox {
-      background-color: var(--bit-bg-color, #ffffff);
     }
   }
 

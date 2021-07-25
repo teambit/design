@@ -2,12 +2,14 @@ importers:
   .:
     dependencies:
       '@babel/runtime': registry.npmjs.org/@babel/runtime/7.12.18
+      '@teambit/base-ui.css-components.elevation': registry.npmjs.org/@teambit/base-ui.css-components.elevation/1.0.0_react-dom@17.0.2+react@17.0.2
       '@teambit/base-ui.css-components.roundness': registry.npmjs.org/@teambit/base-ui.css-components.roundness/1.0.0_react-dom@17.0.2+react@17.0.2
       '@teambit/base-ui.elements.icon': registry.npmjs.org/@teambit/base-ui.elements.icon/1.0.0_react-dom@17.0.2+react@17.0.2
       '@teambit/base-ui.input.button': registry.npmjs.org/@teambit/base-ui.input.button/1.0.1_react-dom@17.0.2+react@17.0.2
       '@teambit/base-ui.input.checkbox.label': registry.npmjs.org/@teambit/base-ui.input.checkbox.label/1.0.1_react-dom@17.0.2+react@17.0.2
       '@teambit/base-ui.styles.flex-center': registry.npmjs.org/@teambit/base-ui.styles.flex-center/1.0.0_react-dom@17.0.2+react@17.0.2
       '@teambit/base-ui.surfaces.abs-container': registry.npmjs.org/@teambit/base-ui.surfaces.abs-container/1.0.0_react-dom@17.0.2+react@17.0.2
+      '@teambit/base-ui.surfaces.background': registry.npmjs.org/@teambit/base-ui.surfaces.background/1.0.1_react-dom@17.0.2+react@17.0.2
       '@teambit/base-ui.surfaces.card': registry.npmjs.org/@teambit/base-ui.surfaces.card/1.0.1_react-dom@17.0.2+react@17.0.2
       '@teambit/base-ui.surfaces.drawer': registry.npmjs.org/@teambit/base-ui.surfaces.drawer/1.0.0_react-dom@17.0.2+react@17.0.2
       '@teambit/base-ui.text.heading': registry.npmjs.org/@teambit/base-ui.text.heading/1.0.1_react-dom@17.0.2+react@17.0.2
@@ -17,6 +19,7 @@ importers:
       '@teambit/base-ui.time.duration': registry.npmjs.org/@teambit/base-ui.time.duration/0.0.17_react-dom@17.0.2+react@17.0.2
       '@teambit/design.ui.avatar': registry.npmjs.org/@teambit/design.ui.avatar/0.0.380_react-dom@17.0.2+react@17.0.2
       '@teambit/design.ui.styles.ellipsis': registry.npmjs.org/@teambit/design.ui.styles.ellipsis/0.0.344_react-dom@17.0.2+react@17.0.2
+      '@teambit/evangelist.css-components.fade-in-out': registry.npmjs.org/@teambit/evangelist.css-components.fade-in-out/1.0.1_react-dom@17.0.2+react@17.0.2
       '@teambit/harmony': registry.npmjs.org/@teambit/harmony/0.2.11
       '@teambit/toolbox.date.duration': 0.0.6
       '@types/react-router-dom': registry.npmjs.org/@types/react-router-dom/5.1.7
@@ -33,18 +36,20 @@ importers:
       '@testing-library/react': registry.npmjs.org/@testing-library/react/11.2.2_react-dom@17.0.2+react@17.0.2
       '@types/jest': registry.npmjs.org/@types/jest/26.0.24
       '@types/node': registry.npmjs.org/@types/node/12.20.4
-      '@types/react': registry.npmjs.org/@types/react/17.0.14
+      '@types/react': registry.npmjs.org/@types/react/17.0.15
       '@types/react-dom': registry.npmjs.org/@types/react-dom/17.0.9
       '@types/react-tabs': registry.npmjs.org/@types/react-tabs/2.3.2
       '@types/testing-library__jest-dom': registry.npmjs.org/@types/testing-library__jest-dom/5.9.5
     specifiers:
       '@babel/runtime': 7.12.18
+      '@teambit/base-ui.css-components.elevation': 1.0.0
       '@teambit/base-ui.css-components.roundness': 1.0.0
       '@teambit/base-ui.elements.icon': ^1.0.0
       '@teambit/base-ui.input.button': ^1.0.1
       '@teambit/base-ui.input.checkbox.label': ^1.0.1
       '@teambit/base-ui.styles.flex-center': ^1.0.0
-      '@teambit/base-ui.surfaces.abs-container': ^1.0.0
+      '@teambit/base-ui.surfaces.abs-container': 1.0.0
+      '@teambit/base-ui.surfaces.background': 1.0.1
       '@teambit/base-ui.surfaces.card': ^1.0.1
       '@teambit/base-ui.surfaces.drawer': ^1.0.0
       '@teambit/base-ui.text.heading': ^1.0.1
@@ -56,12 +61,13 @@ importers:
       '@teambit/base-ui.time.duration': 0.0.17
       '@teambit/design.ui.avatar': 0.0.380
       '@teambit/design.ui.styles.ellipsis': 0.0.344
+      '@teambit/evangelist.css-components.fade-in-out': 1.0.1
       '@teambit/harmony': 0.2.11
       '@teambit/toolbox.date.duration': 0.0.6
       '@testing-library/react': 11.2.2
       '@types/jest': ^26.0.24
       '@types/node': 12.20.4
-      '@types/react': ^17.0.14
+      '@types/react': ^17.0.15
       '@types/react-dom': ^17.0.9
       '@types/react-router-dom': 5.1.7
       '@types/react-tabs': 2.3.2
@@ -379,7 +385,7 @@ packages:
   registry.npmjs.org/@teambit/base-ui.surfaces.abs-container/1.0.0_react-dom@17.0.2+react@17.0.2:
     dependencies:
       classnames: registry.npmjs.org/classnames/2.3.1
-      core-js: registry.npmjs.org/core-js/3.15.1
+      core-js: registry.npmjs.org/core-js/3.15.2
       react: registry.npmjs.org/react/17.0.2
       react-create-ref: registry.npmjs.org/react-create-ref/1.0.1_react@17.0.2
       react-dom: registry.npmjs.org/react-dom/17.0.2_react@17.0.2
@@ -800,6 +806,22 @@ packages:
       registry: https://node.bit.dev/
       tarball: https://registry.npmjs.org/@teambit/design.ui.styles.ellipsis/-/design.ui.styles.ellipsis-0.0.344.tgz
     version: 0.0.344
+  registry.npmjs.org/@teambit/evangelist.css-components.fade-in-out/1.0.1_react-dom@17.0.2+react@17.0.2:
+    dependencies:
+      core-js: registry.npmjs.org/core-js/3.15.2
+      react: registry.npmjs.org/react/17.0.2
+      react-dom: registry.npmjs.org/react-dom/17.0.2_react@17.0.2
+    dev: false
+    id: registry.npmjs.org/@teambit/evangelist.css-components.fade-in-out/1.0.1
+    name: '@teambit/evangelist.css-components.fade-in-out'
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0
+      react-dom: ^16.8.0 || ^17.0.0
+    resolution:
+      integrity: sha512-oi5xKYxUqVUXP3Ae6eZS2LSaVe9sthO4nA3f95SnFnJ8O5HAX4O/xGi4WCYoxNPDo1muzp5/mfJkdmyRiILLRA==
+      registry: https://node.bit.dev/
+      tarball: https://registry.npmjs.org/@teambit/evangelist.css-components.fade-in-out/-/evangelist.css-components.fade-in-out-1.0.1.tgz
+    version: 1.0.1
   registry.npmjs.org/@teambit/evangelist.elements.icon/0.5.41_react-dom@17.0.2+react@17.0.2:
     dependencies:
       '@teambit/base-ui.elements.icon': registry.npmjs.org/@teambit/base-ui.elements.icon/0.6.11_react-dom@17.0.2+react@17.0.2
@@ -979,7 +1001,7 @@ packages:
     version: 15.7.4
   registry.npmjs.org/@types/react-dom/17.0.9:
     dependencies:
-      '@types/react': registry.npmjs.org/@types/react/17.0.14
+      '@types/react': registry.npmjs.org/@types/react/17.0.15
     dev: true
     name: '@types/react-dom'
     resolution:
@@ -1031,7 +1053,7 @@ packages:
       registry: https://node.bit.dev/
       tarball: https://registry.npmjs.org/@types/react/-/react-17.0.11.tgz
     version: 17.0.11
-  registry.npmjs.org/@types/react/17.0.14:
+  registry.npmjs.org/@types/react/17.0.15:
     dependencies:
       '@types/prop-types': registry.npmjs.org/@types/prop-types/15.7.4
       '@types/scheduler': registry.npmjs.org/@types/scheduler/0.16.2
@@ -1039,10 +1061,10 @@ packages:
     dev: true
     name: '@types/react'
     resolution:
-      integrity: sha512-0WwKHUbWuQWOce61UexYuWTGuGY/8JvtUe/dtQ6lR4sZ3UiylHotJeWpf3ArP9+DSGUoLY3wbU59VyMrJps5VQ==
+      integrity: sha512-uTKHDK9STXFHLaKv6IMnwp52fm0hwU+N89w/p9grdUqcFA6WuqDyPhaWopbNyE1k/VhgzmHl8pu1L4wITtmlLw==
       registry: https://node.bit.dev/
-      tarball: https://registry.npmjs.org/@types/react/-/react-17.0.14.tgz
-    version: 17.0.14
+      tarball: https://registry.npmjs.org/@types/react/-/react-17.0.15.tgz
+    version: 17.0.15
   registry.npmjs.org/@types/scheduler/0.16.1:
     name: '@types/scheduler'
     resolution:

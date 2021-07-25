@@ -1,30 +1,24 @@
 import React from 'react';
 import classNames from 'classnames';
-import { Card } from '@teambit/base-ui.surfaces.card';
 import { Selectable } from '@teambit/design.surfaces.selectable';
 import { colorsList } from './colors-list';
 import styles from './colors-box.module.scss';
 
 export type ColorsBoxProps = {
   /**
-   * The selected color to show in the colors box.
-   */
-  value?: string;
-  /**
    * A function that is trigger when the user click on a color from the list.
    * The function return the selected color.
    */
-  onSelect: (value: string) => void;
-  hidden?: boolean;
+  onColorSelect: (value: string) => void;
 } & React.HTMLAttributes<HTMLDivElement>;
 
-export function ColorsBox({ value, onSelect, hidden, className, ...rest }: ColorsBoxProps) {
+export function ColorsBox({ onColorSelect, className, ...rest }: ColorsBoxProps) {
   return (
-    <Card roundness="small" className={classNames(styles.colorsBox, hidden && styles.hidden, className)} {...rest}>
+    <div className={classNames(styles.colorsBox, className)} {...rest}>
       {colorsList.map((color, index) => {
         return (
           <Selectable
-            onClick={(e) => onSelect(color)}
+            onClick={(e) => onColorSelect(color)}
             key={color}
             roundness="circle"
             className={styles.selectableColor}
@@ -32,6 +26,6 @@ export function ColorsBox({ value, onSelect, hidden, className, ...rest }: Color
           />
         );
       })}
-    </Card>
+    </div>
   );
 }

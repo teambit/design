@@ -1,68 +1,52 @@
-import React, { PureComponent } from 'react';
+import React from 'react';
 import classNames from 'classnames';
+import { Dropdown } from '@teambit/design.surfaces.dropdown';
 import styles from './color-picker.module.scss';
 import sizes from './sizes.module.scss';
 import { ColorsBox, ColorsBoxProps } from './colors-box';
 
 export type ColorPickerProps = {
   /**
+   * The selected color to show in the colors box.
+   */
+  value?: string;
+  /**
    * box sizes
    */
   size?: 'm' | 'l';
   disabled?: boolean;
-  /**
-   * Control the CSS class of the colors box.
-   */
-  colorsBoxClassName?: string;
 } & ColorsBoxProps;
-
-type ColorPickerState = {
-  isHidden: boolean;
-};
 
 export const DEFAULT_COLOR = '#BABEC9';
 
-export class ColorPicker extends PureComponent<ColorPickerProps, ColorPickerState> {
-  state = {
-    isHidden: true,
-  };
-
-  handleOpen = () => {
-    const { disabled } = this.props;
-    if (disabled) return;
-    const { isHidden } = this.state;
-    this.setState({ isHidden: !isHidden });
-  };
-
-  render() {
-    const {
-      value = DEFAULT_COLOR,
-      size,
-      disabled,
-      colorsBoxClassName,
-      onSelect,
-      className,
-      children,
-      ...rest
-    } = this.props;
-    const { isHidden } = this.state;
-    return (
-      <div
-        className={classNames(
-          styles.colorPicker,
-          !isHidden && styles.isOpen,
-          sizes.pickerSizes,
-          disabled && styles.disabled,
-          className
-        )}
-        data-size={size}
-        onClick={this.handleOpen}
-        {...rest}
-      >
-        {children && <div className={styles.textBox}>{children}</div>}
-        <div className={classNames(styles.colorBox, !children && styles.noText)} style={{ backgroundColor: value }} />
-        {!disabled && <ColorsBox value={value} onSelect={onSelect} hidden={isHidden} />}
-      </div>
-    );
-  }
+export function ColorPicker({
+  value = DEFAULT_COLOR,
+  size,
+  disabled,
+  onColorSelect,
+  className,
+  children,
+  ...rest
+}: ColorPickerProps) {
+  return (
+    <Dropdown
+      //@ts-ignore
+      placeholder={
+        <div
+          className={classNames(styles.colorPicker, sizes.pickerSizes, disabled && styles.disabled, className)}
+          data-size={size}
+        >
+          {children && <div className={styles.textBox}>{children}</div>}
+          <div className={classNames(styles.colorBox, !children && styles.noText)} style={{ backgroundColor: value }} />
+        </div>
+      }
+      roundness="small"
+      className={styles.dropDown}
+      dropClass={styles.dropClass}
+      open={!disabled && undefined}
+      {...rest}
+    >
+      <ColorsBox onColorSelect={onColorSelect} />
+    </Dropdown>
+  );
 }
