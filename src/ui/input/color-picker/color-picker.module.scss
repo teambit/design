@@ -11,7 +11,6 @@ $borderRadius: 8px;
   cursor: pointer;
   border-radius: $borderRadius;
   transition: 80ms background-color, 80ms border-color, 80ms box-shadow;
-  position: relative;
 
   &:hover {
     .colorBox {

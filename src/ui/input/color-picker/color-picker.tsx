@@ -15,6 +15,7 @@ export type ColorPickerProps = {
    */
   size?: 'm' | 'l';
   disabled?: boolean;
+  dropClassName?: string;
 } & ColorsBoxProps;
 
 export const DEFAULT_COLOR = '#BABEC9';
@@ -23,6 +24,7 @@ export function ColorPicker({
   value = DEFAULT_COLOR,
   size,
   disabled,
+  dropClassName,
   onColorSelect,
   className,
   children,
@@ -33,7 +35,7 @@ export function ColorPicker({
       //@ts-ignore
       placeholder={
         <div
-          className={classNames(styles.colorPicker, sizes.pickerSizes, disabled && styles.disabled, className)}
+          className={classNames(styles.colorPicker, sizes.pickerSizes, disabled && styles.disabled)}
           data-size={size}
         >
           {children && <div className={styles.textBox}>{children}</div>}
@@ -41,8 +43,8 @@ export function ColorPicker({
         </div>
       }
       roundness="small"
-      className={styles.dropDown}
-      dropClass={styles.dropClass}
+      className={classNames(styles.dropDown, className)}
+      dropClass={classNames(styles.dropClass, dropClassName)}
       open={!disabled && undefined}
       margin={4}
       {...rest}
