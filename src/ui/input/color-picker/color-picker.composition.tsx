@@ -3,9 +3,9 @@ import { darkMode } from '@teambit/base-ui.theme.dark-theme';
 import { ColorPicker, DEFAULT_COLOR } from './color-picker';
 
 export function PreviewColorPicker() {
-  const [color, setColor] = useState(DEFAULT_COLOR);
+  const [color, setColor] = useState<string>(DEFAULT_COLOR);
   return (
-    <ColorPicker value={color} onInputChanged={(e) => setColor(e.target.value)} size="l">
+    <ColorPicker value={color} onColorSelect={(value) => setColor(value)} size="l" style={{ margin: 100 }}>
       Select color
     </ColorPicker>
   );
@@ -13,15 +13,15 @@ export function PreviewColorPicker() {
 
 export function DisabledColorPicker() {
   return (
-    <ColorPicker disabled size="l" value="#d507c4">
+    <ColorPicker disabled size="l" value="#897DEC">
       Select color
     </ColorPicker>
   );
 }
 
 export function ColorPickerWithNoText() {
-  const [color, setColor] = useState('#23c76a');
-  return <ColorPicker value={color} onInputChanged={(e) => setColor(e.target.value)} size="l" />;
+  const [color, setColor] = useState('#23C76A');
+  return <ColorPicker value={color} onColorSelect={(value) => setColor(value)} size="l" />;
 }
 
 export function DisabledColorPickerWithNoText() {
@@ -31,8 +31,8 @@ export function DisabledColorPickerWithNoText() {
 export function DarkThemePreviewColorPicker() {
   const [color, setColor] = useState(DEFAULT_COLOR);
   return (
-    <div className={darkMode} style={{ padding: 16, borderRadius: 4, background: "#0c0c0c" }}>
-      <ColorPicker value={color} onInputChanged={(e) => setColor(e.target.value)} size="l">
+    <div className={darkMode} style={{ padding: 16, borderRadius: 4, background: '#0c0c0c' }}>
+      <ColorPicker value={color} onColorSelect={(value) => setColor(value)} size="l">
         Select color
       </ColorPicker>
     </div>

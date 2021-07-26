@@ -28,11 +28,14 @@
     "policy": {
       "dependencies": {
         "@babel/runtime": "7.14.5",
+        "@teambit/base-ui.css-components.elevation": "1.0.0",
+        "@teambit/base-ui.css-components.roundness": "1.0.0",
         "@teambit/base-ui.elements.icon": "^1.0.0",
         "@teambit/base-ui.input.button": "^1.0.0",
         "@teambit/base-ui.input.checkbox.label": "^1.0.1",
         "@teambit/base-ui.styles.flex-center": "^1.0.0",
-        "@teambit/base-ui.surfaces.abs-container": "^1.0.0",
+        "@teambit/base-ui.surfaces.abs-container": "1.0.0",
+        "@teambit/base-ui.surfaces.background": "1.0.1",
         "@teambit/base-ui.surfaces.card": "^1.0.0",
         "@teambit/base-ui.surfaces.drawer": "^1.0.0",
         "@teambit/base-ui.text.heading": "^1.0.0",
@@ -44,6 +47,7 @@
         "@teambit/base-ui.time.duration": "0.0.17",
         "@teambit/design.ui.avatar": "0.0.380",
         "@teambit/design.ui.styles.ellipsis": "0.0.344",
+        "@teambit/evangelist.css-components.fade-in-out": "1.0.1",
         "@teambit/toolbox.date.duration": "0.0.6",
         "@testing-library/react": "11.2.2",
         "@types/jest": "^26.0.0",
@@ -82,6 +86,7 @@
      */
     "strictPeerDependencies": true,
     "installFromBitDevRegistry": true,
+    "savePrefix": "",
     /**
      * map of extra arguments to pass to the configured package manager upon the installation
      * of dependencies.

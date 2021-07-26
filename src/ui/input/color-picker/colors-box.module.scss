@@ -1,0 +1,16 @@
+$borderRadius: 8px;
+
+.colorsBox {
+  display: grid;
+  grid-template-columns: repeat(6, 24px);
+  grid-gap: 8px;
+
+  .selectableColor {
+    margin: 1px;
+    transition: all 0.2s ease-in-out;
+    font-size: 24px;
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+}
