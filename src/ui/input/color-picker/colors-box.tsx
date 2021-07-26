@@ -9,7 +9,7 @@ export type ColorsBoxProps = {
    * A function that is trigger when the user click on a color from the list.
    * The function return the selected color.
    */
-  onColorSelect: (value: string) => void;
+  onColorSelect?: (value: string) => void;
 } & React.HTMLAttributes<HTMLDivElement>;
 
 export function ColorsBox({ onColorSelect, className, ...rest }: ColorsBoxProps) {
@@ -18,7 +18,7 @@ export function ColorsBox({ onColorSelect, className, ...rest }: ColorsBoxProps)
       {colorsList.map((color, index) => {
         return (
           <Selectable
-            onClick={(e) => onColorSelect(color)}
+            onClick={(e) => onColorSelect && onColorSelect(color)}
             key={color}
             roundness="circle"
             className={styles.selectableColor}

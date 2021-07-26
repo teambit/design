@@ -13,7 +13,7 @@ export function PreviewColorPicker() {
 
 export function DisabledColorPicker() {
   return (
-    <ColorPicker onColorSelect={() => {}} disabled size="l" value="#897DEC">
+    <ColorPicker disabled size="l" value="#897DEC">
       Select color
     </ColorPicker>
   );
@@ -25,7 +25,7 @@ export function ColorPickerWithNoText() {
 }
 
 export function DisabledColorPickerWithNoText() {
-  return <ColorPicker onColorSelect={() => {}} disabled size="l" />;
+  return <ColorPicker disabled size="l" />;
 }
 
 export function DarkThemePreviewColorPicker() {
