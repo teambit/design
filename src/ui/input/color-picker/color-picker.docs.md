@@ -4,14 +4,14 @@ labels: ['react', 'typescript', 'input', 'color']
 ---
 
 import { useState } from 'react';
-import { ColorPicker, DEFAULT_COLOR } from './color-picker';
+import { ColorPicker, DEFAULT_BACKGROUND_ICON_COLOR } from './color-picker';
 
 A color picker component.  
 Basic example:
 
 ```js live
 () => {
-  const [color, setColor] = useState(DEFAULT_COLOR);
+  const [color, setColor] = useState(DEFAULT_BACKGROUND_ICON_COLOR);
   return (
     <ColorPicker value={color} onColorSelect={(value) => setColor(value)} size="l">
       Color

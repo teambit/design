@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { darkMode } from '@teambit/base-ui.theme.dark-theme';
-import { ColorPicker, DEFAULT_COLOR } from './color-picker';
+import { ColorPicker, DEFAULT_BACKGROUND_ICON_COLOR } from './color-picker';
 
 export function PreviewColorPicker() {
-  const [color, setColor] = useState<string>(DEFAULT_COLOR);
+  const [color, setColor] = useState<string>(DEFAULT_BACKGROUND_ICON_COLOR);
   return (
     <ColorPicker value={color} onColorSelect={(value) => setColor(value)} size="l" style={{ margin: 100 }}>
       Select color
@@ -29,7 +29,7 @@ export function DisabledColorPickerWithNoText() {
 }
 
 export function DarkThemePreviewColorPicker() {
-  const [color, setColor] = useState(DEFAULT_COLOR);
+  const [color, setColor] = useState(DEFAULT_BACKGROUND_ICON_COLOR);
   return (
     <div className={darkMode} style={{ padding: 16, borderRadius: 4, background: '#0c0c0c' }}>
       <ColorPicker value={color} onColorSelect={(value) => setColor(value)} size="l">

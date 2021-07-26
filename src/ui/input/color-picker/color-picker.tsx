@@ -18,10 +18,11 @@ export type ColorPickerProps = {
   dropClassName?: string;
 } & ColorsBoxProps;
 
-export const DEFAULT_COLOR = '#BABEC9';
+export const DEFAULT_BACKGROUND_ICON_COLOR = '#BABEC9';
+export const DEFAULT_STRIP_COLOR = '#EDEDED';
 
 export function ColorPicker({
-  value = DEFAULT_COLOR,
+  value = DEFAULT_BACKGROUND_ICON_COLOR,
   size,
   disabled,
   dropClassName,
