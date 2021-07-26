@@ -15,7 +15,7 @@
     },
     "surfaces/dropdown": {
         "scope": "teambit.design",
-        "version": "0.0.2",
+        "version": "0.0.3",
         "mainFile": "index.ts",
         "rootDir": "src/surfaces/dropdown"
     },
@@ -45,13 +45,13 @@
     },
     "ui/css/menu-transition": {
         "scope": "teambit.design",
-        "version": "1.0.6",
+        "version": "1.0.7",
         "mainFile": "index.ts",
         "rootDir": "src/ui/css/menu-transition"
     },
     "ui/dropdown": {
         "scope": "teambit.design",
-        "version": "1.0.6",
+        "version": "1.0.7",
         "mainFile": "index.ts",
         "rootDir": "src/ui/dropdown"
     },
@@ -75,7 +75,7 @@
     },
     "ui/input/color-picker": {
         "scope": "teambit.design",
-        "version": "0.0.14",
+        "version": "0.0.15",
         "mainFile": "index.ts",
         "rootDir": "src/ui/input/color-picker"
     },
