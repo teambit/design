@@ -18,7 +18,7 @@ export function ColorsBox({ onColorSelect, className, ...rest }: ColorsBoxProps)
       {colorsList.map((color, index) => {
         return (
           <Selectable
-            onClick={(e) => onColorSelect && onColorSelect(color)}
+            onClick={(e) => onColorSelect?.(color)}
             key={color}
             roundness="circle"
             className={styles.selectableColor}
