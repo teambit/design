@@ -1,7 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
 import { Drawer, DrawerProps } from '@teambit/base-ui.surfaces.drawer';
-
 import { Position, ContaineeProps, Containee } from '@teambit/base-ui.surfaces.abs-container';
 import { elevationClass, ElevationHeight } from '@teambit/base-ui.css-components.elevation';
 import { roundnessClass, Roundness } from '@teambit/base-ui.css-components.roundness';

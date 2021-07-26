@@ -44,6 +44,7 @@ export function ColorPicker({
       className={styles.dropDown}
       dropClass={styles.dropClass}
       open={!disabled && undefined}
+      margin={4}
       {...rest}
     >
       <ColorsBox onColorSelect={onColorSelect} />

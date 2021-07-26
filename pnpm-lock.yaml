@@ -11,7 +11,7 @@ importers:
       '@teambit/base-ui.surfaces.abs-container': registry.npmjs.org/@teambit/base-ui.surfaces.abs-container/1.0.0_react-dom@17.0.2+react@17.0.2
       '@teambit/base-ui.surfaces.background': registry.npmjs.org/@teambit/base-ui.surfaces.background/1.0.1_react-dom@17.0.2+react@17.0.2
       '@teambit/base-ui.surfaces.card': registry.npmjs.org/@teambit/base-ui.surfaces.card/1.0.1_react-dom@17.0.2+react@17.0.2
-      '@teambit/base-ui.surfaces.drawer': registry.npmjs.org/@teambit/base-ui.surfaces.drawer/1.0.0_react-dom@17.0.2+react@17.0.2
+      '@teambit/base-ui.surfaces.drawer': registry.npmjs.org/@teambit/base-ui.surfaces.drawer/1.0.1_react-dom@17.0.2+react@17.0.2
       '@teambit/base-ui.text.heading': registry.npmjs.org/@teambit/base-ui.text.heading/1.0.1_react-dom@17.0.2+react@17.0.2
       '@teambit/base-ui.text.text-sizes': registry.npmjs.org/@teambit/base-ui.text.text-sizes/1.0.0_react-dom@17.0.2+react@17.0.2
       '@teambit/base-ui.theme.fonts.roboto': registry.npmjs.org/@teambit/base-ui.theme.fonts.roboto/1.0.0_react-dom@17.0.2+react@17.0.2
@@ -23,6 +23,7 @@ importers:
       '@teambit/harmony': registry.npmjs.org/@teambit/harmony/0.2.11
       '@teambit/toolbox.date.duration': 0.0.6
       '@types/react-router-dom': registry.npmjs.org/@types/react-router-dom/5.1.7
+      '@types/react-tabs': registry.npmjs.org/@types/react-tabs/2.3.2
       classnames: registry.npmjs.org/classnames/2.3.1
       core-js: registry.npmjs.org/core-js/3.15.2
       react: registry.npmjs.org/react/17.0.2
@@ -38,7 +39,6 @@ importers:
       '@types/node': registry.npmjs.org/@types/node/12.20.4
       '@types/react': registry.npmjs.org/@types/react/17.0.15
       '@types/react-dom': registry.npmjs.org/@types/react-dom/17.0.9
-      '@types/react-tabs': registry.npmjs.org/@types/react-tabs/2.3.2
       '@types/testing-library__jest-dom': registry.npmjs.org/@types/testing-library__jest-dom/5.9.5
     specifiers:
       '@babel/runtime': 7.12.18
@@ -51,13 +51,13 @@ importers:
       '@teambit/base-ui.surfaces.abs-container': 1.0.0
       '@teambit/base-ui.surfaces.background': 1.0.1
       '@teambit/base-ui.surfaces.card': ^1.0.1
-      '@teambit/base-ui.surfaces.drawer': ^1.0.0
+      '@teambit/base-ui.surfaces.drawer': 1.0.1
       '@teambit/base-ui.text.heading': ^1.0.1
       '@teambit/base-ui.text.text-sizes': ^1.0.0
       '@teambit/base-ui.theme.accent-color': 0.1.0
       '@teambit/base-ui.theme.dark-theme': 1.0.1
       '@teambit/base-ui.theme.fonts.roboto': ^1.0.0
-      '@teambit/base-ui.theme.theme-provider': ^1.0.1
+      '@teambit/base-ui.theme.theme-provider': 1.0.1
       '@teambit/base-ui.time.duration': 0.0.17
       '@teambit/design.ui.avatar': 0.0.380
       '@teambit/design.ui.styles.ellipsis': 0.0.344
@@ -80,6 +80,8 @@ importers:
       reset-css: 5.0.1
       typescript: ^4.3.5
   src/envs/react:
+    specifiers: {}
+  src/surfaces/dropdown:
     specifiers: {}
   src/surfaces/selectable:
     specifiers: {}
@@ -282,7 +284,7 @@ packages:
     version: 1.0.0
   registry.npmjs.org/@teambit/base-ui.hook.use-click-outside/1.0.0_react-dom@17.0.2+react@17.0.2:
     dependencies:
-      core-js: registry.npmjs.org/core-js/3.15.1
+      core-js: registry.npmjs.org/core-js/3.15.2
       react: registry.npmjs.org/react/17.0.2
       react-dom: registry.npmjs.org/react-dom/17.0.2_react@17.0.2
     dev: false
@@ -400,6 +402,24 @@ packages:
       registry: https://node.bit.dev/
       tarball: https://registry.npmjs.org/@teambit/base-ui.surfaces.abs-container/-/base-ui.surfaces.abs-container-1.0.0.tgz
     version: 1.0.0
+  registry.npmjs.org/@teambit/base-ui.surfaces.abs-container/1.0.1_react-dom@17.0.2+react@17.0.2:
+    dependencies:
+      classnames: registry.npmjs.org/classnames/2.3.1
+      core-js: registry.npmjs.org/core-js/3.15.2
+      react: registry.npmjs.org/react/17.0.2
+      react-create-ref: registry.npmjs.org/react-create-ref/1.0.1_react@17.0.2
+      react-dom: registry.npmjs.org/react-dom/17.0.2_react@17.0.2
+    dev: false
+    id: registry.npmjs.org/@teambit/base-ui.surfaces.abs-container/1.0.1
+    name: '@teambit/base-ui.surfaces.abs-container'
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0
+      react-dom: ^16.8.0 || ^17.0.0
+    resolution:
+      integrity: sha512-kWyAbcUWbEzEkUfgKA6Ble7zoVza+NNUPOHWfsN/VjmXsYhl6nGWbbQkNwficnhMK7VRfUPlv1j6uleda6+ugg==
+      registry: https://node.bit.dev/
+      tarball: https://registry.npmjs.org/@teambit/base-ui.surfaces.abs-container/-/base-ui.surfaces.abs-container-1.0.1.tgz
+    version: 1.0.1
   registry.npmjs.org/@teambit/base-ui.surfaces.background/1.0.1_react-dom@17.0.2+react@17.0.2:
     dependencies:
       core-js: registry.npmjs.org/core-js/3.15.2
@@ -436,26 +456,26 @@ packages:
       registry: https://node.bit.dev/
       tarball: https://registry.npmjs.org/@teambit/base-ui.surfaces.card/-/base-ui.surfaces.card-1.0.1.tgz
     version: 1.0.1
-  registry.npmjs.org/@teambit/base-ui.surfaces.drawer/1.0.0_react-dom@17.0.2+react@17.0.2:
+  registry.npmjs.org/@teambit/base-ui.surfaces.drawer/1.0.1_react-dom@17.0.2+react@17.0.2:
     dependencies:
       '@teambit/base-ui.hook.use-click-outside': registry.npmjs.org/@teambit/base-ui.hook.use-click-outside/1.0.0_react-dom@17.0.2+react@17.0.2
-      '@teambit/base-ui.surfaces.abs-container': registry.npmjs.org/@teambit/base-ui.surfaces.abs-container/1.0.0_react-dom@17.0.2+react@17.0.2
+      '@teambit/base-ui.surfaces.abs-container': registry.npmjs.org/@teambit/base-ui.surfaces.abs-container/1.0.1_react-dom@17.0.2+react@17.0.2
       classnames: registry.npmjs.org/classnames/2.3.1
-      core-js: registry.npmjs.org/core-js/3.15.1
+      core-js: registry.npmjs.org/core-js/3.15.2
       react: registry.npmjs.org/react/17.0.2
       react-create-ref: registry.npmjs.org/react-create-ref/1.0.1_react@17.0.2
       react-dom: registry.npmjs.org/react-dom/17.0.2_react@17.0.2
     dev: false
-    id: registry.npmjs.org/@teambit/base-ui.surfaces.drawer/1.0.0
+    id: registry.npmjs.org/@teambit/base-ui.surfaces.drawer/1.0.1
     name: '@teambit/base-ui.surfaces.drawer'
     peerDependencies:
       react: ^16.8.0 || ^17.0.0
       react-dom: ^16.8.0 || ^17.0.0
     resolution:
-      integrity: sha512-4eSIGZGllXif9vXmZjMbV++HjA9EU2MzHL9gud+4NXZgj8JCoplqbvkk1Ptbhvs4BLDwPuujY28+dlAosOpXXQ==
+      integrity: sha512-9/xSOCe/llyOe6/YmWnqxfVPuc/S0UoRCZ2jwDkWy2SgnGi1FXODEyOSI6/nj46Sh14Eka7uIcDvxWui5bc6YA==
       registry: https://node.bit.dev/
-      tarball: https://registry.npmjs.org/@teambit/base-ui.surfaces.drawer/-/base-ui.surfaces.drawer-1.0.0.tgz
-    version: 1.0.0
+      tarball: https://registry.npmjs.org/@teambit/base-ui.surfaces.drawer/-/base-ui.surfaces.drawer-1.0.1.tgz
+    version: 1.0.1
   registry.npmjs.org/@teambit/base-ui.text.heading/1.0.1_react-dom@17.0.2+react@17.0.2:
     dependencies:
       core-js: registry.npmjs.org/core-js/3.15.2
@@ -985,6 +1005,7 @@ packages:
       tarball: https://registry.npmjs.org/@types/node/-/node-12.20.4.tgz
     version: 12.20.4
   registry.npmjs.org/@types/prop-types/15.7.3:
+    dev: false
     name: '@types/prop-types'
     resolution:
       integrity: sha512-KfRL3PuHmqQLOG+2tGpRO26Ctg+Cq1E01D2DMriKEATHgWLfeNDmq9e29Q9WIky0dQ3NPkd1mzYH8Lm936Z9qw==
@@ -1035,7 +1056,7 @@ packages:
   registry.npmjs.org/@types/react-tabs/2.3.2:
     dependencies:
       '@types/react': registry.npmjs.org/@types/react/17.0.11
-    dev: true
+    dev: false
     name: '@types/react-tabs'
     resolution:
       integrity: sha512-QfMelaJSdMcp+CenKhATp12XFFqqUcLXILgwpX3dgWfVYNZPtsLXZDDCRsVn+kwmBOWB+DFPKpQorxbUhnXINw==
@@ -1047,6 +1068,7 @@ packages:
       '@types/prop-types': registry.npmjs.org/@types/prop-types/15.7.3
       '@types/scheduler': registry.npmjs.org/@types/scheduler/0.16.1
       csstype: registry.npmjs.org/csstype/3.0.8
+    dev: false
     name: '@types/react'
     resolution:
       integrity: sha512-yFRQbD+whVonItSk7ZzP/L+gPTJVBkL/7shLEF+i9GC/1cV3JmUxEQz6+9ylhUpWSDuqo1N9qEvqS6vTj4USUA==
@@ -1066,6 +1088,7 @@ packages:
       tarball: https://registry.npmjs.org/@types/react/-/react-17.0.15.tgz
     version: 17.0.15
   registry.npmjs.org/@types/scheduler/0.16.1:
+    dev: false
     name: '@types/scheduler'
     resolution:
       integrity: sha512-EaCxbanVeyxDRTQBkdLb3Bvl/HK7PBK6UJjsSixB0iHKoWxE5uu2Q/DgtpOhPIojN0Zl1whvOd7PoHs2P0s5eA==
