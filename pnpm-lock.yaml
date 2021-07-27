@@ -32,7 +32,7 @@ importers:
       typescript: registry.npmjs.org/typescript/4.3.5
     devDependencies:
       '@teambit/base-ui.theme.accent-color': registry.npmjs.org/@teambit/base-ui.theme.accent-color/0.1.0_react-dom@17.0.2+react@17.0.2
-      '@teambit/base-ui.theme.dark-theme': registry.npmjs.org/@teambit/base-ui.theme.dark-theme/1.0.1_react-dom@17.0.2+react@17.0.2
+      '@teambit/base-ui.theme.dark-theme': registry.npmjs.org/@teambit/base-ui.theme.dark-theme/1.0.2_react-dom@17.0.2+react@17.0.2
       '@testing-library/react': registry.npmjs.org/@testing-library/react/11.2.2_react-dom@17.0.2+react@17.0.2
       '@types/jest': registry.npmjs.org/@types/jest/26.0.24
       '@types/node': registry.npmjs.org/@types/node/12.20.4
@@ -48,14 +48,14 @@ importers:
       '@teambit/base-ui.input.button': ^1.0.1
       '@teambit/base-ui.input.checkbox.label': ^1.0.1
       '@teambit/base-ui.styles.flex-center': ^1.0.0
-      '@teambit/base-ui.surfaces.abs-container': 1.0.1
+      '@teambit/base-ui.surfaces.abs-container': ^1.0.1
       '@teambit/base-ui.surfaces.background': 1.0.1
       '@teambit/base-ui.surfaces.card': ^1.0.1
       '@teambit/base-ui.surfaces.drawer': 1.0.1
       '@teambit/base-ui.text.heading': ^1.0.1
       '@teambit/base-ui.text.text-sizes': ^1.0.0
       '@teambit/base-ui.theme.accent-color': 0.1.0
-      '@teambit/base-ui.theme.dark-theme': 1.0.1
+      '@teambit/base-ui.theme.dark-theme': 1.0.2
       '@teambit/base-ui.theme.fonts.roboto': ^1.0.0
       '@teambit/base-ui.theme.theme-provider': 1.0.1
       '@teambit/base-ui.time.duration': 0.0.17
@@ -588,23 +588,23 @@ packages:
       registry: https://node.bit.dev/
       tarball: https://registry.npmjs.org/@teambit/base-ui.theme.colors/-/base-ui.theme.colors-1.0.0.tgz
     version: 1.0.0
-  registry.npmjs.org/@teambit/base-ui.theme.dark-theme/1.0.1_react-dom@17.0.2+react@17.0.2:
+  registry.npmjs.org/@teambit/base-ui.theme.dark-theme/1.0.2_react-dom@17.0.2+react@17.0.2:
     dependencies:
       '@teambit/base-ui.theme.colors': registry.npmjs.org/@teambit/base-ui.theme.colors/1.0.0_react-dom@17.0.2+react@17.0.2
       core-js: registry.npmjs.org/core-js/3.15.2
       react: registry.npmjs.org/react/17.0.2
       react-dom: registry.npmjs.org/react-dom/17.0.2_react@17.0.2
     dev: true
-    id: registry.npmjs.org/@teambit/base-ui.theme.dark-theme/1.0.1
+    id: registry.npmjs.org/@teambit/base-ui.theme.dark-theme/1.0.2
     name: '@teambit/base-ui.theme.dark-theme'
     peerDependencies:
       react: ^16.8.0 || ^17.0.0
       react-dom: ^16.8.0 || ^17.0.0
     resolution:
-      integrity: sha512-ZzpueHuGvQyyS0gPa8QGvZArA/vzMWHFu5wQGw8OlMwW/l5mZrIgLHni3EMiHkcxKKJEpXYvuSYzKZf7ynAlWg==
+      integrity: sha512-Y/fLbxyb8XW7qZ4wAgl2cEmWXceOfaXN/GcfrVZEBqmM6YerlAkNq9RW3bcN9OuhSVekDjApwbDtELsE9WStdA==
       registry: https://node.bit.dev/
-      tarball: https://registry.npmjs.org/@teambit/base-ui.theme.dark-theme/-/base-ui.theme.dark-theme-1.0.1.tgz
-    version: 1.0.1
+      tarball: https://registry.npmjs.org/@teambit/base-ui.theme.dark-theme/-/base-ui.theme.dark-theme-1.0.2.tgz
+    version: 1.0.2
   registry.npmjs.org/@teambit/base-ui.theme.fonts.book/1.0.0_react-dom@17.0.2+react@17.0.2:
     dependencies:
       core-js: registry.npmjs.org/core-js/3.15.2

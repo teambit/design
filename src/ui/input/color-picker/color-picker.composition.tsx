@@ -5,7 +5,12 @@ import { ColorPicker, DEFAULT_BACKGROUND_ICON_COLOR } from './color-picker';
 export function PreviewColorPicker() {
   const [color, setColor] = useState<string>(DEFAULT_BACKGROUND_ICON_COLOR);
   return (
-    <ColorPicker value={color} onColorSelect={(value) => setColor(value)} size="l" style={{ margin: 100 }}>
+    <ColorPicker
+      value={color}
+      onColorSelect={(value) => setColor(value)}
+      size="l"
+      style={{ margin: '16px 100px 230px 16px' }}
+    >
       Select color
     </ColorPicker>
   );
@@ -13,7 +18,7 @@ export function PreviewColorPicker() {
 
 export function DisabledColorPicker() {
   return (
-    <ColorPicker disabled size="l" value="#897DEC">
+    <ColorPicker disabled size="l" value="#897DEC" style={{ margin: '16px 100px 230px 16px' }}>
       Select color
     </ColorPicker>
   );
@@ -21,18 +26,22 @@ export function DisabledColorPicker() {
 
 export function ColorPickerWithNoText() {
   const [color, setColor] = useState('#23C76A');
-  return <ColorPicker value={color} onColorSelect={(value) => setColor(value)} size="l" />;
+  return (
+    <div >
+      <ColorPicker value={color} onColorSelect={setColor} size="l" style={{ margin: '16px 210px 230px 16px' }} />
+    </div>
+  );
 }
 
 export function DisabledColorPickerWithNoText() {
-  return <ColorPicker disabled size="l" />;
+  return <ColorPicker disabled size="l" style={{ margin: '16px 210px 230px 16px' }} />;
 }
 
 export function DarkThemePreviewColorPicker() {
   const [color, setColor] = useState(DEFAULT_BACKGROUND_ICON_COLOR);
   return (
-    <div className={darkMode} style={{ padding: 16, borderRadius: 4, background: '#0c0c0c' }}>
-      <ColorPicker value={color} onColorSelect={(value) => setColor(value)} size="l">
+    <div className={darkMode} style={{ padding: '16px 100px 230px 16px', borderRadius: 4, background: '#0c0c0c' }}>
+      <ColorPicker value={color} onColorSelect={setColor} size="l">
         Select color
       </ColorPicker>
     </div>
