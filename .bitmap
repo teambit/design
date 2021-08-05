@@ -85,6 +85,12 @@
         "mainFile": "index.ts",
         "rootDir": "src/ui/input/radio"
     },
+    "ui/input/text": {
+        "scope": "",
+        "version": "",
+        "mainFile": "index.ts",
+        "rootDir": "src/ui/input/text"
+    },
     "ui/input/toggle": {
         "scope": "teambit.design",
         "version": "1.0.5",

@@ -1,0 +1,37 @@
+.input {
+  outline: 0;
+  padding: 11px 16px;
+  font-size: inherit;
+  font-family: inherit;
+  border-radius: 8px;
+  border: 1px solid var(--bit-border-color-lightest, #ededed);
+  background-color: var(--bit-bg-tooltip, #ffffff);
+  color: var(--bit-text-color-heavy, #2b2b2b);
+
+  &.error {
+    background-color: var(--bit-accent-bg, #fdeff2);
+    border: 1px solid var(--bit-accent-color, #e62e5c);
+  }
+  &.success {
+    background-color: var(--bit-accent-bg, #eefaf3);
+    border: 1px solid var(--bit-accent-color, #37b26c);
+  }
+  &::placeholder {
+    color: var(--bit-text-color-light, #6c707c);
+  }
+  &:disabled {
+    cursor: not-allowed;
+    background-color: var(--bit-bg-dent, #f6f6f6);
+    color: var(--bit-text-inactive, #babec9);
+  }
+  &:focus {
+    box-shadow: var(--bit-shadow-raised-low, 0 -1px 1px 0 rgba(0, 0, 0, 0.09), 0 2px 2px 0 rgba(0, 0, 0, 0.23));
+  }
+  &:hover:not(:disabled):not(:focus) {
+    border: 1px solid var(--bit-text-inactive, #babec9);
+  }
+}
+
+textarea.input {
+  resize: none;
+}
