@@ -3,6 +3,8 @@ import { Text, TextArea } from './text';
 
 export const InputExample = () => <Text placeholder="enter text..." data-testid="test-input" />;
 
+export const FilledExample = () => <Text value="some text" filled data-testid="test-input" />;
+
 export const ErrorInput = () => <Text error data-testid="test-input" />;
 
 export const SuccessInput = () => <Text success data-testid="test-input" />;

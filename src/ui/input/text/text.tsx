@@ -6,6 +6,7 @@ import styles from './text.module.scss';
 export type Props = {
   error?: boolean;
   success?: boolean;
+  filled?: boolean;
 };
 
 export type TextProps = Props & React.InputHTMLAttributes<HTMLInputElement>;
@@ -18,12 +19,17 @@ const getAccent = ({ error, success }: Props) => {
   );
 };
 
-export function Text({ className, error, success, ...rest }: TextProps) {
+export function Text({ className, error, success, filled, ...rest }: TextProps) {
   const accent = getAccent({ error, success });
-  return <input className={classNames(styles.input, accent, className)} {...rest} />;
+  return <input className={classNames(styles.input, filled && styles.filled, accent, className)} {...rest} />;
 }
 
-export function TextArea({ className, error, success, ...rest }: TextareaProps) {
+export function TextArea({ className, error, success, filled, ...rest }: TextareaProps) {
   const accent = getAccent({ error, success });
-  return <textarea className={classNames(styles.input, accent, className)} {...rest} />;
+  return (
+    <textarea
+      className={classNames(styles.input, styles.textarea, filled && styles.filled, accent, className)}
+      {...rest}
+    />
+  );
 }
