@@ -27,7 +27,7 @@ export function DisabledColorPicker() {
 export function ColorPickerWithNoText() {
   const [color, setColor] = useState('#23C76A');
   return (
-    <div >
+    <div>
       <ColorPicker value={color} onColorSelect={setColor} size="l" style={{ margin: '16px 210px 230px 16px' }} />
     </div>
   );
