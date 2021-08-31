@@ -16,7 +16,7 @@
         "rootDir": "src/ui/elements/icon"
     },
     "embeds/figma": {
-        "scope": "",
+        "scope": "teambit.design",
         "version": "0.0.2",
         "mainFile": "index.ts",
         "rootDir": "src/ui/embeds/figma"
