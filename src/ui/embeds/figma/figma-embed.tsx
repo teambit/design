@@ -9,7 +9,7 @@ export function FigmaEmbed({ className, ...rest }: FigmaEmbedProps) {
 }
 
 FigmaEmbed.defaultProps = {
-  allowfullscreen: true,
+  allowFullScreen: true,
   loading: 'lazy',
   width: '100%',
   height: '600px',
