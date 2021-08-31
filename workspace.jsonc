@@ -1,7 +1,7 @@
 /**
  * this is the main configuration file of your bit workspace.
  * for full documentation, please see: https://docs.bit.dev/configuration
- **/{
+ **/ {
   "$schema": "",
   /**
    * main configuration of the Bit workspace.
@@ -69,9 +69,7 @@
       }
     },
     "packageManagerArgs": [],
-    "devFilePatterns": [
-      "**/*.spec.ts"
-    ],
+    "devFilePatterns": ["**/*.spec.ts"],
     // "devFilePatterns": [
     //   "*.spec.ts"
     // ],
@@ -114,12 +112,11 @@
       "teambit.envs/envs": {
         "env": "teambit.design/envs/react"
       },
+      "teambit.react/react": "-",
       "teambit.symphony/envs/symphony-react": "-",
       "teambit.symphony/envs/node": "-",
       "teambit.pkg/pkg": {
-        "packageManagerPublishArgs": [
-          "--access public"
-        ],
+        "packageManagerPublishArgs": ["--access public"],
         "packageJson": {
           "name": "@teambit/{scope}.{name}",
           "private": false

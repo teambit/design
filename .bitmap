@@ -21,17 +21,23 @@
         "mainFile": "index.ts",
         "rootDir": "src/envs/react"
     },
+    "embeds/figma": {
+        "scope": "",
+        "version": "",
+        "mainFile": "index.ts",
+        "rootDir": "src/ui/embeds/figma"
+    },
     "surfaces/dropdown": {
         "scope": "teambit.design",
         "version": "0.0.4",
         "mainFile": "index.ts",
-        "rootDir": "src/surfaces/dropdown"
+        "rootDir": "src/ui/surfaces/dropdown"
     },
     "surfaces/selectable": {
         "scope": "teambit.design",
         "version": "0.0.2",
         "mainFile": "index.ts",
-        "rootDir": "src/surfaces/selectable"
+        "rootDir": "src/ui/surfaces/selectable"
     },
     "theme/icons-font": {
         "scope": "teambit.design",
