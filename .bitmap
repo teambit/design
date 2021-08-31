@@ -15,27 +15,27 @@
         "mainFile": "index.tsx",
         "rootDir": "src/ui/elements/icon"
     },
+    "embeds/figma": {
+        "scope": "",
+        "version": "0.0.2",
+        "mainFile": "index.ts",
+        "rootDir": "src/ui/embeds/figma"
+    },
     "envs/react": {
         "scope": "teambit.design",
         "version": "1.0.4",
         "mainFile": "index.ts",
         "rootDir": "src/envs/react"
     },
-    "embeds/figma": {
-        "scope": "",
-        "version": "",
-        "mainFile": "index.ts",
-        "rootDir": "src/ui/embeds/figma"
-    },
     "surfaces/dropdown": {
         "scope": "teambit.design",
-        "version": "0.0.4",
+        "version": "0.0.5",
         "mainFile": "index.ts",
         "rootDir": "src/ui/surfaces/dropdown"
     },
     "surfaces/selectable": {
         "scope": "teambit.design",
-        "version": "0.0.2",
+        "version": "0.0.3",
         "mainFile": "index.ts",
         "rootDir": "src/ui/surfaces/selectable"
     },
@@ -89,7 +89,7 @@
     },
     "ui/input/color-picker": {
         "scope": "teambit.design",
-        "version": "0.0.20",
+        "version": "0.0.21",
         "mainFile": "index.ts",
         "rootDir": "src/ui/input/color-picker"
     },
@@ -101,7 +101,7 @@
     },
     "ui/input/text": {
         "scope": "teambit.design",
-        "version": "0.0.1",
+        "version": "0.0.2",
         "mainFile": "index.ts",
         "rootDir": "src/ui/input/text"
     },
