@@ -53,7 +53,7 @@
     },
     "ui/color-border": {
         "scope": "teambit.design",
-        "version": "1.0.4",
+        "version": "1.0.5",
         "mainFile": "index.ts",
         "rootDir": "src/ui/color-border"
     },
