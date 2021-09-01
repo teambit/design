@@ -1,0 +1,28 @@
+.colorBorderSizes {
+  // x2
+  &[data-size='xxs'] {
+    height: 2px;
+  }
+  &[data-size='xs'] {
+    height: 4px;
+  }
+
+  // x4
+  &[data-size='s'] {
+    height: 8px; //default
+  }
+  &[data-size='m'] {
+    height: 12px;
+  }
+  &[data-size='l'] {
+    height: 16px;
+  }
+
+  // x8
+  &[data-size='xl'] {
+    height: 24px;
+  }
+  &[data-size='xxl'] {
+    height: 32px;
+  }
+}
