@@ -17,13 +17,13 @@
     },
     "embeds/figma": {
         "scope": "teambit.design",
-        "version": "0.0.3",
+        "version": "0.0.4",
         "mainFile": "index.ts",
         "rootDir": "src/ui/embeds/figma"
     },
     "envs/react": {
         "scope": "teambit.design",
-        "version": "1.0.4",
+        "version": "1.0.5",
         "mainFile": "index.ts",
         "rootDir": "src/envs/react"
     },
@@ -41,13 +41,13 @@
     },
     "theme/icons-font": {
         "scope": "teambit.design",
-        "version": "1.0.0",
+        "version": "1.0.1",
         "mainFile": "index.ts",
         "rootDir": "src/theme/icons-font"
     },
     "theme/theme-context": {
         "scope": "teambit.design",
-        "version": "1.0.1",
+        "version": "1.0.2",
         "mainFile": "index.ts",
         "rootDir": "src/theme/theme-context"
     },
