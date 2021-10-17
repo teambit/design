@@ -1,8 +1,10 @@
 import React from 'react';
 import { darkMode } from '@teambit/base-ui.theme.dark-theme';
-import { Text, TextArea } from './text';
+import { Text, TextArea, IconText } from './text';
 
 export const InputExample = () => <Text placeholder="enter text..." data-testid="test-input" />;
+
+export const InputWithIcon = () => <IconText placeholder="search..." icon="discovery" data-testid="test-input" />;
 
 export const FilledExample = () => <Text value="some text" filled data-testid="test-input" />;
 

@@ -4,9 +4,9 @@ description: 'text and text-area components'
 ---
 
 import { useState } from 'react';
-import { Text } from './text';
+import { Text, IconText } from './text';
 
-### Overview
+### Usages
 
 Text and TextArea components with error and success props.  
 Supports all props from native html input and textarea.  
@@ -18,5 +18,14 @@ Text example:
 () => {
   const [value, setValue] = useState('');
   return <Text error={value === 'error'} success={value === 'success'} onChange={(e) => setValue(e.target.value)} />;
+};
+```
+
+### Icon and Text
+
+```js live
+() => {
+  const [value, setValue] = useState('');
+  return <IconText placeholder="search..." icon="discovery" onChange={(e) => setValue(e.target.value)} />;
 };
 ```

@@ -1,16 +1,41 @@
 import React from 'react';
 import classNames from 'classnames';
 import { colorPalette } from '@teambit/base-ui.theme.accent-color';
+import { BaseIcon } from '@teambit/base-ui.elements.icon';
 import styles from './text.module.scss';
 
 export type Props = {
+  /**
+   * error style
+   */
   error?: boolean;
+  /**
+   * success style
+   */
   success?: boolean;
+  /**
+   * filled style
+   */
   filled?: boolean;
 };
 
 export type TextProps = Props & React.InputHTMLAttributes<HTMLInputElement>;
 export type TextareaProps = Props & React.TextareaHTMLAttributes<HTMLTextAreaElement>;
+export type IconTextProps = {
+  /**
+   * icon name
+   */
+  icon?: string;
+  /**
+   * icon override class
+   */
+  iconClass?: string;
+  /**
+   * input override class
+   */
+  inputClass?: string;
+} & Props &
+  React.InputHTMLAttributes<HTMLInputElement>;
 
 const getAccent = ({ error, success }: Props) => {
   return (
@@ -18,6 +43,15 @@ const getAccent = ({ error, success }: Props) => {
     (success && classNames(colorPalette.success, styles.success))
   );
 };
+
+export function IconText({ icon, iconClass, inputClass, className, style, ...rest }: IconTextProps) {
+  return (
+    <div className={classNames(styles.inputIcon, className)} style={style}>
+      <Text className={classNames(styles.input, inputClass)} {...rest} />
+      <BaseIcon className={classNames(styles.icon, iconClass)} of={`bitcon-${icon}`} />
+    </div>
+  );
+}
 
 export function Text({ className, error, success, filled, ...rest }: TextProps) {
   const accent = getAccent({ error, success });
