@@ -45,7 +45,6 @@ describe('Text component', () => {
   it('should have disabled attribute', () => {
     const { getByTestId } = render(<DisabledInput />);
     const rendered = getByTestId('test-input');
-    console.log(rendered.getAttribute('disabled'));
 
     expect(rendered.getAttribute('disabled')).toBe('');
   });
@@ -85,7 +84,6 @@ describe('TextArea component', () => {
   it('should have disabled attribute', () => {
     const { getByTestId } = render(<DisabledTextArea />);
     const rendered = getByTestId('test-textarea');
-    console.log(rendered.getAttribute('disabled'));
 
     expect(rendered.getAttribute('disabled')).toBe('');
   });

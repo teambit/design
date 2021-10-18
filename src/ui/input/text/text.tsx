@@ -4,8 +4,17 @@ import { colorPalette } from '@teambit/base-ui.theme.accent-color';
 import styles from './text.module.scss';
 
 export type Props = {
+  /**
+   * error style
+   */
   error?: boolean;
+  /**
+   * success style
+   */
   success?: boolean;
+  /**
+   * filled style
+   */
   filled?: boolean;
 };
 
