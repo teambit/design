@@ -38,8 +38,7 @@ export type IconTextProps = {
    * input override class
    */
   inputClass?: string;
-} & Props &
-  React.InputHTMLAttributes<HTMLInputElement>;
+} & TextProps;
 
 const getAccent = ({ error, success }: Props) => {
   return (
@@ -48,7 +47,15 @@ const getAccent = ({ error, success }: Props) => {
   );
 };
 
-export function IconText({ icon, iconClass, onIconClick, inputClass, className, style, ...rest }: IconTextProps) {
+export function IconText({
+  icon = 'discovery',
+  iconClass,
+  onIconClick,
+  inputClass,
+  className,
+  style,
+  ...rest
+}: IconTextProps) {
   return (
     <div className={classNames(styles.inputIcon, className)} style={style}>
       <Text className={classNames(styles.input, inputClass)} {...rest} />
