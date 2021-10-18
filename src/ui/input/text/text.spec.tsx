@@ -5,6 +5,7 @@ import {
   ErrorInput,
   SuccessInput,
   DisabledInput,
+  InputWithIcon,
   TextAreaExample,
   ErrorTextArea,
   SuccessTextArea,
@@ -45,9 +46,18 @@ describe('Text component', () => {
   it('should have disabled attribute', () => {
     const { getByTestId } = render(<DisabledInput />);
     const rendered = getByTestId('test-input');
-    console.log(rendered.getAttribute('disabled'));
 
     expect(rendered.getAttribute('disabled')).toBe('');
+  });
+});
+
+describe('IconText component', () => {
+  it('should render input correctly', () => {
+    const { getByTestId } = render(<InputWithIcon />);
+    const rendered = getByTestId('test-input');
+
+    expect(rendered).toBeInTheDocument();
+    expect(rendered.tagName).toBe('INPUT');
   });
 });
 
@@ -85,7 +95,6 @@ describe('TextArea component', () => {
   it('should have disabled attribute', () => {
     const { getByTestId } = render(<DisabledTextArea />);
     const rendered = getByTestId('test-textarea');
-    console.log(rendered.getAttribute('disabled'));
 
     expect(rendered.getAttribute('disabled')).toBe('');
   });

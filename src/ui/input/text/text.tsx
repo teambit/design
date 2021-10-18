@@ -31,6 +31,10 @@ export type IconTextProps = {
    */
   iconClass?: string;
   /**
+   *
+   */
+  onIconClick?: React.MouseEventHandler<HTMLSpanElement>;
+  /**
    * input override class
    */
   inputClass?: string;
@@ -44,11 +48,15 @@ const getAccent = ({ error, success }: Props) => {
   );
 };
 
-export function IconText({ icon, iconClass, inputClass, className, style, ...rest }: IconTextProps) {
+export function IconText({ icon, iconClass, onIconClick, inputClass, className, style, ...rest }: IconTextProps) {
   return (
     <div className={classNames(styles.inputIcon, className)} style={style}>
       <Text className={classNames(styles.input, inputClass)} {...rest} />
-      <BaseIcon className={classNames(styles.icon, iconClass)} of={`bitcon-${icon}`} />
+      <BaseIcon
+        className={classNames(styles.icon, onIconClick && styles.clickable, iconClass)}
+        of={`bitcon-${icon}`}
+        onClick={onIconClick}
+      />
     </div>
   );
 }
