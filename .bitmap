@@ -95,7 +95,7 @@
     },
     "ui/input/icon-text": {
         "scope": "teambit.design",
-        "version": "0.0.2",
+        "version": "0.0.3",
         "mainFile": "index.ts",
         "rootDir": "src/ui/input/icon-text"
     },
@@ -107,7 +107,7 @@
     },
     "ui/input/text": {
         "scope": "teambit.design",
-        "version": "0.1.2",
+        "version": "0.1.3",
         "mainFile": "index.ts",
         "rootDir": "src/ui/input/text"
     },
