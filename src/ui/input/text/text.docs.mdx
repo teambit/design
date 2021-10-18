@@ -4,7 +4,7 @@ description: 'text and text-area components'
 ---
 
 import { useState } from 'react';
-import { Text, IconText } from './text';
+import { Text } from './text';
 
 ### Usages
 
@@ -18,14 +18,5 @@ Text example:
 () => {
   const [value, setValue] = useState('');
   return <Text error={value === 'error'} success={value === 'success'} onChange={(e) => setValue(e.target.value)} />;
-};
-```
-
-### Icon and Text
-
-```js live
-() => {
-  const [value, setValue] = useState('');
-  return <IconText placeholder="search..." icon="discovery" onChange={(e) => setValue(e.target.value)} />;
 };
 ```

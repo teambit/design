@@ -39,24 +39,6 @@
   }
 }
 
-.inputIcon {
-  position: relative;
-  font-size: inherit;
-  .input {
-    padding-right: 2em;
-  }
-  .icon {
-    font-size: inherit;
-    color: inherit;
-    position: absolute;
-    right: 0.75em;
-    top: 0.75em;
-    &.clickable {
-      cursor: pointer;
-    }
-  }
-}
-
 .textarea {
   resize: none;
 }

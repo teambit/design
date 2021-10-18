@@ -5,7 +5,6 @@ import {
   ErrorInput,
   SuccessInput,
   DisabledInput,
-  InputWithIcon,
   TextAreaExample,
   ErrorTextArea,
   SuccessTextArea,
@@ -48,16 +47,6 @@ describe('Text component', () => {
     const rendered = getByTestId('test-input');
 
     expect(rendered.getAttribute('disabled')).toBe('');
-  });
-});
-
-describe('IconText component', () => {
-  it('should render input correctly', () => {
-    const { getByTestId } = render(<InputWithIcon />);
-    const rendered = getByTestId('test-input');
-
-    expect(rendered).toBeInTheDocument();
-    expect(rendered.tagName).toBe('INPUT');
   });
 });
 

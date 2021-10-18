@@ -1,6 +1,6 @@
 import React from 'react';
 import { darkMode } from '@teambit/base-ui.theme.dark-theme';
-import { Text, TextArea, IconText } from './text';
+import { Text, TextArea } from './text';
 
 export const InputExample = () => <Text placeholder="enter text..." data-testid="test-input" />;
 
@@ -17,25 +17,6 @@ export const DisabledInput = () => {
 export const SmallInput = () => <Text style={{ fontSize: 12 }} placeholder="enter text..." data-testid="test-input" />;
 
 export const BigInput = () => <Text style={{ fontSize: 24 }} placeholder="enter text..." data-testid="test-input" />;
-
-export const InputWithIcon = () => (
-  <IconText
-    placeholder="search..."
-    icon="discovery"
-    onIconClick={() => alert('on icon click')}
-    data-testid="test-input"
-  />
-);
-
-export const BigInputWithIcon = () => (
-  <IconText
-    placeholder="bigger with font size"
-    icon="discovery"
-    onIconClick={() => alert('on icon click')}
-    data-testid="test-input"
-    style={{ fontSize: 20 }}
-  />
-);
 
 export const InputDarkMode = () => (
   <div className={darkMode} style={{ padding: '20px 40px', backgroundColor: '#0c0c0c' }}>
