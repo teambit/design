@@ -14,9 +14,9 @@ export type IconTextProps = {
    */
   iconClass?: string;
   /**
-   *
+   * A function that is trigger when the user click on the icon.
    */
-  onIconClick?: React.MouseEventHandler<HTMLSpanElement>;
+  onSubmit?: () => void;
   /**
    * input override class
    */
@@ -26,19 +26,20 @@ export type IconTextProps = {
 export function IconText({
   icon = 'discovery',
   iconClass,
-  onIconClick,
+  onSubmit,
   inputClass,
   className,
   style,
+  value,
   ...rest
 }: IconTextProps) {
   return (
     <div className={classNames(styles.inputIcon, className)} style={style}>
-      <Text className={classNames(styles.input, inputClass)} {...rest} />
+      <Text className={classNames(styles.input, inputClass)} value={value} {...rest} />
       <BaseIcon
-        className={classNames(styles.icon, onIconClick && styles.clickable, iconClass)}
+        className={classNames(styles.icon, onSubmit && styles.clickable, iconClass)}
         of={`bitcon-${icon}`}
-        onClick={onIconClick}
+        onClick={onSubmit}
       />
     </div>
   );
