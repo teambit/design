@@ -10,7 +10,14 @@ import { fadeInOutClass } from '@teambit/evangelist.css-components.fade-in-out';
 
 export type DropdownProps = { dropClass?: string } & DrawerProps & DropdownMenuProps;
 
-export function Dropdown({ children, position = 'bottom', elevation, roundness, dropClass, ...rest }: DropdownProps) {
+export function Dropdown({
+  children,
+  position = 'bottom',
+  elevation = 'medium',
+  roundness = 'sharp',
+  dropClass,
+  ...rest
+}: DropdownProps) {
   return (
     <Drawer {...rest}>
       <DropdownMenu position={position} elevation={elevation} roundness={roundness} className={dropClass}>
@@ -21,7 +28,7 @@ export function Dropdown({ children, position = 'bottom', elevation, roundness, 
 }
 
 type DropdownMenuProps = {
-  position: Position;
+  position?: Position;
   elevation?: ElevationHeight;
   roundness?: Roundness;
 } & ContaineeProps;
@@ -41,10 +48,3 @@ function DropdownMenu({ className, elevation = 'medium', roundness = 'sharp', ..
     />
   );
 }
-
-Dropdown.defaultProps = {
-  // hoverToOpen: false,
-  position: 'bottom',
-  elevation: 'medium',
-  roundness: 'sharp',
-};

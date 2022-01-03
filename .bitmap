@@ -29,7 +29,7 @@
     },
     "surfaces/dropdown": {
         "scope": "teambit.design",
-        "version": "0.0.7",
+        "version": "0.0.8",
         "mainFile": "index.ts",
         "rootDir": "src/ui/surfaces/dropdown"
     },
@@ -89,7 +89,7 @@
     },
     "ui/input/color-picker": {
         "scope": "teambit.design",
-        "version": "0.0.23",
+        "version": "0.0.24",
         "mainFile": "index.ts",
         "rootDir": "src/ui/input/color-picker"
     },
