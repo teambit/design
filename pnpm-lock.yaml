@@ -5,7 +5,7 @@ importers:
   .:
     specifiers:
       '@babel/runtime': 7.12.18
-      '@teambit/base-ui.css-components.elevation': 1.0.0
+      '@teambit/base-ui.css-components.elevation': 1.0.1
       '@teambit/base-ui.css-components.roundness': 1.0.0
       '@teambit/base-ui.elements.icon': ^1.0.0
       '@teambit/base-ui.input.button': ^1.0.0
@@ -13,7 +13,7 @@ importers:
       '@teambit/base-ui.styles.flex-center': ^1.0.0
       '@teambit/base-ui.surfaces.abs-container': ^1.0.1
       '@teambit/base-ui.surfaces.background': 1.0.1
-      '@teambit/base-ui.surfaces.card': ^1.0.0
+      '@teambit/base-ui.surfaces.card': 1.0.2
       '@teambit/base-ui.surfaces.drawer': 1.0.1
       '@teambit/base-ui.text.heading': ^1.0.0
       '@teambit/base-ui.text.text-sizes': ^1.0.0
@@ -43,7 +43,7 @@ importers:
       typescript: ^4.0.0
     dependencies:
       '@babel/runtime': registry.npmjs.org/@babel/runtime/7.12.18
-      '@teambit/base-ui.css-components.elevation': registry.npmjs.org/@teambit/base-ui.css-components.elevation/1.0.0_react-dom@17.0.2+react@17.0.2
+      '@teambit/base-ui.css-components.elevation': registry.npmjs.org/@teambit/base-ui.css-components.elevation/1.0.1_react-dom@17.0.2+react@17.0.2
       '@teambit/base-ui.css-components.roundness': registry.npmjs.org/@teambit/base-ui.css-components.roundness/1.0.0_react-dom@17.0.2+react@17.0.2
       '@teambit/base-ui.elements.icon': registry.npmjs.org/@teambit/base-ui.elements.icon/1.0.0_react-dom@17.0.2+react@17.0.2
       '@teambit/base-ui.input.button': registry.npmjs.org/@teambit/base-ui.input.button/1.0.3_react-dom@17.0.2+react@17.0.2
@@ -51,7 +51,7 @@ importers:
       '@teambit/base-ui.styles.flex-center': registry.npmjs.org/@teambit/base-ui.styles.flex-center/1.0.0_react-dom@17.0.2+react@17.0.2
       '@teambit/base-ui.surfaces.abs-container': registry.npmjs.org/@teambit/base-ui.surfaces.abs-container/1.0.1_react-dom@17.0.2+react@17.0.2
       '@teambit/base-ui.surfaces.background': registry.npmjs.org/@teambit/base-ui.surfaces.background/1.0.1_react-dom@17.0.2+react@17.0.2
-      '@teambit/base-ui.surfaces.card': registry.npmjs.org/@teambit/base-ui.surfaces.card/1.0.1_react-dom@17.0.2+react@17.0.2
+      '@teambit/base-ui.surfaces.card': registry.npmjs.org/@teambit/base-ui.surfaces.card/1.0.2_react-dom@17.0.2+react@17.0.2
       '@teambit/base-ui.surfaces.drawer': registry.npmjs.org/@teambit/base-ui.surfaces.drawer/1.0.1_react-dom@17.0.2+react@17.0.2
       '@teambit/base-ui.text.heading': registry.npmjs.org/@teambit/base-ui.text.heading/1.0.3_react-dom@17.0.2+react@17.0.2
       '@teambit/base-ui.text.text-sizes': registry.npmjs.org/@teambit/base-ui.text.text-sizes/1.0.0_react-dom@17.0.2+react@17.0.2
@@ -224,11 +224,11 @@ packages:
       chalk: registry.npmjs.org/chalk/4.1.2
     dev: true
 
-  registry.npmjs.org/@teambit/base-ui.css-components.elevation/1.0.0_react-dom@17.0.2+react@17.0.2:
-    resolution: {integrity: sha512-6hC8vHh0PmHU8fOUM81NXLML7rx9SYpzKkEMz1eS5sIrY/cFIdhLKupo01sARPVwcWTQ0VkVYI1fOO3Q4vi3yg==, registry: https://node.bit.dev/, tarball: https://registry.npmjs.org/@teambit/base-ui.css-components.elevation/-/base-ui.css-components.elevation-1.0.0.tgz}
-    id: registry.npmjs.org/@teambit/base-ui.css-components.elevation/1.0.0
+  registry.npmjs.org/@teambit/base-ui.css-components.elevation/1.0.1_react-dom@17.0.2+react@17.0.2:
+    resolution: {integrity: sha512-2GIr0mfRyn8L/vIoJLNgiYvM6XdKFEKV0Iz0DFp2As9wVunLNeZANIDdYfkZIkxZ5wNhfzyZAgsrLv6b9hSw8g==, registry: https://node.bit.dev/, tarball: https://registry.npmjs.org/@teambit/base-ui.css-components.elevation/-/base-ui.css-components.elevation-1.0.1.tgz}
+    id: registry.npmjs.org/@teambit/base-ui.css-components.elevation/1.0.1
     name: '@teambit/base-ui.css-components.elevation'
-    version: 1.0.0
+    version: 1.0.1
     peerDependencies:
       react: ^16.8.0 || ^17.0.0
       react-dom: ^16.8.0 || ^17.0.0
@@ -417,16 +417,16 @@ packages:
       react-dom: registry.npmjs.org/react-dom/17.0.2_react@17.0.2
     dev: false
 
-  registry.npmjs.org/@teambit/base-ui.surfaces.card/1.0.1_react-dom@17.0.2+react@17.0.2:
-    resolution: {integrity: sha512-taJIr7LqtuyIrERv9FeT3+91mSrY8WF+AbtfHttb6J8pE4xV0FaqxVXbKT9wRw06XDi5RUo6LXKMZOldkgR8Gw==, registry: https://node.bit.dev/, tarball: https://registry.npmjs.org/@teambit/base-ui.surfaces.card/-/base-ui.surfaces.card-1.0.1.tgz}
-    id: registry.npmjs.org/@teambit/base-ui.surfaces.card/1.0.1
+  registry.npmjs.org/@teambit/base-ui.surfaces.card/1.0.2_react-dom@17.0.2+react@17.0.2:
+    resolution: {integrity: sha512-DiIc/tMttcRleTcSN1z8QgtZLLlCeK7nmfEU1a20uUWGr0xwKoyfB/IpZS8MbE7gcAweMa/Bi/ruphrRE9q3PA==, registry: https://node.bit.dev/, tarball: https://registry.npmjs.org/@teambit/base-ui.surfaces.card/-/base-ui.surfaces.card-1.0.2.tgz}
+    id: registry.npmjs.org/@teambit/base-ui.surfaces.card/1.0.2
     name: '@teambit/base-ui.surfaces.card'
-    version: 1.0.1
+    version: 1.0.2
     peerDependencies:
       react: ^16.8.0 || ^17.0.0
       react-dom: ^16.8.0 || ^17.0.0
     dependencies:
-      '@teambit/base-ui.css-components.elevation': registry.npmjs.org/@teambit/base-ui.css-components.elevation/1.0.0_react-dom@17.0.2+react@17.0.2
+      '@teambit/base-ui.css-components.elevation': registry.npmjs.org/@teambit/base-ui.css-components.elevation/1.0.1_react-dom@17.0.2+react@17.0.2
       '@teambit/base-ui.css-components.roundness': registry.npmjs.org/@teambit/base-ui.css-components.roundness/1.0.0_react-dom@17.0.2+react@17.0.2
       '@teambit/base-ui.surfaces.background': registry.npmjs.org/@teambit/base-ui.surfaces.background/1.0.1_react-dom@17.0.2+react@17.0.2
       classnames: registry.npmjs.org/classnames/2.3.1
