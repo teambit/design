@@ -29,7 +29,7 @@
     },
     "surfaces/dropdown": {
         "scope": "teambit.design",
-        "version": "0.0.9",
+        "version": "0.0.10",
         "mainFile": "index.ts",
         "rootDir": "src/ui/surfaces/dropdown"
     },
@@ -89,7 +89,7 @@
     },
     "ui/input/color-picker": {
         "scope": "teambit.design",
-        "version": "0.0.25",
+        "version": "0.0.26",
         "mainFile": "index.ts",
         "rootDir": "src/ui/input/color-picker"
     },
@@ -119,7 +119,7 @@
     },
     "ui/message-card": {
         "scope": "teambit.design",
-        "version": "1.0.7",
+        "version": "1.0.8",
         "mainFile": "index.ts",
         "rootDir": "src/ui/message-card"
     },
@@ -137,7 +137,7 @@
     },
     "ui/status-message-card": {
         "scope": "teambit.design",
-        "version": "1.0.7",
+        "version": "1.0.8",
         "mainFile": "index.ts",
         "rootDir": "src/ui/status-message-card"
     },
