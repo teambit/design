@@ -107,7 +107,7 @@
     "{envs/**}": {
       "teambit.harmony/aspect": {}
     },
-    "src/ui": {
+    "src/ui, src/inputs": {
       "teambit.dependencies/dependency-resolver": {}, // (remove leftover deps config from symphony)
       "teambit.design/envs/react": {},
       "teambit.envs/envs": {
