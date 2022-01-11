@@ -29,9 +29,15 @@
     },
     "inputs/dropdown": {
         "scope": "teambit.design",
-        "version": "0.0.2",
+        "version": "0.0.3",
         "mainFile": "index.ts",
         "rootDir": "src/inputs/dropdown"
+    },
+    "inputs/selectors/menu-item": {
+        "scope": "teambit.design",
+        "version": "0.0.1",
+        "mainFile": "index.ts",
+        "rootDir": "src/inputs/selectors/menu-item"
     },
     "surfaces/dropdown": {
         "scope": "teambit.design",

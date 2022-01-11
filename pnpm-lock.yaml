@@ -87,6 +87,9 @@ importers:
   src/figma/figma-embed:
     specifiers: {}
 
+  src/inputs/dropdown:
+    specifiers: {}
+
   src/surfaces/dropdown:
     specifiers: {}
 

@@ -5,6 +5,7 @@ import { Position, ContaineeProps, Containee } from '@teambit/base-ui.surfaces.a
 import { elevationClass, ElevationHeight } from '@teambit/base-ui.css-components.elevation';
 import { roundnessClass, Roundness } from '@teambit/base-ui.css-components.roundness';
 import { backgrounds } from '@teambit/base-ui.surfaces.background';
+import { Icon } from '@teambit/design.elements.icon';
 import styles from './dropdown.module.scss';
 import { fadeInOutClass } from '@teambit/evangelist.css-components.fade-in-out';
 
@@ -13,13 +14,14 @@ export type DropdownProps = { dropClass?: string } & DrawerProps & DropdownMenuP
 export function Dropdown({
   children,
   position = 'bottom',
-  elevation = 'medium',
-  roundness = 'sharp',
+  elevation = 'low',
+  roundness = 'small',
   dropClass,
+  margin = 4,
   ...rest
 }: DropdownProps) {
   return (
-    <Drawer {...rest}>
+    <Drawer margin={margin} {...rest}>
       <DropdownMenu position={position} elevation={elevation} roundness={roundness} className={dropClass}>
         {children}
       </DropdownMenu>
@@ -33,12 +35,12 @@ type DropdownMenuProps = {
   roundness?: Roundness;
 } & ContaineeProps;
 
-function DropdownMenu({ className, elevation = 'medium', roundness = 'sharp', ...rest }: DropdownMenuProps) {
+function DropdownMenu({ className, elevation = 'low', roundness = 'small', ...rest }: DropdownMenuProps) {
   return (
     <Containee
       {...rest}
       className={classNames(
-        styles.dropdown,
+        styles.dropdownMenu,
         backgrounds.layer,
         elevationClass[elevation],
         roundnessClass[roundness],
