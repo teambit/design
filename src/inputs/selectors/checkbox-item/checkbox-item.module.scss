@@ -1,0 +1,18 @@
+.checkboxItem {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  text-decoration: none;
+  color: var(--bit-text-color-heavy, #2b2b2b);
+
+  .text {
+    padding-left: 16px;
+  }
+  &.hoverable:hover {
+    background: var(--bit-bg-heavy, #f6f6f6);
+    cursor: pointer;
+    .text {
+      cursor: pointer;
+    }
+  }
+}

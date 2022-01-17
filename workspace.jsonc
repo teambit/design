@@ -49,6 +49,7 @@
         "@teambit/design.ui.avatar": "0.0.380",
         "@teambit/design.ui.styles.ellipsis": "0.0.344",
         "@teambit/evangelist.css-components.fade-in-out": "1.0.1",
+        "@teambit/evangelist.input.checkbox.label": "1.0.7",
         "@testing-library/react": "11.2.2",
         "@types/jest": "^26.0.0",
         "@types/node": "15.12.2",

@@ -11,163 +11,169 @@
 {
     "elements/icon": {
         "scope": "teambit.design",
-        "version": "1.0.7",
+        "version": "1.0.8",
         "mainFile": "index.tsx",
         "rootDir": "src/ui/elements/icon"
     },
     "embeds/figma": {
         "scope": "teambit.design",
-        "version": "0.0.7",
+        "version": "0.0.8",
         "mainFile": "index.ts",
         "rootDir": "src/ui/embeds/figma"
     },
     "envs/react": {
         "scope": "teambit.design",
-        "version": "1.0.8",
+        "version": "1.0.9",
         "mainFile": "index.ts",
         "rootDir": "src/envs/react"
     },
     "inputs/dropdown": {
         "scope": "teambit.design",
-        "version": "0.0.4",
+        "version": "0.0.5",
         "mainFile": "index.ts",
         "rootDir": "src/inputs/dropdown"
     },
-    "inputs/selectors/menu-item": {
+    "inputs/selectors/checkbox-item": {
         "scope": "teambit.design",
         "version": "0.0.1",
+        "mainFile": "index.ts",
+        "rootDir": "src/inputs/selectors/checkbox-item"
+    },
+    "inputs/selectors/menu-item": {
+        "scope": "teambit.design",
+        "version": "0.0.2",
         "mainFile": "index.ts",
         "rootDir": "src/inputs/selectors/menu-item"
     },
     "surfaces/dropdown": {
         "scope": "teambit.design",
-        "version": "0.0.11",
+        "version": "0.0.12",
         "mainFile": "index.ts",
         "rootDir": "src/ui/surfaces/dropdown"
     },
     "surfaces/selectable": {
         "scope": "teambit.design",
-        "version": "0.0.6",
+        "version": "0.0.7",
         "mainFile": "index.ts",
         "rootDir": "src/ui/surfaces/selectable"
     },
     "theme/icons-font": {
         "scope": "teambit.design",
-        "version": "1.0.3",
+        "version": "1.0.6",
         "mainFile": "index.ts",
         "rootDir": "src/theme/icons-font"
     },
     "theme/theme-context": {
         "scope": "teambit.design",
-        "version": "1.0.5",
+        "version": "1.0.6",
         "mainFile": "index.ts",
         "rootDir": "src/theme/theme-context"
     },
     "ui/color-border": {
         "scope": "teambit.design",
-        "version": "1.0.8",
+        "version": "1.0.9",
         "mainFile": "index.ts",
         "rootDir": "src/ui/color-border"
     },
     "ui/css/menu-transition": {
         "scope": "teambit.design",
-        "version": "1.0.11",
+        "version": "1.0.12",
         "mainFile": "index.ts",
         "rootDir": "src/ui/css/menu-transition"
     },
     "ui/dropdown": {
         "scope": "teambit.design",
-        "version": "1.0.11",
+        "version": "1.0.12",
         "mainFile": "index.ts",
         "rootDir": "src/ui/dropdown"
     },
     "ui/heading": {
         "scope": "teambit.design",
-        "version": "1.0.8",
+        "version": "1.0.9",
         "mainFile": "index.tsx",
         "rootDir": "src/ui/heading"
     },
     "ui/hoverable": {
         "scope": "teambit.design",
-        "version": "1.0.7",
+        "version": "1.0.8",
         "mainFile": "index.ts",
         "rootDir": "src/ui/hoverable"
     },
     "ui/icon-button": {
         "scope": "teambit.design",
-        "version": "1.0.11",
+        "version": "1.0.12",
         "mainFile": "index.ts",
         "rootDir": "src/ui/icon-button"
     },
     "ui/input/color-picker": {
         "scope": "teambit.design",
-        "version": "0.0.27",
+        "version": "0.0.28",
         "mainFile": "index.ts",
         "rootDir": "src/ui/input/color-picker"
     },
     "ui/input/icon-text": {
         "scope": "teambit.design",
-        "version": "0.0.8",
+        "version": "0.0.9",
         "mainFile": "index.ts",
         "rootDir": "src/ui/input/icon-text"
     },
     "ui/input/radio": {
         "scope": "teambit.design",
-        "version": "1.0.8",
+        "version": "1.0.9",
         "mainFile": "index.ts",
         "rootDir": "src/ui/input/radio"
     },
     "ui/input/text": {
         "scope": "teambit.design",
-        "version": "0.1.6",
+        "version": "0.1.7",
         "mainFile": "index.ts",
         "rootDir": "src/ui/input/text"
     },
     "ui/input/toggle": {
         "scope": "teambit.design",
-        "version": "1.0.8",
+        "version": "1.0.9",
         "mainFile": "index.ts",
         "rootDir": "src/ui/input/toggle"
     },
     "ui/message-card": {
         "scope": "teambit.design",
-        "version": "1.0.9",
+        "version": "1.0.10",
         "mainFile": "index.ts",
         "rootDir": "src/ui/message-card"
     },
     "ui/panels/tabs": {
         "scope": "teambit.design",
-        "version": "1.0.7",
+        "version": "1.0.8",
         "mainFile": "index.ts",
         "rootDir": "src/ui/panels/tabs"
     },
     "ui/settings-button": {
         "scope": "teambit.design",
-        "version": "1.0.11",
+        "version": "1.0.12",
         "mainFile": "index.ts",
         "rootDir": "src/ui/settings-button"
     },
     "ui/status-message-card": {
         "scope": "teambit.design",
-        "version": "1.0.9",
+        "version": "1.0.10",
         "mainFile": "index.ts",
         "rootDir": "src/ui/status-message-card"
     },
     "ui/tag-label": {
         "scope": "teambit.design",
-        "version": "1.0.7",
+        "version": "1.0.8",
         "mainFile": "index.ts",
         "rootDir": "src/ui/tag-label"
     },
     "ui/time/duration": {
         "scope": "teambit.design",
-        "version": "1.0.8",
+        "version": "1.0.9",
         "mainFile": "index.ts",
         "rootDir": "src/ui/time/duration"
     },
     "ui/visibility": {
         "scope": "teambit.design",
-        "version": "1.0.7",
+        "version": "1.0.8",
         "mainFile": "index.ts",
         "rootDir": "src/ui/visibility"
     },

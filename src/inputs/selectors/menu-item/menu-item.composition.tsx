@@ -1,8 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { MenuItem } from './menu-item';
 
 export function Preview() {
-  return <MenuItem icon="settings">Menu item</MenuItem>;
+  const [active, setActive] = useState(false);
+  return (
+    <MenuItem icon="settings" active={active} onClick={() => setActive(!active)}>
+      Menu item
+    </MenuItem>
+  );
 }
 
 export function Active() {
