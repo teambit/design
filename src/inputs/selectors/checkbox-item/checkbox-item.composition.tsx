@@ -2,7 +2,7 @@ import React from 'react';
 import { CheckboxItem } from './checkbox-item';
 
 export const BasicCheckboxItem = () => {
-  return <CheckboxItem>hello world!</CheckboxItem>;
+  return <CheckboxItem onInputChanged={(e) => console.log(e.target.checked)}>hello world!</CheckboxItem>;
 };
 
 export const DisabledCheckboxItem = () => {

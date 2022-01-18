@@ -35,7 +35,7 @@
     },
     "inputs/selectors/checkbox-item": {
         "scope": "teambit.design",
-        "version": "0.0.1",
+        "version": "0.0.2",
         "mainFile": "index.ts",
         "rootDir": "src/inputs/selectors/checkbox-item"
     },
@@ -44,6 +44,12 @@
         "version": "0.0.2",
         "mainFile": "index.ts",
         "rootDir": "src/inputs/selectors/menu-item"
+    },
+    "inputs/selectors/multi-select": {
+        "scope": "teambit.design",
+        "version": "0.0.1",
+        "mainFile": "index.ts",
+        "rootDir": "src/inputs/selectors/multi-select"
     },
     "surfaces/dropdown": {
         "scope": "teambit.design",
