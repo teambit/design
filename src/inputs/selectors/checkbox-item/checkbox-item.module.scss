@@ -6,6 +6,7 @@
   color: var(--bit-text-color-heavy, #2b2b2b);
 
   .text {
+    font-size: var(--bit-p-md, 16px);
     padding-left: 16px;
   }
   &.hoverable:hover {
