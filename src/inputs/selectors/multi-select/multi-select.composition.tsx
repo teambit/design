@@ -20,6 +20,7 @@ export const BasicMultiSelect = () => {
     {
       value: ' four',
       checked: false,
+      disabled: true,
     },
     {
       value: ' five',
