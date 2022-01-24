@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import classNames from 'classnames';
 import { Dropdown } from '@teambit/design.inputs.dropdown';
 import { CheckboxItem } from '@teambit/design.inputs.selectors.checkbox-item';
@@ -16,7 +16,7 @@ export type MultiSelectProps = {
   /**
    * text to be rendered in the dropdown placeholder.
    */
-  placeholderText?: string;
+  placeholderText?: ReactNode;
   /**
    * a list of item be rendered in the dropdown component.
    */
