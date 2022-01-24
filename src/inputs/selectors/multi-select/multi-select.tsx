@@ -8,6 +8,7 @@ import styles from './multi-select.module.scss';
 
 export type ItemType = {
   value: string;
+  description?: string;
   checked: boolean;
   disabled?: boolean;
 };
@@ -74,6 +75,7 @@ export function MultiSelect({
         <CheckboxItem
           checked={item.checked}
           disabled={item.disabled}
+          description={item.description}
           onInputChanged={(e) => onCheck?.(item.value, e.target.checked)}
           key={index}
           className={styles.checkboxItem}
