@@ -3,9 +3,11 @@
   justify-content: space-between;
 }
 .dropdown {
-  border: 1px solid var(--bit-border-color-lightest, #ededed);
   border-radius: 8px;
   box-sizing: border-box;
+  &.dropdownBorder {
+    border: 1px solid var(--bit-border-color-lightest, #ededed);
+  }
 }
 .dropClass {
   padding-top: 8px;

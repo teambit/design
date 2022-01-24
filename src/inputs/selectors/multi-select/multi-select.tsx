@@ -38,6 +38,10 @@ export type MultiSelectProps = {
    */
   className?: string;
   /**
+   * add border to the dropdown container.
+   */
+  dropdownBorder?: boolean;
+  /**
    * add style to the dropdown menu.
    */
   dropClass?: string;
@@ -50,6 +54,7 @@ export function MultiSelect({
   onClear,
   onSubmit,
   className,
+  dropdownBorder = true,
   dropClass,
 }: MultiSelectProps) {
   const placeholder = (
@@ -60,7 +65,7 @@ export function MultiSelect({
 
   return (
     <Dropdown
-      className={classNames(styles.dropdown, className)}
+      className={classNames(styles.dropdown, dropdownBorder && styles.dropdownBorder, className)}
       dropClass={classNames(styles.dropClass, dropClass)}
       placeholder={placeholder}
       clickToggles={false}
