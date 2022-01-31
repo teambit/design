@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react';
 import classNames from 'classnames';
-import { Dropdown } from '@teambit/design.inputs.dropdown';
+import { Dropdown, DropdownProps } from '@teambit/design.inputs.dropdown';
 import { CheckboxItem } from '@teambit/design.inputs.selectors.checkbox-item';
 import { MenuItem } from '@teambit/design.inputs.selectors.menu-item';
 import { Icon } from '@teambit/design.elements.icon';
@@ -46,11 +46,7 @@ export type MultiSelectProps = {
    * add style to the dropdown menu.
    */
   dropClass?: string;
-  /**
-   * open or close the dropdown.
-   */
-  dropdownOpen?: boolean;
-};
+} & Omit<DropdownProps, 'placeholder'>;
 
 export function MultiSelect({
   placeholderText = '',
@@ -61,7 +57,7 @@ export function MultiSelect({
   className,
   dropdownBorder = true,
   dropClass,
-  dropdownOpen,
+  ...rest
 }: MultiSelectProps) {
   const placeholder = (
     <MenuItem className={styles.dropdownPlaceholder}>
@@ -71,11 +67,11 @@ export function MultiSelect({
 
   return (
     <Dropdown
+      {...rest}
       className={classNames(styles.dropdown, dropdownBorder && styles.dropdownBorder, className)}
       dropClass={classNames(styles.dropClass, dropClass)}
       placeholder={placeholder}
       clickToggles={false}
-      open={dropdownOpen}
     >
       {itemsList.map((item, index) => (
         <CheckboxItem
