@@ -46,6 +46,10 @@ export type MultiSelectProps = {
    * add style to the dropdown menu.
    */
   dropClass?: string;
+  /**
+   * open or close the dropdown.
+   */
+  dropdownOpen?: boolean;
 };
 
 export function MultiSelect({
@@ -57,6 +61,7 @@ export function MultiSelect({
   className,
   dropdownBorder = true,
   dropClass,
+  dropdownOpen,
 }: MultiSelectProps) {
   const placeholder = (
     <MenuItem className={styles.dropdownPlaceholder}>
@@ -70,6 +75,7 @@ export function MultiSelect({
       dropClass={classNames(styles.dropClass, dropClass)}
       placeholder={placeholder}
       clickToggles={false}
+      open={dropdownOpen}
     >
       {itemsList.map((item, index) => (
         <CheckboxItem
