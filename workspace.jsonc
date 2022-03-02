@@ -106,6 +106,7 @@
       "teambit.symphony/envs/node": "-"
     },
     "{envs/**}": {
+      "teambit.react/react": "-",
       "teambit.harmony/aspect": {}
     },
     "src/ui, src/inputs": {
