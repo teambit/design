@@ -28,3 +28,34 @@ export const DisabledCheckboxItemWithDescription = () => {
 export const CheckedCheckboxItem = () => {
   return <CheckboxItem checked>hello world!</CheckboxItem>;
 };
+
+export const CheckboxItemWithIcon = () => {
+  return (
+    <CheckboxItem icon="note" onInputChanged={(e) => console.log(e.target.checked)}>
+      hello world!
+    </CheckboxItem>
+  );
+};
+
+export const CheckboxItemWithIconUrl = () => {
+  return (
+    <CheckboxItem
+      icon="https://static.bit.dev/extensions-icons/vuejs.svg"
+      onInputChanged={(e) => console.log(e.target.checked)}
+    >
+      hello world!
+    </CheckboxItem>
+  );
+};
+
+export const CheckboxItemWithDescriptionAndIcon = () => {
+  return (
+    <CheckboxItem
+      description="description text example"
+      icon="note"
+      onInputChanged={(e) => console.log(e.target.checked)}
+    >
+      hello world!
+    </CheckboxItem>
+  );
+};
