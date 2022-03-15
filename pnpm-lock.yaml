@@ -86,9 +86,6 @@ importers:
   src/envs/react:
     specifiers: {}
 
-  src/figma/figma-embed:
-    specifiers: {}
-
   src/inputs/dropdown:
     specifiers: {}
 
@@ -99,12 +96,6 @@ importers:
     specifiers: {}
 
   src/inputs/selectors/multi-select:
-    specifiers: {}
-
-  src/surfaces/dropdown:
-    specifiers: {}
-
-  src/surfaces/selectable:
     specifiers: {}
 
   src/theme/icons-font:

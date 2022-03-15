@@ -30,11 +30,11 @@ export type MultiSelectProps = {
   /**
    * a function that is trigger when clear is clicked.
    */
-  onClear?: () => void;
+  onClear?: (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => void;
   /**
    * a function that is trigger when done is clicked.
    */
-  onSubmit: () => void;
+  onSubmit?: (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => void;
   /**
    * add style to the dropdown container.
    */
@@ -87,16 +87,20 @@ export function MultiSelect({
           {item.value}
         </CheckboxItem>
       ))}
-      <div className={styles.buttonsHolder}>
-        {onClear && (
-          <div className={styles.clearText} onClick={() => onClear()}>
-            Clear
-          </div>
-        )}
-        <div className={styles.doneText} onClick={() => onSubmit()}>
-          Done
+      {(onClear || onSubmit) && (
+        <div className={styles.buttonsHolder}>
+          {onClear && (
+            <div className={styles.clearText} onClick={onClear}>
+              Clear
+            </div>
+          )}
+          {onSubmit && (
+            <div className={styles.doneText} onClick={onSubmit}>
+              Done
+            </div>
+          )}
         </div>
-      </div>
+      )}
     </Dropdown>
   );
 }
