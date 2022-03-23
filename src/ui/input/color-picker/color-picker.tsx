@@ -1,51 +1,56 @@
 import React from 'react';
 import classNames from 'classnames';
-import { CheckboxLabel, CheckboxLabelProps } from '@teambit/base-ui.input.checkbox.label';
+import { Dropdown } from '@teambit/design.surfaces.dropdown';
 import styles from './color-picker.module.scss';
 import sizes from './sizes.module.scss';
-import { HiddenColorInput } from './hidden-color-input';
+import { ColorsBox, ColorsBoxProps } from './colors-box';
 
 export type ColorPickerProps = {
   /**
-   * The color to show in the color box, and also the color value for the Input.
+   * The selected color to show in the colors box.
    */
   value?: string;
-  /**
-   * Control the CSS class of the indicator.
-   */
-  indicatorClassName?: string;
   /**
    * box sizes
    */
   size?: 'm' | 'l';
-} & CheckboxLabelProps;
+  disabled?: boolean;
+  dropClassName?: string;
+} & ColorsBoxProps;
 
-export const DEFAULT_COLOR = '#babec9';
+export const DEFAULT_BACKGROUND_ICON_COLOR = '#BABEC9';
+export const DEFAULT_STRIP_COLOR = '#EDEDED';
 
 export function ColorPicker({
-  value = DEFAULT_COLOR,
-  onInputChanged,
+  value = DEFAULT_BACKGROUND_ICON_COLOR,
+  size,
   disabled,
+  dropClassName,
+  onColorSelect,
   className,
   children,
-  input = <HiddenColorInput onChange={onInputChanged} disabled={disabled} value={value} />,
-  indicatorClassName,
-  size,
   ...rest
 }: ColorPickerProps) {
-  const indicator = (
-    <div className={classNames(styles.indicator, indicatorClassName)}>
-      {children && <div className={styles.textBox}>{children}</div>}
-      <div className={styles.colorBox} style={{ backgroundColor: value }} />
-    </div>
-  );
   return (
-    <CheckboxLabel
-      className={classNames(styles.label, sizes.pickerSizes, className)}
-      input={input}
-      indicator={indicator}
+    <Dropdown
+      //@ts-ignore
+      placeholder={
+        <div
+          className={classNames(styles.colorPicker, sizes.pickerSizes, disabled && styles.disabled)}
+          data-size={size}
+        >
+          {children && <div className={styles.textBox}>{children}</div>}
+          <div className={classNames(styles.colorBox, !children && styles.noText)} style={{ backgroundColor: value }} />
+        </div>
+      }
+      roundness="small"
+      className={classNames(styles.dropDown, className)}
+      dropClass={classNames(styles.dropClass, dropClassName)}
+      open={!disabled && undefined}
+      margin={4}
       {...rest}
-      data-size={size}
-    />
+    >
+      <ColorsBox onColorSelect={onColorSelect} />
+    </Dropdown>
   );
 }

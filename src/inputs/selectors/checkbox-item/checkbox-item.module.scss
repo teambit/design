@@ -1,0 +1,45 @@
+.checkboxItem {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  text-decoration: none;
+  color: var(--bit-text-color-heavy, #2b2b2b);
+
+  &.hoverable:hover {
+    background: var(--bit-bg-heavy, #f6f6f6);
+    cursor: pointer;
+  }
+
+  &.withDescription {
+    align-items: baseline;
+  }
+}
+.contentHolder {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.text {
+  font-size: var(--bit-p-md, 16px);
+  padding-left: 16px;
+}
+.descriptionHolder {
+  display: flex;
+  flex-direction: column;
+}
+.descriptionText {
+  font-size: var(--bit-p-xs, 14px);
+  padding-left: 16px;
+  color: var(--bit-text-color-light, #6c707c);
+}
+.iconHolder {
+  display: flex;
+  align-items: center;
+}
+.icon {
+  font-size: 16px;
+  color: var(--bit-text-color-light, #6c707c);
+}
+.img {
+  width: 16px;
+}

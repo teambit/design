@@ -30,14 +30,13 @@ export function DropdownExample() {
 
 export function DropdownWithoutImagesExample() {
   return (
-    <Dropdown menuClass={menuTransition} placeholder={false} placeholderTitle={<Item name='teambit' accountType="organization" />}>
+    <Dropdown
+      menuClass={menuTransition}
+      placeholder={false}
+      placeholderTitle={<Item name="teambit" accountType="organization" />}
+    >
       {dropdownList.map((listItem, index) => (
-        <Item
-          key={index}
-          className={hoverable}
-          name={listItem.name}
-          isActive={activeOption.name === listItem.name}
-        />
+        <Item key={index} className={hoverable} name={listItem.name} isActive={activeOption.name === listItem.name} />
       ))}
     </Dropdown>
   );

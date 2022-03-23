@@ -1,0 +1,33 @@
+.dropdownPlaceholder {
+  border-radius: 8px;
+  justify-content: space-between;
+}
+.dropdown {
+  border-radius: 8px;
+  box-sizing: border-box;
+  &.dropdownBorder {
+    border: 1px solid var(--bit-border-color-lightest, #ededed);
+  }
+}
+.dropClass {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+.checkboxItem {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+.buttonsHolder {
+  display: flex;
+  justify-content: flex-end;
+  padding: 8px 24px;
+}
+.clearText {
+  color: var(--bit-text-color-light, #6c707c);
+  cursor: pointer;
+  margin-right: 24px;
+}
+.doneText {
+  color: var(--bit-accent-color, #6c5ce7);
+  cursor: pointer;
+}

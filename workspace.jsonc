@@ -7,6 +7,7 @@
    * main configuration of the Bit workspace.
    **/
   "teambit.workspace/workspace": {
+    "name": "design",
     /**
      * set the default scope when there is no matching for the component in the components array.
      **/
@@ -28,23 +29,27 @@
     "policy": {
       "dependencies": {
         "@babel/runtime": "7.14.5",
+        "@teambit/base-ui.css-components.elevation": "1.0.1",
+        "@teambit/base-ui.css-components.roundness": "1.0.0",
         "@teambit/base-ui.elements.icon": "^1.0.0",
         "@teambit/base-ui.input.button": "^1.0.0",
-        "@teambit/base-ui.input.checkbox.label": "^1.0.1",
+        "@teambit/base-ui.input.checkbox.label": "^1.0.2",
         "@teambit/base-ui.styles.flex-center": "^1.0.0",
-        "@teambit/base-ui.surfaces.abs-container": "^1.0.0",
-        "@teambit/base-ui.surfaces.card": "^1.0.0",
-        "@teambit/base-ui.surfaces.drawer": "^1.0.0",
+        "@teambit/base-ui.surfaces.abs-container": "^1.0.1",
+        "@teambit/base-ui.surfaces.background": "1.0.2",
+        "@teambit/base-ui.surfaces.card": "1.0.3",
+        "@teambit/base-ui.surfaces.drawer": "1.0.1",
         "@teambit/base-ui.text.heading": "^1.0.0",
         "@teambit/base-ui.text.text-sizes": "^1.0.0",
-        "@teambit/base-ui.theme.accent-color": "^1.0.0",
-        "@teambit/base-ui.theme.dark-theme": "^1.0.0",
+        "@teambit/base-ui.theme.accent-color": "^1.1.0",
+        "@teambit/base-ui.theme.dark-theme": "^1.0.2",
         "@teambit/base-ui.theme.fonts.roboto": "^1.0.0",
         "@teambit/base-ui.theme.theme-provider": "^1.0.0",
-        "@teambit/base-ui.time.duration": "0.0.17",
+        "@teambit/base-ui.time.duration": "0.1.0",
         "@teambit/design.ui.avatar": "0.0.380",
         "@teambit/design.ui.styles.ellipsis": "0.0.344",
-        "@teambit/toolbox.date.duration": "0.0.6",
+        "@teambit/evangelist.css-components.fade-in-out": "1.0.1",
+        "@teambit/evangelist.input.checkbox.label": "1.0.10",
         "@testing-library/react": "11.2.2",
         "@types/jest": "^26.0.0",
         "@types/node": "15.12.2",
@@ -82,6 +87,7 @@
      */
     "strictPeerDependencies": true,
     "installFromBitDevRegistry": true,
+    "savePrefix": "",
     /**
      * map of extra arguments to pass to the configured package manager upon the installation
      * of dependencies.
@@ -100,14 +106,16 @@
       "teambit.symphony/envs/node": "-"
     },
     "{envs/**}": {
+      "teambit.react/react": "-",
       "teambit.harmony/aspect": {}
     },
-    "src/ui": {
+    "src/ui, src/inputs": {
       "teambit.dependencies/dependency-resolver": {}, // (remove leftover deps config from symphony)
       "teambit.design/envs/react": {},
       "teambit.envs/envs": {
         "env": "teambit.design/envs/react"
       },
+      "teambit.react/react": "-",
       "teambit.symphony/envs/symphony-react": "-",
       "teambit.symphony/envs/node": "-",
       "teambit.pkg/pkg": {
