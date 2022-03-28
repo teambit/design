@@ -79,11 +79,14 @@ export function MultiSelect({
   dropClass,
   ...rest
 }: MultiSelectProps) {
-  const dropdownPlaceholder = (
-    <MenuItem className={styles.dropdownPlaceholder}>
-      {placeholder} <Icon of="fat-arrow-down" />
-    </MenuItem>
-  ) as any;
+  const dropdownPlaceholder =
+    typeof placeholder === 'string' ? (
+      <MenuItem className={styles.dropdownPlaceholder}>
+        {placeholder} <Icon of="fat-arrow-down" />
+      </MenuItem>
+    ) : (
+      (placeholder as any)
+    );
 
   return (
     <Dropdown

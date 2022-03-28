@@ -295,7 +295,7 @@ export const CustomMultiSelect = () => {
         }}
       />
       <MultiSelect
-        placeholder={<span style={{ color: 'red' }}>Custom placeholder {text}</span>}
+        placeholder={<div style={{ padding: 8, color: 'red' }}>Custom placeholder {text}</div>}
         itemsList={list}
         onCheck={onCheck}
         onClear={onClear}
