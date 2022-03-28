@@ -1,7 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 import { Selectable } from '@teambit/design.surfaces.selectable';
-import { colorsList } from './colors-list';
+import { colorsList as defaultColorsList } from './colors-list';
 import styles from './colors-box.module.scss';
 
 export type ColorsBoxProps = {
@@ -10,9 +10,13 @@ export type ColorsBoxProps = {
    * The function return the selected color.
    */
   onColorSelect?: (value: string) => void;
+  /**
+   * An array of colors.
+   */
+  colorsList?: string[];
 } & React.HTMLAttributes<HTMLDivElement>;
 
-export function ColorsBox({ onColorSelect, className, ...rest }: ColorsBoxProps) {
+export function ColorsBox({ onColorSelect, colorsList = defaultColorsList, className, ...rest }: ColorsBoxProps) {
   return (
     <div className={classNames(styles.colorsBox, className)} {...rest}>
       {colorsList.map((color, index) => {
