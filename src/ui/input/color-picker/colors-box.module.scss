@@ -4,6 +4,7 @@ $borderRadius: 8px;
   display: grid;
   grid-template-columns: repeat(6, 24px);
   grid-gap: 8px;
+  z-index: 100;
 
   .selectableColor {
     margin: 1px;

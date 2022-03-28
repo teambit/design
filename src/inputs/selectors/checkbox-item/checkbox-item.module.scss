@@ -16,8 +16,8 @@
 }
 .contentHolder {
   display: flex;
+  flex: auto;
   justify-content: space-between;
-  width: 100%;
 }
 .text {
   font-size: var(--bit-p-md, 16px);

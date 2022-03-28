@@ -21,14 +21,16 @@ function getIcon(icon: string) {
 }
 
 export function CheckboxItem({ description, icon, children, disabled, className, ...rest }: CheckboxItemProps) {
-  const content = description ? (
-    <div className={styles.descriptionHolder}>
-      <span className={styles.text}>{children}</span>
-      <span className={styles.descriptionText}>{description}</span>
-    </div>
-  ) : (
-    <div className={styles.text}>{children}</div>
-  );
+  const getContent = () => {
+    return description ? (
+      <div className={styles.descriptionHolder}>
+        <span className={styles.text}>{children}</span>
+        <span className={styles.descriptionText}>{description}</span>
+      </div>
+    ) : (
+      <div className={styles.text}>{children}</div>
+    );
+  };
 
   return (
     <CheckboxLabel
@@ -41,10 +43,14 @@ export function CheckboxItem({ description, icon, children, disabled, className,
       )}
       {...rest}
     >
-      <div className={styles.contentHolder}>
-        {content}
-        {icon && <div className={styles.iconHolder}>{getIcon(icon)}</div>}
-      </div>
+      {typeof children === 'string' ? (
+        <div className={styles.contentHolder}>
+          {getContent()}
+          {icon && <div className={styles.iconHolder}>{getIcon(icon)}</div>}
+        </div>
+      ) : (
+        children
+      )}
     </CheckboxLabel>
   );
 }

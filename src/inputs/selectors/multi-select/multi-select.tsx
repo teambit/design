@@ -7,18 +7,37 @@ import { Icon } from '@teambit/design.elements.icon';
 import styles from './multi-select.module.scss';
 
 export type ItemType = {
+  /**
+   * Value to be rendered in the list.
+   */
   value: string;
+  /**
+   * Description to be rendered below the text.
+   */
   description?: string;
+  /**
+   * Icon to be rendered right to the text.
+   */
   icon?: string;
+  /**
+   * If the Item is selected or not.
+   */
   checked: boolean;
+  /**
+   * Make item disbaled.
+   */
   disabled?: boolean;
+  /**
+   * Custom element to be rendered as Item in the list.
+   */
+  element?: ReactNode;
 };
 
 export type MultiSelectProps = {
   /**
-   * text to be rendered in the dropdown placeholder.
+   * placeholder to be rendered in the dropdown placeholder.
    */
-  placeholderText?: ReactNode;
+  placeholder?: ReactNode;
   /**
    * a list of item be rendered in the dropdown component.
    */
@@ -26,7 +45,7 @@ export type MultiSelectProps = {
   /**
    * a function that is trigger when an item is clicked, the function receive the checked/unchecked value.
    */
-  onCheck?: (value: string, checked: boolean) => void;
+  onCheck?: (value: string, e: React.ChangeEvent<HTMLInputElement>) => void;
   /**
    * a function that is trigger when clear is clicked.
    */
@@ -50,7 +69,7 @@ export type MultiSelectProps = {
 } & Omit<DropdownProps, 'placeholder'>;
 
 export function MultiSelect({
-  placeholderText = '',
+  placeholder = '',
   itemsList = [],
   onCheck,
   onClear,
@@ -60,9 +79,9 @@ export function MultiSelect({
   dropClass,
   ...rest
 }: MultiSelectProps) {
-  const placeholder = (
+  const dropdownPlaceholder = (
     <MenuItem className={styles.dropdownPlaceholder}>
-      {placeholderText} <Icon of="fat-arrow-down" />
+      {placeholder} <Icon of="fat-arrow-down" />
     </MenuItem>
   ) as any;
 
@@ -71,7 +90,7 @@ export function MultiSelect({
       {...rest}
       className={classNames(styles.dropdown, dropdownBorder && styles.dropdownBorder, className)}
       dropClass={classNames(styles.dropClass, dropClass)}
-      placeholder={placeholder}
+      placeholder={dropdownPlaceholder}
       clickToggles={false}
     >
       {itemsList.map((item, index) => (
@@ -80,11 +99,11 @@ export function MultiSelect({
           disabled={item.disabled}
           description={item.description}
           icon={item.icon}
-          onInputChanged={(e) => onCheck?.(item.value, e.target.checked)}
+          onInputChanged={(e) => onCheck?.(item.value, e)}
           key={index}
           className={styles.checkboxItem}
         >
-          {item.value}
+          {item.element || item.value}
         </CheckboxItem>
       ))}
       {(onClear || onSubmit) && (

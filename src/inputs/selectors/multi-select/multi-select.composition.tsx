@@ -35,10 +35,10 @@ export const BasicMultiSelect = () => {
     } else setText(`${checkedCount} ${placeholderText}`);
   };
 
-  const onCheck = (value: string, checked: boolean) => {
+  const onCheck = (value: string, e: React.ChangeEvent<HTMLInputElement>) => {
     const newList = list.map((item, index) => {
       if (item.value === value) {
-        item.checked = checked;
+        item.checked = e.target.checked;
       }
       return item;
     });
@@ -56,7 +56,7 @@ export const BasicMultiSelect = () => {
 
   return (
     <MultiSelect
-      placeholderText={text}
+      placeholder={text}
       itemsList={list}
       onCheck={onCheck}
       onClear={onClear}
@@ -104,10 +104,10 @@ export const MultiSelectWithDescription = () => {
     } else setText(`${checkedCount} ${placeholderText}`);
   };
 
-  const onCheck = (value: string, checked: boolean) => {
+  const onCheck = (value: string, e: React.ChangeEvent<HTMLInputElement>) => {
     const newList = list.map((item, index) => {
       if (item.value === value) {
-        item.checked = checked;
+        item.checked = e.target.checked;
       }
       return item;
     });
@@ -125,7 +125,7 @@ export const MultiSelectWithDescription = () => {
 
   return (
     <MultiSelect
-      placeholderText={text}
+      placeholder={text}
       itemsList={list}
       onCheck={onCheck}
       onClear={onClear}
@@ -175,10 +175,10 @@ export const MultiSelectWithIcons = () => {
     } else setText(`${checkedCount} ${placeholderText}`);
   };
 
-  const onCheck = (value: string, checked: boolean) => {
+  const onCheck = (value: string, e: React.ChangeEvent<HTMLInputElement>) => {
     const newList = list.map((item, index) => {
       if (item.value === value) {
-        item.checked = checked;
+        item.checked = e.target.checked;
       }
       return item;
     });
@@ -206,7 +206,96 @@ export const MultiSelectWithIcons = () => {
         }}
       />
       <MultiSelect
-        placeholderText={text}
+        placeholder={text}
+        itemsList={list}
+        onCheck={onCheck}
+        onClear={onClear}
+        onSubmit={() => alert(`clicked on done! ${JSON.stringify(list)}`)}
+        dropClass="dropClass"
+      />
+    </>
+  );
+};
+
+export const CustomMultiSelect = () => {
+  const placeholderText = 'Item';
+  const [text, setText] = useState(placeholderText);
+  const [list, setList] = useState<ItemType[]>([
+    {
+      value: 'one',
+      checked: false,
+      element: (
+        <div style={{ display: 'flex', justifyContent: 'space-between', flex: 'auto', paddingLeft: 16 }}>
+          <span>Custom element</span>
+        </div>
+      ),
+    },
+    {
+      value: 'two',
+      checked: false,
+      element: (
+        <div style={{ display: 'flex', justifyContent: 'space-between', flex: 'auto', paddingLeft: 16 }}>
+          <div>Custom element</div>
+          <div style={{ display: 'flex' }}>
+            <img src="https://static.bit.dev/extensions-icons/react.svg" style={{ width: 16 }} />
+          </div>
+        </div>
+      ),
+    },
+    {
+      value: 'three',
+      checked: false,
+    },
+    {
+      value: 'four',
+      checked: false,
+      disabled: true,
+    },
+    {
+      value: 'five',
+      checked: false,
+    },
+  ]);
+
+  const updateCount = () => {
+    const checkedCount = list.filter((item) => item.checked).length;
+    if (checkedCount > 1) {
+      setText(`${checkedCount} ${placeholderText}s`);
+    } else setText(`${checkedCount} ${placeholderText}`);
+  };
+
+  const onCheck = (value: string, e: React.ChangeEvent<HTMLInputElement>) => {
+    const newList = list.map((item, index) => {
+      if (item.value === value) {
+        item.checked = e.target.checked;
+      }
+      return item;
+    });
+    setList(newList);
+    updateCount();
+  };
+
+  const onClear = () => {
+    const newList = list.map((item, index) => {
+      item.checked = false;
+      return item;
+    });
+    setList(newList);
+  };
+
+  return (
+    <>
+      <style
+        dangerouslySetInnerHTML={{
+          __html: `
+    .dropClass {
+      width: 250px;
+    }
+    `,
+        }}
+      />
+      <MultiSelect
+        placeholder={<span style={{ color: 'red' }}>Custom placeholder {text}</span>}
         itemsList={list}
         onCheck={onCheck}
         onClear={onClear}
