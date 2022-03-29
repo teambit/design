@@ -32,7 +32,7 @@ type DropdownMenuProps = {
   position?: Position;
   elevation?: ElevationHeight;
   roundness?: Roundness;
-} & ContaineeProps;
+} & Omit<ContaineeProps, 'onChange'>;
 
 function DropdownMenu({ className, elevation = 'low', roundness = 'small', ...rest }: DropdownMenuProps) {
   return (
