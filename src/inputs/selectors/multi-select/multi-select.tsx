@@ -2,7 +2,7 @@ import React, { ReactNode } from 'react';
 import classNames from 'classnames';
 import { Dropdown, DropdownProps } from '@teambit/design.inputs.dropdown';
 import { CheckboxItem } from '@teambit/design.inputs.selectors.checkbox-item';
-import { MenuItem } from '@teambit/design.inputs.selectors.menu-item';
+import { MenuItem, MenuItemsProps } from '@teambit/design.inputs.selectors.menu-item';
 import { Icon } from '@teambit/design.elements.icon';
 import styles from './multi-select.module.scss';
 
@@ -37,7 +37,7 @@ export type MultiSelectProps = {
   /**
    * placeholder to be rendered in the dropdown placeholder.
    */
-  placeholder?: ReactNode;
+  placeholder: ReactNode;
   /**
    * a list of item be rendered in the dropdown component.
    */
@@ -55,6 +55,15 @@ export type MultiSelectProps = {
    */
   onSubmit?: (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => void;
   /**
+   * fires when the component opens and closes
+   */
+  onOpenToggle?: DropdownProps['onChange'];
+  /**
+   * fires when the component opens and closes
+   * @deprecated use onOpenToggle
+   */
+  onChange?: DropdownProps['onChange'];
+  /**
    * add style to the dropdown container.
    */
   className?: string;
@@ -68,32 +77,35 @@ export type MultiSelectProps = {
   dropClass?: string;
 } & Omit<DropdownProps, 'placeholder'>;
 
+function Placeholder({ children, className, ...rest }: MenuItemsProps) {
+  return (
+    <MenuItem className={classNames(styles.dropdownPlaceholder, className)} {...rest}>
+      {children} <Icon of="fat-arrow-down" />
+    </MenuItem>
+  );
+}
+
 export function MultiSelect({
-  placeholder = '',
+  placeholder,
   itemsList = [],
   onCheck,
   onClear,
   onSubmit,
+  onOpenToggle,
+  onChange = onOpenToggle,
   className,
   dropdownBorder = true,
   dropClass,
   ...rest
 }: MultiSelectProps) {
-  const dropdownPlaceholder =
-    typeof placeholder === 'string' ? (
-      <MenuItem className={styles.dropdownPlaceholder}>
-        {placeholder} <Icon of="fat-arrow-down" />
-      </MenuItem>
-    ) : (
-      (placeholder as any)
-    );
-
   return (
     <Dropdown
       {...rest}
       className={classNames(styles.dropdown, dropdownBorder && styles.dropdownBorder, className)}
       dropClass={classNames(styles.dropClass, dropClass)}
-      placeholder={dropdownPlaceholder}
+      PlaceholderComponent={typeof placeholder === 'string' ? Placeholder : undefined}
+      // @ts-ignore - @types/react mimatch
+      placeholder={placeholder}
       clickToggles={false}
     >
       {itemsList.map((item, index) => (
