@@ -21,10 +21,19 @@ export type MenuItemsProps = {
 /**
  * Menu entry with icon.
  */
-export function MenuItem({ children, className, icon, active, interactive = true, ...rest }: MenuItemsProps) {
+export function MenuItem({
+  children,
+  className,
+  icon,
+  active,
+  onClick,
+  interactive = !!onClick,
+  ...rest
+}: MenuItemsProps) {
   return (
     <div
       {...rest}
+      onClick={onClick}
       className={classNames(className, classes.menuItem, interactive && classes.interactive, active && classes.active)}
     >
       {icon && <Icon of={icon} className={classes.icon} />}
