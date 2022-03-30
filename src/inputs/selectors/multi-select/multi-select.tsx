@@ -55,15 +55,6 @@ export type MultiSelectProps = {
    */
   onSubmit?: (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => void;
   /**
-   * fires when the component opens and closes
-   */
-  onOpenToggle?: DropdownProps['onChange'];
-  /**
-   * fires when the component opens and closes
-   * @deprecated use onOpenToggle
-   */
-  onChange?: DropdownProps['onChange'];
-  /**
    * add style to the dropdown container.
    */
   className?: string;
@@ -91,8 +82,6 @@ export function MultiSelect({
   onCheck,
   onClear,
   onSubmit,
-  onOpenToggle,
-  onChange = onOpenToggle,
   className,
   dropdownBorder = true,
   dropClass,
