@@ -1,10 +1,33 @@
 import React, { useState } from 'react';
+import { Icon } from '@teambit/design.elements.icon';
 import { MenuItem } from './menu-item';
 
-export function Preview() {
+export function BasicMenuItem() {
   const [active, setActive] = useState(false);
   return (
-    <MenuItem icon="settings" active={active} onClick={() => setActive(!active)}>
+    <MenuItem active={active} onClick={() => setActive(!active)}>
+      Menu item
+    </MenuItem>
+  );
+}
+
+export function WithIcon() {
+  const [active, setActive] = useState(false);
+  return (
+    <MenuItem Icon={<Icon of="settings" />} active={active} onClick={() => setActive(!active)}>
+      Menu item
+    </MenuItem>
+  );
+}
+
+export function WithImage() {
+  const [active, setActive] = useState(false);
+  return (
+    <MenuItem
+      Icon={<img src="https://static.bit.dev/extensions-icons/react.svg" />}
+      active={active}
+      onClick={() => setActive(!active)}
+    >
       Menu item
     </MenuItem>
   );
@@ -12,7 +35,7 @@ export function Preview() {
 
 export function Active() {
   return (
-    <MenuItem icon="settings" active>
+    <MenuItem Icon={<Icon of="settings" />} active>
       Active item
     </MenuItem>
   );
@@ -20,7 +43,7 @@ export function Active() {
 
 export function Interactive() {
   return (
-    <MenuItem icon="settings" interactive>
+    <MenuItem Icon={<Icon of="settings" />} interactive>
       Hoverable item
     </MenuItem>
   );

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Icon } from '@teambit/design.elements.icon';
 import { MultiSelect, ItemType } from './multi-select';
 
 export const BasicMultiSelect = () => {
@@ -140,30 +141,30 @@ export const MultiSelectWithIcons = () => {
   const [list, setList] = useState<ItemType[]>([
     {
       value: 'Vue',
-      icon: 'https://static.bit.dev/extensions-icons/vuejs.svg',
+      Icon: <img src="https://static.bit.dev/extensions-icons/vuejs.svg" />,
       checked: false,
       description: 'Some text',
     },
     {
       value: 'Angular',
-      icon: 'https://static.bit.dev/extensions-icons/angular.svg',
+      Icon: <img src="https://static.bit.dev/extensions-icons/angular.svg" />,
       checked: false,
       description: 'Some text',
     },
     {
       value: 'React',
-      icon: 'https://static.bit.dev/extensions-icons/react.svg',
+      Icon: <img src="https://static.bit.dev/extensions-icons/react.svg" />,
       checked: false,
     },
     {
       value: 'Node JS',
-      icon: 'https://static.bit.dev/extensions-icons/nodejs.svg',
+      Icon: <img src="https://static.bit.dev/extensions-icons/nodejs.svg" />,
       checked: false,
       disabled: true,
     },
     {
       value: 'warning',
-      icon: 'note',
+      Icon: <Icon of="note" />,
       checked: false,
     },
   ]);
