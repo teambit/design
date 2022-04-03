@@ -32,7 +32,7 @@ export const CheckedCheckboxItem = () => {
 
 export const CheckboxItemWithIcon = () => {
   return (
-    <CheckboxItem Icon={<Icon of="note" />} onInputChanged={(e) => console.log(e.target.checked)}>
+    <CheckboxItem icon={<Icon of="note" />} onInputChanged={(e) => console.log(e.target.checked)}>
       hello world!
     </CheckboxItem>
   );
@@ -41,7 +41,7 @@ export const CheckboxItemWithIcon = () => {
 export const CheckboxItemWithImage = () => {
   return (
     <CheckboxItem
-      Icon={<img src="https://static.bit.dev/extensions-icons/vuejs.svg" />}
+      icon={<img src="https://static.bit.dev/extensions-icons/vuejs.svg" />}
       onInputChanged={(e) => console.log(e.target.checked)}
     >
       hello world!
@@ -53,7 +53,7 @@ export const CheckboxItemWithDescriptionAndIcon = () => {
   return (
     <CheckboxItem
       description="description text example"
-      Icon={<Icon of="note" />}
+      icon={<Icon of="note" />}
       onInputChanged={(e) => console.log(e.target.checked)}
     >
       hello world!

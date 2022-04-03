@@ -11,10 +11,10 @@ export type CheckboxItemProps = {
   /**
    * An optional Icon element to be render at the end of the item, can be an Image or an Icon.
    */
-  Icon?: ReactElement;
+  icon?: ReactElement;
 } & CheckboxLabelProps;
 
-export function CheckboxItem({ description, Icon, children, disabled, className, ...rest }: CheckboxItemProps) {
+export function CheckboxItem({ description, icon, children, disabled, className, ...rest }: CheckboxItemProps) {
   const Content = description ? (
     <div className={styles.descriptionHolder}>
       <span className={styles.text}>{children}</span>
@@ -38,7 +38,7 @@ export function CheckboxItem({ description, Icon, children, disabled, className,
       {typeof children === 'string' ? (
         <div className={styles.contentHolder}>
           {Content}
-          <div className={styles.iconHolder}>{Icon}</div>
+          {icon && <div className={styles.iconHolder}>{icon}</div>}
         </div>
       ) : (
         children

@@ -13,7 +13,7 @@ A Checkbox Item component that render content with icon option.
 ```js live
 <CheckboxItem
   description="description text example"
-  Icon={<Icon of="note" />}
+  icon={<Icon of="note" />}
   onInputChanged={(e) => console.log(e.target.checked)}
 >
   hello world!

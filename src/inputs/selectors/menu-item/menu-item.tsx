@@ -8,7 +8,7 @@ export type MenuItemsProps = {
   /**
    * An optional Icon element to be render at the start of the item, can be an Image or an Icon.
    */
-  Icon?: ReactElement;
+  icon?: ReactElement;
   /**
    * Apply active styles
    */
@@ -25,7 +25,7 @@ export type MenuItemsProps = {
 export function MenuItem({
   children,
   className,
-  Icon,
+  icon,
   active,
   onClick,
   interactive = !!onClick,
@@ -40,10 +40,10 @@ export function MenuItem({
         styles.menuItem,
         interactive && styles.interactive,
         active && styles.active,
-        Icon && styles.withIcon
+        icon && styles.withIcon
       )}
     >
-      {Icon}
+      {icon}
       {children}
     </div>
   );

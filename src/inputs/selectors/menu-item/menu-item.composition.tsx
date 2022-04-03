@@ -14,7 +14,7 @@ export function BasicMenuItem() {
 export function WithIcon() {
   const [active, setActive] = useState(false);
   return (
-    <MenuItem Icon={<Icon of="settings" />} active={active} onClick={() => setActive(!active)}>
+    <MenuItem icon={<Icon of="settings" />} active={active} onClick={() => setActive(!active)}>
       Menu item
     </MenuItem>
   );
@@ -24,7 +24,7 @@ export function WithImage() {
   const [active, setActive] = useState(false);
   return (
     <MenuItem
-      Icon={<img src="https://static.bit.dev/extensions-icons/react.svg" />}
+      icon={<img src="https://static.bit.dev/extensions-icons/react.svg" />}
       active={active}
       onClick={() => setActive(!active)}
     >
@@ -35,7 +35,7 @@ export function WithImage() {
 
 export function Active() {
   return (
-    <MenuItem Icon={<Icon of="settings" />} active>
+    <MenuItem icon={<Icon of="settings" />} active>
       Active item
     </MenuItem>
   );
@@ -43,7 +43,7 @@ export function Active() {
 
 export function Interactive() {
   return (
-    <MenuItem Icon={<Icon of="settings" />} interactive>
+    <MenuItem icon={<Icon of="settings" />} interactive>
       Hoverable item
     </MenuItem>
   );

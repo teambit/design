@@ -15,7 +15,7 @@ A Menu Item component that render content with icon option.
 () => {
   const [active, setActive] = useState(false);
   return (
-    <MenuItem Icon={<Icon of="settings" />} active={active} onClick={() => setActive(!active)}>
+    <MenuItem icon={<Icon of="settings" />} active={active} onClick={() => setActive(!active)}>
       Menu item
     </MenuItem>
   );

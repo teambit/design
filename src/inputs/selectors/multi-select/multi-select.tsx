@@ -100,7 +100,7 @@ export function MultiSelect({
           checked={item.checked}
           disabled={item.disabled}
           description={item.description}
-          Icon={item.Icon}
+          icon={item.Icon}
           onInputChanged={(e) => onCheck?.(item.value, e)}
           key={index}
           className={styles.checkboxItem}
