@@ -1,9 +1,8 @@
-import React, { ReactNode } from 'react';
+import React, { ReactNode, ReactElement } from 'react';
 import classNames from 'classnames';
 import { Dropdown, DropdownProps } from '@teambit/design.inputs.dropdown';
 import { CheckboxItem } from '@teambit/design.inputs.selectors.checkbox-item';
-import { MenuItem } from '@teambit/design.inputs.selectors.menu-item';
-import { Icon } from '@teambit/design.elements.icon';
+import { MenuItem, MenuItemsProps } from '@teambit/design.inputs.selectors.menu-item';
 import styles from './multi-select.module.scss';
 
 export type ItemType = {
@@ -18,7 +17,7 @@ export type ItemType = {
   /**
    * Icon to be rendered right to the text.
    */
-  icon?: string;
+  Icon?: ReactElement;
   /**
    * If the Item is selected or not.
    */
@@ -68,6 +67,13 @@ export type MultiSelectProps = {
   dropClass?: string;
 } & Omit<DropdownProps, 'placeholder'>;
 
+function Placeholder({ children, className, ...rest }: MenuItemsProps) {
+  return (
+    <MenuItem className={classNames(styles.dropdownPlaceholder, className)} {...rest}>
+      {children} <img src="https://static.bit.dev/bit-icons/fat-arrow-down.svg" alt="arrow down" />
+    </MenuItem>
+  );
+}
 export function MultiSelect({
   placeholder = '',
   itemsList = [],
@@ -79,21 +85,14 @@ export function MultiSelect({
   dropClass,
   ...rest
 }: MultiSelectProps) {
-  const dropdownPlaceholder =
-    typeof placeholder === 'string' ? (
-      <MenuItem className={styles.dropdownPlaceholder}>
-        {placeholder} <Icon of="fat-arrow-down" />
-      </MenuItem>
-    ) : (
-      (placeholder as any)
-    );
-
   return (
     <Dropdown
       {...rest}
       className={classNames(styles.dropdown, dropdownBorder && styles.dropdownBorder, className)}
       dropClass={classNames(styles.dropClass, dropClass)}
-      placeholder={dropdownPlaceholder}
+      PlaceholderComponent={typeof placeholder === 'string' ? Placeholder : undefined}
+      // @ts-ignore - @types/react mismatch
+      placeholder={placeholder}
       clickToggles={false}
     >
       {itemsList.map((item, index) => (
@@ -101,7 +100,7 @@ export function MultiSelect({
           checked={item.checked}
           disabled={item.disabled}
           description={item.description}
-          icon={item.icon}
+          icon={item.Icon}
           onInputChanged={(e) => onCheck?.(item.value, e)}
           key={index}
           className={styles.checkboxItem}

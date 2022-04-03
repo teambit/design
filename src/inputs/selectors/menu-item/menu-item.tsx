@@ -1,33 +1,49 @@
-import React from 'react';
-import { Icon } from '@teambit/design.elements.icon';
+import React, { ReactElement } from 'react';
 import classNames from 'classnames';
 import styles from './menu-item.module.scss';
 
-export const classes = {
-  menuItem: styles.menuItem,
-  interactive: styles.interactive,
-  active: styles.active,
-  icon: styles.icon,
-};
+export const iconClass = styles.withIcon;
+
 export type MenuItemsProps = {
-  /** Optional icon to render at the start of the item (icomoon id) */
-  icon?: string;
-  /** apply active styles */
+  /**
+   * An optional Icon element to be render at the start of the item, can be an Image or an Icon.
+   */
+  icon?: ReactElement;
+  /**
+   * Apply active styles
+   */
   active?: boolean;
-  /** highlight when user hovers over item */
+  /**
+   * Highlight when user hovers over item
+   */
   interactive?: boolean;
 } & React.HTMLAttributes<HTMLDivElement>;
 
 /**
  * Menu entry with icon.
  */
-export function MenuItem({ children, className, icon, active, interactive = true, ...rest }: MenuItemsProps) {
+export function MenuItem({
+  children,
+  className,
+  icon,
+  active,
+  onClick,
+  interactive = !!onClick,
+  ...rest
+}: MenuItemsProps) {
   return (
     <div
       {...rest}
-      className={classNames(className, classes.menuItem, interactive && classes.interactive, active && classes.active)}
+      onClick={onClick}
+      className={classNames(
+        className,
+        styles.menuItem,
+        interactive && styles.interactive,
+        active && styles.active,
+        icon && styles.withIcon
+      )}
     >
-      {icon && <Icon of={icon} className={classes.icon} />}
+      {icon}
       {children}
     </div>
   );

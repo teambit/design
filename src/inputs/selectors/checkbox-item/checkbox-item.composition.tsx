@@ -1,4 +1,5 @@
 import React from 'react';
+import { Icon } from '@teambit/design.elements.icon';
 import { CheckboxItem } from './checkbox-item';
 
 export const BasicCheckboxItem = () => {
@@ -31,16 +32,16 @@ export const CheckedCheckboxItem = () => {
 
 export const CheckboxItemWithIcon = () => {
   return (
-    <CheckboxItem icon="note" onInputChanged={(e) => console.log(e.target.checked)}>
+    <CheckboxItem icon={<Icon of="note" />} onInputChanged={(e) => console.log(e.target.checked)}>
       hello world!
     </CheckboxItem>
   );
 };
 
-export const CheckboxItemWithIconUrl = () => {
+export const CheckboxItemWithImage = () => {
   return (
     <CheckboxItem
-      icon="https://static.bit.dev/extensions-icons/vuejs.svg"
+      icon={<img src="https://static.bit.dev/extensions-icons/vuejs.svg" />}
       onInputChanged={(e) => console.log(e.target.checked)}
     >
       hello world!
@@ -52,7 +53,7 @@ export const CheckboxItemWithDescriptionAndIcon = () => {
   return (
     <CheckboxItem
       description="description text example"
-      icon="note"
+      icon={<Icon of="note" />}
       onInputChanged={(e) => console.log(e.target.checked)}
     >
       hello world!

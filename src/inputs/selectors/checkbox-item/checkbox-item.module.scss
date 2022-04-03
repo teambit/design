@@ -35,11 +35,9 @@
 .iconHolder {
   display: flex;
   align-items: center;
-}
-.icon {
-  font-size: 16px;
-  color: var(--bit-text-color-light, #6c707c);
-}
-.img {
-  width: 16px;
+  > :first-child {
+    font-size: 16px;
+    color: var(--bit-text-color-light, #6c707c);
+    width: 16px;
+  }
 }
