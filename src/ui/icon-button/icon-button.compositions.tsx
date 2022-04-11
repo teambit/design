@@ -1,25 +1,22 @@
 import React from 'react';
 import { colorPalette } from '@teambit/base-ui.theme.accent-color';
+import { Icon } from '@teambit/design.elements.icon';
 import { IconButton } from './icon-button';
 
 export function IconButtonExample() {
-  return (
-    <IconButton id="icon-and-text" icon="error-circle">
-      Terminate
-    </IconButton>
-  );
+  return <IconButton icon={<Icon of="error-circle" />}>Terminate</IconButton>;
 }
 
 export function IconButtonDisabled() {
   return (
-    <IconButton id="disabled-icon-button" icon="error-circle" disabled>
+    <IconButton icon={<Icon of="error-circle" />} disabled>
       Terminate
     </IconButton>
   );
 }
 
 export function IconOnlyButtonExample() {
-  return <IconButton id="icon-only" icon="error-circle"></IconButton>;
+  return <IconButton icon={<Icon of="error-circle" />}></IconButton>;
 }
 
 export function TextOnlyButtonExample() {
@@ -36,14 +33,21 @@ export function ActiveButtonExample() {
 
 export function ActiveWithIconButtonExample() {
   return (
-    <IconButton active icon="error-circle">
+    <IconButton active icon={<Icon of="error-circle" />}>
       Terminate
     </IconButton>
   );
 }
 
 export function SmallActiveIconOnlyWithOverrideSize() {
-  return <IconButton icon="plus" active size={null} style={{ width: 24, height: 24, justifyContent: 'center' }} />;
+  return (
+    <IconButton
+      icon={<Icon of="plus" />}
+      active
+      size={null}
+      style={{ width: 24, height: 24, justifyContent: 'center' }}
+    />
+  );
 }
 
 export function DefaultButton() {
@@ -64,7 +68,7 @@ export function CtaButton() {
 
 export function CtaButtonWithIcon() {
   return (
-    <IconButton priority="cta" icon="download">
+    <IconButton priority="cta" icon={<Icon of="download" />}>
       Save
     </IconButton>
   );
@@ -118,10 +122,22 @@ export function SuccessButton() {
   );
 }
 
-// export function WarningButton() {
-//   return (
-//     <IconButton priority="cta" className={colorPalette.warning}>
-//       Make Admin?
-//     </IconButton>
-//   );
-// }
+export function ButtonWithImage() {
+  return <IconButton icon={<img src="https://static.bit.dev/brands/logo-google.svg" />}>Login With Google</IconButton>;
+}
+
+export function DisabledButtonWithImage() {
+  return (
+    <IconButton disabled icon={<img src="https://static.bit.dev/brands/logo-google.svg" />}>
+      Login With Google
+    </IconButton>
+  );
+}
+
+export function LargeButtonWithImage() {
+  return (
+    <IconButton size="l" icon={<img src="https://static.bit.dev/brands/logo-google.svg" />}>
+      Login With Google
+    </IconButton>
+  );
+}

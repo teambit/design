@@ -1,19 +1,14 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 import classNames from 'classnames';
 import Button, { ButtonProps } from '@teambit/base-ui.input.button';
-import { BaseIcon } from '@teambit/base-ui.elements.icon';
 import styles from './icon-button.module.scss';
 import sizes from './sizes.module.scss';
 
 export type IconButtonProps = {
   /**
-   * icon name
+   * An optional Icon element to be render at the start of the button, can be an Image or an Icon.
    */
-  icon?: string;
-  /**
-   * icon override class
-   */
-  iconClass?: string;
+  icon?: ReactElement;
   /**
    * indicate button is on
    */
@@ -36,7 +31,6 @@ export function IconButton({
   icon,
   className,
   children,
-  iconClass,
   active,
   priority = 'ghost',
   size = 'm',
@@ -50,17 +44,14 @@ export function IconButton({
         sizes.buttonSizes,
         active && styles.active,
         icon && !children && styles.iconOnly,
+        icon && children && styles.margin,
+        icon && styles.withIcon,
         className
       )}
       data-priority={priority}
       data-size={size}
     >
-      {icon && (
-        <BaseIcon
-          className={classNames(styles.icon, active && styles.active, children && styles.margin, iconClass)}
-          of={`bitcon-${icon}`}
-        />
-      )}
+      {icon}
       {children}
     </Button>
   );
