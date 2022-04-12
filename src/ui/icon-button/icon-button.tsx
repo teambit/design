@@ -20,7 +20,7 @@ export type IconButtonProps = {
   /**
    * button sizes
    */
-  size?: 'm' | 'l' | null;
+  size?: 's' | 'm' | 'l' | null;
 } & ButtonProps;
 
 /**
@@ -33,7 +33,7 @@ export function IconButton({
   children,
   active,
   priority = 'ghost',
-  size = 'm',
+  size = 's',
   ...rest
 }: IconButtonProps) {
   return (
