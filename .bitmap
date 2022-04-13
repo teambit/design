@@ -107,7 +107,7 @@
     },
     "ui/icon-button": {
         "scope": "teambit.design",
-        "version": "1.1.1",
+        "version": "1.1.2",
         "mainFile": "index.ts",
         "rootDir": "src/ui/icon-button"
     },
@@ -127,7 +127,13 @@
         "scope": "teambit.design",
         "version": "0.0.26",
         "mainFile": "index.ts",
-        "rootDir": "src/ui/input/option-button"
+        "rootDir": "src/ui/input/option-button",
+        "config": {
+            "teambit.design/envs/react": {},
+            "teambit.envs/envs": {
+                "env": "teambit.design/envs/react"
+            }
+        }
     },
     "ui/input/radio": {
         "scope": "teambit.design",
@@ -161,7 +167,7 @@
     },
     "ui/settings-button": {
         "scope": "teambit.design",
-        "version": "1.1.1",
+        "version": "1.1.2",
         "mainFile": "index.ts",
         "rootDir": "src/ui/settings-button"
     },

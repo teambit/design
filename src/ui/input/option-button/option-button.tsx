@@ -1,7 +1,7 @@
 import React from 'react';
 import classnames from 'classnames';
 import Button, { ButtonProps } from '@teambit/base-ui.input.button';
-import { Icon } from '@teambit/evangelist.elements.icon';
+import { Icon } from '@teambit/design.elements.icon';
 
 import styles from './option-button.module.scss';
 

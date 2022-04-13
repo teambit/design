@@ -31,8 +31,7 @@
   &[data-priority='cta'] {
     background-color: var(--bit-accent-color, #6c5ce7);
     border: 1px solid var(--bit-accent-color, #6c5ce7);
-    // @uri please find a color for this
-    color: var(--bit-bg-color, #ffffff);
+    color: var(--bit-text-on-accent, #ffffff);
     &:hover:not(:disabled) {
       background-color: var(--bit-accent-heavy, #5d4aec);
       border: 1px solid var(--bit-accent-heavy, #5d4aec);
