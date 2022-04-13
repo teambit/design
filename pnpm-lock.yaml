@@ -28,7 +28,7 @@ importers:
       '@teambit/evangelist.input.checkbox.label': 1.0.10
       '@teambit/harmony': 0.2.11
       '@testing-library/react': 11.2.2
-      '@types/jest': ^26.0.0
+      '@types/jest': 26.0.20
       '@types/node': 12.20.4
       '@types/react': ^17.0.8
       '@types/react-dom': ^17.0.5
@@ -76,7 +76,7 @@ importers:
     devDependencies:
       '@teambit/base-ui.theme.dark-theme': registry.npmjs.org/@teambit/base-ui.theme.dark-theme/1.0.2_react-dom@17.0.2+react@17.0.2
       '@testing-library/react': registry.npmjs.org/@testing-library/react/11.2.2_react-dom@17.0.2+react@17.0.2
-      '@types/jest': registry.npmjs.org/@types/jest/26.0.24
+      '@types/jest': registry.npmjs.org/@types/jest/26.0.20
       '@types/node': registry.npmjs.org/@types/node/12.20.4
       '@types/react': registry.npmjs.org/@types/react/17.0.30
       '@types/react-dom': registry.npmjs.org/@types/react-dom/17.0.9
@@ -132,6 +132,9 @@ importers:
     specifiers: {}
 
   src/ui/input/icon-text:
+    specifiers: {}
+
+  src/ui/input/option-button:
     specifiers: {}
 
   src/ui/input/radio:
@@ -910,6 +913,15 @@ packages:
     version: 3.0.1
     dependencies:
       '@types/istanbul-lib-report': registry.npmjs.org/@types/istanbul-lib-report/3.0.0
+    dev: true
+
+  registry.npmjs.org/@types/jest/26.0.20:
+    resolution: {integrity: sha512-9zi2Y+5USJRxd0FsahERhBwlcvFh6D2GLQnY2FH2BzK8J9s9omvNHIbvABwIluXa0fD8XVKMLTO0aOEuUfACAA==, registry: https://node.bit.dev/, tarball: https://registry.npmjs.org/@types/jest/-/jest-26.0.20.tgz}
+    name: '@types/jest'
+    version: 26.0.20
+    dependencies:
+      jest-diff: registry.npmjs.org/jest-diff/26.6.2
+      pretty-format: registry.npmjs.org/pretty-format/26.6.2
     dev: true
 
   registry.npmjs.org/@types/jest/26.0.24:
