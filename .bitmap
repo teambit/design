@@ -123,6 +123,12 @@
         "mainFile": "index.ts",
         "rootDir": "src/ui/input/icon-text"
     },
+    "ui/input/option-button": {
+        "scope": "teambit.design",
+        "version": "0.0.26",
+        "mainFile": "index.ts",
+        "rootDir": "src/ui/input/option-button"
+    },
     "ui/input/radio": {
         "scope": "teambit.design",
         "version": "1.0.13",
