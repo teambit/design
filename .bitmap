@@ -125,15 +125,9 @@
     },
     "ui/input/option-button": {
         "scope": "teambit.design",
-        "version": "0.0.26",
+        "version": "1.0.0",
         "mainFile": "index.ts",
-        "rootDir": "src/ui/input/option-button",
-        "config": {
-            "teambit.design/envs/react": {},
-            "teambit.envs/envs": {
-                "env": "teambit.design/envs/react"
-            }
-        }
+        "rootDir": "src/ui/input/option-button"
     },
     "ui/input/radio": {
         "scope": "teambit.design",
