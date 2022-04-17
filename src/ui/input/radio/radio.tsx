@@ -4,9 +4,9 @@ import { CheckboxLabel, CheckboxLabelProps, Input } from '@teambit/base-ui.input
 import styles from './radio.module.scss';
 
 export { Input };
-export type RadioProps = {} & CheckboxLabelProps;
+export type RadioProps = { name?: string; value?: string } & CheckboxLabelProps;
 
-export function Radio({ className, ...rest }: RadioProps) {
+export function Radio({ className, type = 'radio', ...rest }: RadioProps) {
   const indicator = (
     <div className={styles.out}>
       <div className={styles.inner}>
@@ -14,5 +14,5 @@ export function Radio({ className, ...rest }: RadioProps) {
       </div>
     </div>
   );
-  return <CheckboxLabel className={classNames(styles.label, className)} indicator={indicator} {...rest} />;
+  return <CheckboxLabel type={type} className={classNames(styles.label, className)} indicator={indicator} {...rest} />;
 }
