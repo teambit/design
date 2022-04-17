@@ -31,7 +31,7 @@ it('should show the icon of the relevant theme', () => {
   expect(rendered).toBeTruthy();
 });
 
-function Theme01({ children }: { children: ReactNode }) {
+function Theme01({ children }: { children?: ReactNode }) {
   return (
     <div>
       <span>theme 01</span>
@@ -42,7 +42,7 @@ function Theme01({ children }: { children: ReactNode }) {
 Theme01.themeName = 'theme01';
 Theme01.Icon = (props: any) => <span {...props}>t01</span>;
 
-function Theme02({ children }: { children: ReactNode }) {
+function Theme02({ children }: { children?: ReactNode }) {
   return (
     <div>
       <span>theme 02</span>

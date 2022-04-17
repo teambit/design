@@ -1,26 +1,24 @@
-import React, { useContext } from 'react';
+import React from 'react';
+import { useNextTheme, useThemePicker } from '@teambit/base-react.themes.theme-switcher';
+
 import styles from './theme-toggler.module.scss';
-import { ThemePickerContext } from './theme-picker-context';
 
 export function ThemeToggler() {
-  const ThemePicker = useContext(ThemePickerContext);
-  if (!ThemePicker) return null;
+  const themePicker = useThemePicker();
+  const setNextTheme = useNextTheme();
+  if (!themePicker) return null;
 
-  const { setTheme, options } = ThemePicker;
-  const currentIdx = options.findIndex((x) => x === ThemePicker.current);
-  const nextTheme = options[(currentIdx + 1) % options.length];
-  if (!nextTheme) return null;
+  const currentTheme = themePicker.current;
+  if (!currentTheme) return null;
 
-  // fallback to nextTheme, when there is no current
-  const currentTheme = ThemePicker.current || nextTheme;
   const { Icon, displayName } = currentTheme;
 
   if (!Icon)
     return (
-      <div className={styles.toggler} onClick={() => setTheme(nextTheme)}>
+      <div className={styles.toggler} onClick={setNextTheme}>
         {displayName}
       </div>
     );
 
-  return <Icon className={styles.toggler} onClick={() => setTheme(nextTheme)} />;
+  return <Icon className={styles.toggler} onClick={setNextTheme} />;
 }
