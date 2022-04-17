@@ -51,12 +51,6 @@
         "mainFile": "index.ts",
         "rootDir": "src/inputs/selectors/multi-select"
     },
-    "surfaces/dropdown": {
-        "scope": "teambit.design",
-        "version": "0.0.16",
-        "mainFile": "index.ts",
-        "rootDir": "src/ui/surfaces/dropdown"
-    },
     "surfaces/selectable": {
         "scope": "teambit.design",
         "version": "0.0.11",
