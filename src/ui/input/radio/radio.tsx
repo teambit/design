@@ -4,7 +4,7 @@ import { CheckboxLabel, CheckboxLabelProps, Input } from '@teambit/base-ui.input
 import styles from './radio.module.scss';
 
 export { Input };
-export type RadioProps = { name?: string; value?: string } & CheckboxLabelProps;
+export type RadioProps = CheckboxLabelProps;
 
 export function Radio({ className, type = 'radio', ...rest }: RadioProps) {
   const indicator = (
