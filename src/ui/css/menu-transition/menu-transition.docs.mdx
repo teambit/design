@@ -4,7 +4,8 @@ description: A menu transition effect to animate the openning and closing of a d
 ---
 
 import classNames from 'classnames';
-import { Dropdown, Item } from '@teambit/design.ui.dropdown';
+import { Dropdown } from '@teambit/design.inputs.dropdown';
+import { MenuItem } from '@teambit/design.inputs.selectors.menu-item';
 import exampleStyles from './menu-transition.example.module.scss';
 import { menuTransition, rightMenuTransition, centerMenuTransition } from './';
 
@@ -14,41 +15,38 @@ This is a css only component. use it to add effects to any dropdown that toggles
 
 ## Usage:
 
-```ts live
+```js live
 <Dropdown
-  style={{ width: '80%', margin: 10 }}
-  menuClass={classNames(menuTransition, exampleStyles.center)}
-  placeholder={false}
-  placeholderTitle="left transition effect"
+  className={exampleStyles.dropdown}
+  dropClass={classNames(exampleStyles.dropClass, menuTransition)}
+  PlaceholderComponent={() => <MenuItem>left transition effect</MenuItem>}
 >
-  <Item name="user" />
-  <Item name="user" />
-  <Item name="user" />
+  <MenuItem>user</MenuItem>
+  <MenuItem>user</MenuItem>
+  <MenuItem>user</MenuItem>
 </Dropdown>
 ```
 
-```ts live
+```js live
 <Dropdown
-  style={{ width: '80%', margin: 10 }}
-  menuClass={classNames(rightMenuTransition, exampleStyles.center)}
-  placeholder={false}
-  placeholderTitle="right transition effect"
+  className={exampleStyles.dropdown}
+  dropClass={classNames(exampleStyles.dropClass, rightMenuTransition)}
+  PlaceholderComponent={() => <MenuItem>right transition effect</MenuItem>}
 >
-  <Item name="user" />
-  <Item name="user" />
-  <Item name="user" />
+  <MenuItem>user</MenuItem>
+  <MenuItem>user</MenuItem>
+  <MenuItem>user</MenuItem>
 </Dropdown>
 ```
 
-```ts live
+```js live
 <Dropdown
-  style={{ width: '80%', margin: 10 }}
-  menuClass={classNames(centerMenuTransition, exampleStyles.center)}
-  placeholder={false}
-  placeholderTitle="center transition effect"
+  className={exampleStyles.dropdown}
+  dropClass={classNames(exampleStyles.dropClass, centerMenuTransition)}
+  PlaceholderComponent={() => <MenuItem>center transition effect</MenuItem>}
 >
-  <Item name="user" />
-  <Item name="user" />
-  <Item name="user" />
+  <MenuItem>user</MenuItem>
+  <MenuItem>user</MenuItem>
+  <MenuItem>user</MenuItem>
 </Dropdown>
 ```

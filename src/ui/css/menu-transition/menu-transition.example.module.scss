@@ -1,4 +1,8 @@
-.center {
-  right: 0;
-  left: 0;
+.dropdown {
+  border-radius: 8px;
+  box-sizing: border-box;
+  border: 1px solid var(--bit-border-color-lightest, #ededed);
+}
+.dropClass {
+  width: 100%;
 }
