@@ -795,7 +795,7 @@ packages:
     dev: false
 
   registry.npmjs.org/@teambit/design.theme.icons-font/1.0.8_react-dom@17.0.2+react@17.0.2:
-    resolution: {integrity: sha512-jVAozUa12QC6scgiylzoKCi7QvqSQbU9BTZEgHQEOCvq0lRdiUzlaIhS9IJV4azLJWRe//2SE/UYFkNqlEA7cA==, registry: https://node.bit.dev/, tarball: https://registry.npmjs.org/@teambit/design.theme.icons-font/-/design.theme.icons-font-1.0.8.tgz}
+    resolution: {integrity: sha512-jVAozUa12QC6scgiylzoKCi7QvqSQbU9BTZEgHQEOCvq0lRdiUzlaIhS9IJV4azLJWRe//2SE/UYFkNqlEA7cA==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/@teambit/design.theme.icons-font/-/design.theme.icons-font-1.0.8.tgz}
     id: registry.npmjs.org/@teambit/design.theme.icons-font/1.0.8
     name: '@teambit/design.theme.icons-font'
     version: 1.0.8
