@@ -1,0 +1,22 @@
+.separator {
+  border-bottom: 1px solid var(--bit-border-color-lightest, #ededed);
+  width: 100%;
+}
+
+.textSeparator {
+  display: flex;
+  align-items: center;
+
+  .line {
+    flex: 1 1 100%;
+    border-bottom: 1px dashed var(--border-high-color, #babec9);
+
+    &:first-child {
+      margin-right: 11px;
+    }
+
+    &:last-child {
+      margin-left: 11px;
+    }
+  }
+}

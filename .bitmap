@@ -59,7 +59,7 @@
     },
     "theme/icons-font": {
         "scope": "teambit.design",
-        "version": "2.0.0",
+        "version": "2.0.1",
         "mainFile": "index.ts",
         "rootDir": "src/theme/icons-font"
     },
@@ -170,6 +170,12 @@
         "version": "1.0.14",
         "mainFile": "index.ts",
         "rootDir": "src/ui/panels/tabs"
+    },
+    "ui/separator": {
+        "scope": "teambit.design",
+        "version": "0.0.355",
+        "mainFile": "index.ts",
+        "rootDir": "src/ui/separator"
     },
     "ui/settings-button": {
         "scope": "teambit.design",
