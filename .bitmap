@@ -173,7 +173,7 @@
     },
     "ui/separator": {
         "scope": "teambit.design",
-        "version": "0.0.355",
+        "version": "0.0.356",
         "mainFile": "index.ts",
         "rootDir": "src/ui/separator"
     },
