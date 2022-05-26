@@ -4,7 +4,7 @@ description: 'text and text-area components'
 ---
 
 import { useState } from 'react';
-import { Text } from './text';
+import { TextInput } from './text';
 
 ### Usages
 
@@ -12,11 +12,11 @@ Text and TextArea components with error and success props.
 Supports all props from native html input and textarea.  
 Size support with em, the container of the component can use `font-size` to change the size of the component.
 
-Text example:
+TextInput example:
 
 ```js live
 () => {
   const [value, setValue] = useState('');
-  return <Text error={value === 'error'} success={value === 'success'} onChange={(e) => setValue(e.target.value)} />;
+  return <TextInput error={value === 'error'} success={value === 'success'} onChange={(e) => setValue(e.target.value)} />;
 };
 ```

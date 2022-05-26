@@ -1,2 +1,2 @@
-export { Text, TextArea } from './text';
-export type { TextProps, TextareaProps } from './text';
+export { TextInput, TextArea } from './text';
+export type { TextInputProps as TextProps, TextareaProps } from './text';

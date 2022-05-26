@@ -1,7 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 import { BaseIcon } from '@teambit/base-ui.elements.icon';
-import { Text, TextProps } from '@teambit/design.ui.input.text';
+import { TextInput, TextProps } from '@teambit/design.ui.input.text';
 import styles from './icon-text.module.scss';
 
 export type IconTextProps = {
@@ -35,7 +35,7 @@ export function IconText({
 }: IconTextProps) {
   return (
     <div className={classNames(styles.inputIcon, className)} style={style}>
-      <Text className={classNames(styles.input, inputClass)} value={value} {...rest} />
+      <TextInput className={classNames(styles.input, inputClass)} value={value} {...rest} />
       <BaseIcon
         className={classNames(styles.icon, onSubmit && styles.clickable, iconClass)}
         of={`bitcon-${icon}`}

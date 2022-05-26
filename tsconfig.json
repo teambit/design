@@ -16,6 +16,11 @@
     "noEmit": true,
     "noImplicitAny": true,
     "strict": true,
+    "paths": {
+      "react": [
+        "./node_modules/@types/react"
+      ]
+    }
   },
   "include": [
     "src"
