@@ -4,6 +4,7 @@ description: 'input element with icon support'
 ---
 
 import { useState } from 'react';
+import { Icon } from '@teambit/design.elements.icon';
 import { IconText } from './icon-text';
 
 ### Usages
@@ -17,6 +18,6 @@ Size support with em, the container of the component can use `font-size` to chan
 ```js live
 () => {
   const [value, setValue] = useState('');
-  return <IconText placeholder="search..." icon="discovery" onChange={(e) => setValue(e.target.value)} />;
+  return <IconText placeholder="search..." icon={<Icon of="discovery" />} onChange={(e) => setValue(e.target.value)} />;
 };
 ```

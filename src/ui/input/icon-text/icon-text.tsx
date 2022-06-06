@@ -1,46 +1,24 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 import classNames from 'classnames';
-import { BaseIcon } from '@teambit/base-ui.elements.icon';
 import { TextInput, TextProps } from '@teambit/design.ui.input.text';
 import styles from './icon-text.module.scss';
 
 export type IconTextProps = {
   /**
-   * icon name
+   * An optional Icon element to be render at the end of the input, can be an Image or an Icon.
    */
-  icon?: string;
-  /**
-   * icon override class
-   */
-  iconClass?: string;
-  /**
-   * A function that is trigger when the user click on the icon.
-   */
-  onSubmit?: () => void;
+  icon?: ReactElement;
   /**
    * input override class
    */
   inputClass?: string;
 } & TextProps;
 
-export function IconText({
-  icon = 'discovery',
-  iconClass,
-  onSubmit,
-  inputClass,
-  className,
-  style,
-  value,
-  ...rest
-}: IconTextProps) {
+export function IconText({ icon, inputClass, className, style, value, ...rest }: IconTextProps) {
   return (
-    <div className={classNames(styles.inputIcon, className)} style={style}>
+    <div className={classNames(styles.inputIcon, icon && styles.withIcon, className)} style={style}>
       <TextInput className={classNames(styles.input, inputClass)} value={value} {...rest} />
-      <BaseIcon
-        className={classNames(styles.icon, onSubmit && styles.clickable, iconClass)}
-        of={`bitcon-${icon}`}
-        onClick={onSubmit}
-      />
+      {icon}
     </div>
   );
 }
