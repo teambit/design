@@ -1,22 +1,22 @@
 import React from 'react';
 import { Icon } from '@teambit/design.elements.icon';
-import { IconText } from './icon-text';
+import { IconTextInput } from './icon-text';
 
-export const BasicIconText = () => (
-  <IconText
+export const BasicIconTextInput = () => (
+  <IconTextInput
     placeholder="search..."
     icon={<Icon of="discovery" style={{ cursor: 'pointer' }} onClick={() => alert('on icon click')} />}
     data-testid="test-input"
   />
 );
 
-export const IconTextWithImage = () => (
-  <IconText
+export const IconTextInputWithImage = () => (
+  <IconTextInput
     placeholder="search..."
     icon={
       <img
         src="https://static.bit.dev/bit-icons/filter.svg"
-        style={{ cursor: 'pointer' }}
+        style={{ cursor: 'pointer', top: '0.55em', right: '0.4em' }}
         onClick={() => alert('on icon click')}
       />
     }
@@ -24,8 +24,8 @@ export const IconTextWithImage = () => (
   />
 );
 
-export const BigIconTextWithIcon = () => (
-  <IconText
+export const BigIconTextInputWithIcon = () => (
+  <IconTextInput
     placeholder="bigger with font size"
     icon={<Icon of="discovery" style={{ cursor: 'pointer' }} onClick={() => alert('on icon click')} />}
     data-testid="test-input"
@@ -33,4 +33,4 @@ export const BigIconTextWithIcon = () => (
   />
 );
 
-export const IconTextWithoutIcon = () => <IconText placeholder="search..." data-testid="test-input" />;
+export const IconTextInputWithoutIcon = () => <IconTextInput placeholder="search..." data-testid="test-input" />;

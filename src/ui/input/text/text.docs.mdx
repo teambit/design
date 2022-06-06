@@ -17,6 +17,8 @@ TextInput example:
 ```js live
 () => {
   const [value, setValue] = useState('');
-  return <TextInput error={value === 'error'} success={value === 'success'} onChange={(e) => setValue(e.target.value)} />;
+  return (
+    <TextInput error={value === 'error'} success={value === 'success'} onChange={(e) => setValue(e.target.value)} />
+  );
 };
 ```

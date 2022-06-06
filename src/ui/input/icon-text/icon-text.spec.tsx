@@ -1,10 +1,10 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import { BasicIconText } from './icon-text.composition';
+import { BasicIconTextInput } from './icon-text.composition';
 
 describe('IconText component', () => {
   it('should render input correctly', () => {
-    const { getByTestId } = render(<BasicIconText />);
+    const { getByTestId } = render(<BasicIconTextInput />);
     const rendered = getByTestId('test-input');
 
     expect(rendered).toBeInTheDocument();
