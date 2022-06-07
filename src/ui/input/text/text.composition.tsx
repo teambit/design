@@ -14,9 +14,13 @@ export const DisabledInput = () => {
   return <TextInput placeholder="placeholder..." disabled data-testid="test-input" />;
 };
 
-export const SmallInput = () => <TextInput style={{ fontSize: 12 }} placeholder="enter text..." data-testid="test-input" />;
+export const SmallInput = () => (
+  <TextInput style={{ fontSize: 12 }} placeholder="enter text..." data-testid="test-input" />
+);
 
-export const BigInput = () => <TextInput style={{ fontSize: 24 }} placeholder="enter text..." data-testid="test-input" />;
+export const BigInput = () => (
+  <TextInput style={{ fontSize: 24 }} placeholder="enter text..." data-testid="test-input" />
+);
 
 export const InputDarkMode = () => (
   <div className={darkMode} style={{ padding: '20px 40px', backgroundColor: '#0c0c0c' }}>

@@ -10,7 +10,7 @@ jobs:
     container:
       image: docker://bitcli/bit:latest
     steps:
-      - uses: teambit/setup-action@v1
+      - uses: teambit/setup-action@v2
         with:
           name: design_scope
           BIT_TOKEN: ${{ env.BIT_TOKEN }}
@@ -21,8 +21,10 @@ jobs:
         run: bit compile && bit compile && bit compile
       - name: Bit test
         run: bit test
+      - name: Bit build
+        run: bit build --all
       - name: lint
-        run: npx prettier -c ./src 
+        run: npx prettier -c ./src
       # - name: tsc
       #   run: tsc
       - uses: actions/upload-artifact@v2
