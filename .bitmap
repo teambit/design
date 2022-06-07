@@ -125,7 +125,7 @@
     },
     "ui/input/icon-text": {
         "scope": "teambit.design",
-        "version": "0.0.17",
+        "version": "1.0.0",
         "mainFile": "index.ts",
         "rootDir": "src/ui/input/icon-text"
     },
