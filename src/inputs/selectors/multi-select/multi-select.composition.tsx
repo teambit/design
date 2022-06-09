@@ -1,33 +1,13 @@
 import React, { useState } from 'react';
 import { Icon } from '@teambit/design.elements.icon';
-import { MultiSelect, ItemType } from './multi-select';
+import { MultiSelect } from './multi-select';
+import type { ItemType } from './types';
+import { basicMockList, searchMockList, descriptionMockList } from './multi-select.mock';
 
 export const BasicMultiSelect = () => {
   const placeholderText = 'Item';
   const [text, setText] = useState(placeholderText);
-  const [list, setList] = useState<ItemType[]>([
-    {
-      value: 'one',
-      checked: false,
-    },
-    {
-      value: 'two',
-      checked: false,
-    },
-    {
-      value: 'three',
-      checked: false,
-    },
-    {
-      value: 'four',
-      checked: false,
-      disabled: true,
-    },
-    {
-      value: 'five',
-      checked: false,
-    },
-  ]);
+  const [list, setList] = useState<ItemType[]>(basicMockList);
 
   const updateCount = () => {
     const checkedCount = list.filter((item) => item.checked).length;
@@ -47,56 +27,13 @@ export const BasicMultiSelect = () => {
     updateCount();
   };
 
-  const onClear = () => {
-    const newList = list.map((item, index) => {
-      item.checked = false;
-      return item;
-    });
-    setList(newList);
-  };
-
-  return (
-    <MultiSelect
-      placeholder={text}
-      itemsList={list}
-      onCheck={onCheck}
-      onClear={onClear}
-      onSubmit={() => alert(`clicked on done! ${JSON.stringify(list)}`)}
-    />
-  );
+  return <MultiSelect placeholder={text} itemsList={list} onCheck={onCheck} />;
 };
 
 export const MultiSelectWithDescription = () => {
   const placeholderText = 'Item';
   const [text, setText] = useState(placeholderText);
-  const [list, setList] = useState<ItemType[]>([
-    {
-      value: 'one',
-      description: 'one description',
-      checked: false,
-    },
-    {
-      value: 'two',
-      description: 'two description',
-      checked: false,
-    },
-    {
-      value: 'three',
-      description: 'three description',
-      checked: false,
-    },
-    {
-      value: 'four',
-      description: 'four description',
-      checked: false,
-      disabled: true,
-    },
-    {
-      value: 'five',
-      description: 'five description',
-      checked: false,
-    },
-  ]);
+  const [list, setList] = useState<ItemType[]>(descriptionMockList);
 
   const updateCount = () => {
     const checkedCount = list.filter((item) => item.checked).length;
@@ -141,30 +78,30 @@ export const MultiSelectWithIcons = () => {
   const [list, setList] = useState<ItemType[]>([
     {
       value: 'Vue',
-      Icon: <img src="https://static.bit.dev/extensions-icons/vuejs.svg" />,
+      icon: <img src="https://static.bit.dev/extensions-icons/vuejs.svg" />,
       checked: false,
       description: 'Some text',
     },
     {
       value: 'Angular',
-      Icon: <img src="https://static.bit.dev/extensions-icons/angular.svg" />,
+      icon: <img src="https://static.bit.dev/extensions-icons/angular.svg" />,
       checked: false,
       description: 'Some text',
     },
     {
       value: 'React',
-      Icon: <img src="https://static.bit.dev/extensions-icons/react.svg" />,
+      icon: <img src="https://static.bit.dev/extensions-icons/react.svg" />,
       checked: false,
     },
     {
       value: 'Node JS',
-      Icon: <img src="https://static.bit.dev/extensions-icons/nodejs.svg" />,
+      icon: <img src="https://static.bit.dev/extensions-icons/nodejs.svg" />,
       checked: false,
       disabled: true,
     },
     {
       value: 'warning',
-      Icon: <Icon of="note" />,
+      icon: <Icon of="note" />,
       checked: false,
     },
   ]);
@@ -196,25 +133,13 @@ export const MultiSelectWithIcons = () => {
   };
 
   return (
-    <>
-      <style
-        dangerouslySetInnerHTML={{
-          __html: `
-    .dropClass {
-      width: 250px;
-    }
-    `,
-        }}
-      />
-      <MultiSelect
-        placeholder={text}
-        itemsList={list}
-        onCheck={onCheck}
-        onClear={onClear}
-        onSubmit={() => alert(`clicked on done! ${JSON.stringify(list)}`)}
-        dropClass="dropClass"
-      />
-    </>
+    <MultiSelect
+      placeholder={text}
+      itemsList={list}
+      onCheck={onCheck}
+      onClear={onClear}
+      onSubmit={() => alert(`clicked on done! ${JSON.stringify(list)}`)}
+    />
   );
 };
 
@@ -304,5 +229,57 @@ export const CustomMultiSelect = () => {
         dropClass="dropClass"
       />
     </>
+  );
+};
+
+export const MultiSelectWithSearchOption = () => {
+  const placeholderText = 'Item';
+  const [text, setText] = useState(placeholderText);
+  const [list, setList] = useState<ItemType[]>(searchMockList);
+
+  const updateCount = () => {
+    const checkedCount = list.filter((item) => item.checked).length;
+    if (checkedCount > 1) {
+      setText(`${checkedCount} ${placeholderText}s`);
+    } else setText(`${checkedCount} ${placeholderText}`);
+  };
+
+  const onCheck = (value: string, e: React.ChangeEvent<HTMLInputElement>) => {
+    const newList = list.map((item, index) => {
+      if (item.value === value) {
+        item.checked = e.target.checked;
+      }
+      return item;
+    });
+    setList(newList);
+    updateCount();
+  };
+
+  const onClear = () => {
+    const newList = list.map((item, index) => {
+      item.checked = false;
+      return item;
+    });
+    setList(newList);
+  };
+
+  const handleOnSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const newList = list.map((item, index) => {
+      if (item.value.includes(e.target.value)) item.visible = true;
+      else item.visible = false;
+      return item;
+    });
+    setList(newList);
+  };
+
+  return (
+    <MultiSelect
+      placeholder={text}
+      itemsList={list}
+      onCheck={onCheck}
+      onClear={onClear}
+      onSubmit={() => alert(`clicked on done! ${JSON.stringify(list)}`)}
+      onSearch={handleOnSearch}
+    />
   );
 };
