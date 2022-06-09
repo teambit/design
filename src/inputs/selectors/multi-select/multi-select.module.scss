@@ -1,7 +1,6 @@
 .dropdownPlaceholder {
   border-radius: 8px;
   justify-content: space-between;
-
   img {
     width: 16px;
   }
@@ -16,6 +15,27 @@
 .dropClass {
   padding-top: 8px;
   padding-bottom: 8px;
+  min-width: 220px;
+  &.hasButtons {
+    label:last-of-type {
+      margin-bottom: 12px;
+    }
+  }
+}
+.listContainer {
+  overflow-y: auto;
+  max-height: 330px;
+}
+.titleList {
+  color: var(--bit-text-color-heavy, #2b2b2b);
+  font-weight: bold;
+  padding: 0 24px 8px;
+  margin: 0; // reset default browser
+}
+.separator {
+  border: none;
+  border-bottom: 1px solid var(--bit-border-color-lightest, #ededed);
+  margin: 16px 24px;
 }
 .checkboxItem {
   padding-left: 24px;
@@ -23,15 +43,18 @@
 }
 .buttonsHolder {
   display: flex;
-  justify-content: flex-end;
-  padding: 8px 24px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px 4px;
+  border-top: 1px solid var(--bit-border-color-lightest, #ededed);
 }
 .clearText {
   color: var(--bit-text-color-light, #6c707c);
   cursor: pointer;
-  margin-right: 24px;
 }
-.doneText {
-  color: var(--bit-accent-color, #6c5ce7);
-  cursor: pointer;
+.searchInput {
+  margin: 4px 16px 16px;
+  .icon {
+    width: 16px;
+  }
 }
