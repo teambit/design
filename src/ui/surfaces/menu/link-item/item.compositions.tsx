@@ -1,5 +1,5 @@
 import React from 'react';
-import { useLocation } from '@teambit/base-ui.routing.routing-provider';
+import { useLocation } from '@teambit/base-react.navigation.link';
 
 import { MenuLinkItem } from './link-item';
 
@@ -15,7 +15,7 @@ export function Active() {
   const location = useLocation();
 
   return (
-    <MenuLinkItem icon="settings" href={location.pathname} exact>
+    <MenuLinkItem icon="settings" href={location?.pathname} exact>
       Active link
     </MenuLinkItem>
   );

@@ -7,8 +7,8 @@ import React from 'react';
 export type MenuLinkItemProps = {
   /** Optional icon to render at the start of the item (icomoon id) */
   icon?: string;
-  /** show link as active. usage as a function is deprecated and will be removed */
-  isActive?: boolean | (() => boolean);
+  /** @deprecated use the `active` prop */
+  isActive?: () => boolean;
 } & LinkProps;
 
 /**
@@ -18,27 +18,24 @@ export function MenuLinkItem({
   href,
   children,
   icon,
+  active,
   isActive,
   className,
   activeClassName,
   ...rest
 }: MenuLinkItemProps) {
+  const _active = active ?? (typeof isActive === 'function' ? isActive() : undefined);
+
   return (
     <Link
       {...rest}
       href={href}
       className={classNames(className, classes.menuItem, !!href && classes.interactive)}
       activeClassName={classNames(activeClassName, classes.active)}
-      active={toBoolean(isActive)}
+      active={_active}
     >
       {icon && <Icon of={icon} className={classes.icon} />}
       {children}
     </Link>
   );
-}
-
-function toBoolean(val?: boolean | (() => boolean)) {
-  if (typeof val === 'boolean') return val;
-  if (typeof val === 'function') return val();
-  return undefined;
 }

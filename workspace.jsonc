@@ -29,6 +29,7 @@
     "policy": {
       "dependencies": {
         "@babel/runtime": "7.14.5",
+        "@teambit/base-react.navigation.link": "2.0.27",
         "@teambit/base-react.themes.theme-switcher": "1.0.2",
         "@teambit/base-ui.css-components.elevation": "1.0.1",
         "@teambit/base-ui.css-components.roundness": "1.0.0",
