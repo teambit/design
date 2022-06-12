@@ -47,7 +47,7 @@
     },
     "inputs/selectors/multi-select": {
         "scope": "teambit.design",
-        "version": "1.0.2",
+        "version": "1.0.3",
         "mainFile": "index.ts",
         "rootDir": "src/inputs/selectors/multi-select"
     },
@@ -59,13 +59,13 @@
     },
     "theme/icons-font": {
         "scope": "teambit.design",
-        "version": "2.0.2",
+        "version": "2.0.4",
         "mainFile": "index.ts",
         "rootDir": "src/theme/icons-font"
     },
     "theme/theme-context": {
         "scope": "teambit.design",
-        "version": "2.0.1",
+        "version": "2.0.2",
         "mainFile": "index.ts",
         "rootDir": "src/theme/theme-context"
     },
