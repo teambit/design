@@ -189,6 +189,12 @@
         "mainFile": "index.ts",
         "rootDir": "src/ui/status-message-card"
     },
+    "ui/surfaces/menu/link-item": {
+        "scope": "teambit.design",
+        "version": "0.0.380",
+        "mainFile": "index.ts",
+        "rootDir": "src/ui/surfaces/menu/link-item"
+    },
     "ui/tag-label": {
         "scope": "teambit.design",
         "version": "1.0.14",
