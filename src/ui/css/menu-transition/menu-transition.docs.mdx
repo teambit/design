@@ -16,11 +16,7 @@ This is a css only component. use it to add effects to any dropdown that toggles
 ## Usage:
 
 ```js live
-<Dropdown
-  className={exampleStyles.dropdown}
-  dropClass={classNames(exampleStyles.dropClass, menuTransition)}
-  PlaceholderComponent={() => <MenuItem>left transition effect</MenuItem>}
->
+<Dropdown dropClass={classNames(exampleStyles.dropClass, menuTransition)} placeholder="left transition effect">
   <MenuItem>user</MenuItem>
   <MenuItem>user</MenuItem>
   <MenuItem>user</MenuItem>
@@ -28,11 +24,7 @@ This is a css only component. use it to add effects to any dropdown that toggles
 ```
 
 ```js live
-<Dropdown
-  className={exampleStyles.dropdown}
-  dropClass={classNames(exampleStyles.dropClass, rightMenuTransition)}
-  PlaceholderComponent={() => <MenuItem>right transition effect</MenuItem>}
->
+<Dropdown dropClass={classNames(exampleStyles.dropClass, rightMenuTransition)} placeholder="right transition effect">
   <MenuItem>user</MenuItem>
   <MenuItem>user</MenuItem>
   <MenuItem>user</MenuItem>
@@ -40,11 +32,7 @@ This is a css only component. use it to add effects to any dropdown that toggles
 ```
 
 ```js live
-<Dropdown
-  className={exampleStyles.dropdown}
-  dropClass={classNames(exampleStyles.dropClass, centerMenuTransition)}
-  PlaceholderComponent={() => <MenuItem>center transition effect</MenuItem>}
->
+<Dropdown dropClass={classNames(exampleStyles.dropClass, centerMenuTransition)} placeholder="center transition effect">
   <MenuItem>user</MenuItem>
   <MenuItem>user</MenuItem>
   <MenuItem>user</MenuItem>

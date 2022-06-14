@@ -1,25 +1,3 @@
-.dropdownPlaceholder {
-  border-radius: 8px;
-  justify-content: space-between;
-  img {
-    width: 16px;
-  }
-}
-.dropdown {
-  border-radius: 8px;
-  box-sizing: border-box;
-  &.dropdownBorder {
-    border: 1px solid var(--bit-border-color-lightest, #ededed);
-  }
-}
-.dropClass {
-  min-width: 220px;
-  &.hasButtons {
-    label:last-of-type {
-      margin-bottom: 12px;
-    }
-  }
-}
 .listContainer {
   overflow-y: auto;
   max-height: 330px;
@@ -38,17 +16,6 @@
 .checkboxItem {
   padding-left: 24px;
   padding-right: 24px;
-}
-.buttonsHolder {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 12px 16px 4px;
-  border-top: 1px solid var(--bit-border-color-lightest, #ededed);
-}
-.clearText {
-  color: var(--bit-text-color-light, #6c707c);
-  cursor: pointer;
 }
 .searchInput {
   margin: 4px 16px 16px;

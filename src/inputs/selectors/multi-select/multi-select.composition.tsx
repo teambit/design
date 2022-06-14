@@ -221,6 +221,7 @@ export const CustomMultiSelect = () => {
         }}
       />
       <MultiSelect
+        //@ts-ignore
         placeholder={<div style={{ padding: 8, color: 'red' }}>Custom placeholder {text}</div>}
         itemsList={list}
         onCheck={onCheck}

@@ -45,28 +45,12 @@ export type ListItemsProps = {
 
 export type MultiSelectProps = {
   /**
-   * placeholder to be rendered in the dropdown placeholder.
-   */
-  placeholder?: ReactNode;
-  /**
-   * a function that is trigger when clear is clicked.
-   */
-  onClear?: (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => void;
-  /**
-   * a function that is trigger when done is clicked.
-   */
-  onSubmit?: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
-  /**
    * add style to the dropdown container.
    */
   className?: string;
-  /**
-   * add border to the dropdown container.
-   */
-  dropdownBorder?: boolean;
   /**
    * add search option.
    */
   onSearch?: React.ChangeEventHandler<HTMLInputElement>;
 } & ListItemsProps &
-  Omit<DropdownProps, 'placeholder'>;
+  DropdownProps;
