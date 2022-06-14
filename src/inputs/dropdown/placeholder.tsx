@@ -1,7 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 import { MenuItem, MenuItemsProps } from '@teambit/design.inputs.selectors.menu-item';
-import styles from './multi-select.module.scss';
+import styles from './dropdown.module.scss';
 
 export function Placeholder({ children, className, ...rest }: MenuItemsProps) {
   return (
