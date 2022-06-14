@@ -29,6 +29,7 @@
     "policy": {
       "dependencies": {
         "@babel/runtime": "7.14.5",
+        "@teambit/base-react.navigation.link": "2.0.27",
         "@teambit/base-react.themes.theme-switcher": "1.0.2",
         "@teambit/base-ui.css-components.elevation": "1.0.1",
         "@teambit/base-ui.css-components.roundness": "1.0.0",
@@ -50,6 +51,7 @@
         "@teambit/design.surfaces.dropdown": "0.0.16",
         "@teambit/design.themes.base-theme": "0.1.0",
         "@teambit/design.ui.styles.ellipsis": "0.0.344",
+        "@teambit/design.ui.surfaces.menu.item": "0.0.354",
         "@teambit/evangelist.css-components.fade-in-out": "1.0.1",
         "@teambit/evangelist.input.checkbox.label": "1.0.10",
         "@testing-library/react": "11.2.2",
