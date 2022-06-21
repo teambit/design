@@ -7,6 +7,9 @@ import styles from './multi-select.module.scss';
 
 export function MultiSelect({ itemsList = [], onCheck, onSearch, ...rest }: MultiSelectProps) {
   const selectedItems = itemsList.filter((item) => item.checked);
+  const filteredListItems = onSearch
+    ? itemsList.filter((item) => !item.checked && (item.visible || item.visible === undefined))
+    : itemsList;
 
   return (
     <Dropdown {...rest}>
@@ -19,7 +22,7 @@ export function MultiSelect({ itemsList = [], onCheck, onSearch, ...rest }: Mult
             <hr className={styles.separator} />
           </>
         )}
-        <ListItems itemsList={onSearch ? itemsList.filter((item) => !item.checked) : itemsList} onCheck={onCheck} />
+        <ListItems itemsList={filteredListItems} onCheck={onCheck} />
       </div>
     </Dropdown>
   );
