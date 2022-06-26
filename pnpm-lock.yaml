@@ -119,6 +119,9 @@ importers:
   src/inputs/dropdown:
     specifiers: {}
 
+  src/inputs/input-text:
+    specifiers: {}
+
   src/inputs/selectors/checkbox-item:
     specifiers: {}
 
@@ -135,6 +138,9 @@ importers:
     specifiers: {}
 
   src/themes/theme-toggler:
+    specifiers: {}
+
+  src/typography/text:
     specifiers: {}
 
   src/ui/avatar:

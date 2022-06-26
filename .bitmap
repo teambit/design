@@ -81,6 +81,12 @@
         "mainFile": "index.ts",
         "rootDir": "src/themes/theme-toggler"
     },
+    "typography/text": {
+        "scope": "teambit.design",
+        "version": "0.0.8",
+        "mainFile": "index.ts",
+        "rootDir": "src/typography/text"
+    },
     "ui/avatar": {
         "scope": "teambit.design",
         "version": "1.0.2",
