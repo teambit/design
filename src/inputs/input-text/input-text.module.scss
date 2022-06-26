@@ -1,0 +1,62 @@
+.inputText {
+  width: 100%;
+  box-sizing: border-box;
+  outline: 0;
+  padding: 0.69em 1em;
+  font-size: inherit;
+  font-family: inherit;
+  border-radius: 8px;
+  border: 1px solid var(--bit-border-color-lightest, #ededed);
+  background-color: var(--bit-bg-tooltip, #ffffff);
+  color: var(--bit-text-color-heavy, #2b2b2b);
+
+  // keep precedence! filled < hover < success < error < disabled
+  &.filled {
+    background-color: var(--bit-bg-dent, #f6f6f6);
+  }
+  &::placeholder {
+    color: var(--bit-text-color-light, #6c707c);
+  }
+  &:hover {
+    border: 1px solid var(--bit-text-inactive, #babec9);
+  }
+  &:focus {
+    border-color: transparent;
+    background-color: var(--bit-bg-tooltip, #ffffff);
+    box-shadow: var(--bit-shadow-raised-low, 0 -1px 1px 0 rgba(0, 0, 0, 0.09), 0 2px 2px 0 rgba(0, 0, 0, 0.23));
+  }
+  &.success {
+    background-color: var(--positive-surface-color, var(--bit-accent-bg, #eefaf3));
+    border: 1px solid var(--positive-color, var(--bit-accent-color, #37b26c));
+  }
+  &.error {
+    background-color: var(--negative-surface-color, var(--bit-accent-bg, #fdeff2));
+    border: 1px solid var(--negative-color, var(--bit-accent-color, #e62e5c));
+  }
+  &:disabled {
+    cursor: not-allowed;
+    background-color: var(--bit-bg-dent, #f6f6f6);
+    color: var(--bit-text-inactive, #babec9);
+    border: 1px solid var(--bit-border-color-lightest, #ededed);
+  }
+}
+
+.inputTextWithIcon {
+  position: relative;
+  font-size: inherit;
+  .inputText {
+    padding-right: 2em;
+  }
+  > :last-child {
+    font-size: inherit;
+    color: inherit;
+    position: absolute;
+    right: 0.75em;
+    top: 0.75em;
+    width: 16px;
+  }
+}
+
+.inputTextArea {
+  resize: none;
+}
