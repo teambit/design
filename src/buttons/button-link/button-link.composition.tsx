@@ -6,9 +6,9 @@ export const ButtonLinkWithImage = () => {
   return (
     <ButtonLink
       linkProps={{ external: true, href: 'https://bit.cloud/teambit' }}
-      icon={<img src="https://static.bit.cloud/cloud/organization.svg" />}
+      icon={<img src="https://static.bit.cloud/bit-icons/setting.svg" />}
     >
-      Teambit
+      Settings
     </ButtonLink>
   );
 };

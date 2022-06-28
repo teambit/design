@@ -4,7 +4,7 @@ import { ButtonLinkWithImage } from './button-link.composition';
 
 it('should render with the correct text', () => {
   const { getByText } = render(<ButtonLinkWithImage />);
-  const rendered = getByText('Teambit');
+  const rendered = getByText('Settings');
 
   expect(rendered).toBeTruthy();
 });
