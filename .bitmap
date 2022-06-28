@@ -9,6 +9,12 @@
  */
 
 {
+    "buttons/button-link": {
+        "scope": "teambit.design",
+        "version": "0.0.1",
+        "mainFile": "index.ts",
+        "rootDir": "src/buttons/button-link"
+    },
     "elements/icon": {
         "scope": "teambit.design",
         "version": "1.0.14",
