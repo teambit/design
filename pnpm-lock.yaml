@@ -113,7 +113,13 @@ importers:
       '@types/testing-library__jest-dom': registry.npmjs.org/@types/testing-library__jest-dom/5.9.5
       '@types/uuid': registry.npmjs.org/@types/uuid/3.4.9
 
+  src/buttons/button-link:
+    specifiers: {}
+
   src/envs/react:
+    specifiers: {}
+
+  src/info/icon-text:
     specifiers: {}
 
   src/inputs/dropdown:
