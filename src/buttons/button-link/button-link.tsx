@@ -1,6 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
-import { Link, LinkProps } from '@teambit/design.ui.navigation.link';
+import { Link, LinkProps } from '@teambit/base-react.navigation.link';
 import { IconButton, IconButtonProps } from '@teambit/design.ui.icon-button';
 import styles from './button-link.module.scss';
 
