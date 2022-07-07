@@ -127,15 +127,15 @@
       "teambit.react/react": "-",
       "teambit.symphony/envs/symphony-react": "-",
       "teambit.symphony/envs/node": "-",
-      "teambit.pkg/pkg": {
-        "packageManagerPublishArgs": [
-          "--access public"
-        ],
-        "packageJson": {
-          "name": "@teambit/{scope}.{name}",
-          "private": false
-        }
-      }
+      // "teambit.pkg/pkg": {
+      //   "packageManagerPublishArgs": [
+      //     "--access public"
+      //   ],
+      //   "packageJson": {
+      //     "name": "@teambit/{scope}.{name}",
+      //     "private": false
+      //   }
+      // }
     }
   }
 }
