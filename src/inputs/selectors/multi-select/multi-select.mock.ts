@@ -1,5 +1,4 @@
-import { ItemType } from './types';
-
+import { ItemType } from './item-list-plugin';
 export const basicMockList: ItemType[] = [
   {
     value: 'one',

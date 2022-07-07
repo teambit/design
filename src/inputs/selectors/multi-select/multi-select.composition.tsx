@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { Icon } from '@teambit/design.elements.icon';
 import { MultiSelect } from './multi-select';
-import type { ItemType } from './types';
+import { SearchInput } from './search-plugin';
+import type { ItemType } from './item-list-plugin';
 import { basicMockList, searchMockList, descriptionMockList } from './multi-select.mock';
 
 export const BasicMultiSelect = () => {
@@ -53,7 +54,7 @@ export const MultiSelectWithDescription = () => {
     updateCount();
   };
 
-  const onClear = () => {
+  const onClear = (e) => {
     const newList = list.map((item, index) => {
       item.checked = false;
       return item;
@@ -275,12 +276,13 @@ export const MultiSelectWithSearchOption = () => {
 
   return (
     <MultiSelect
+      topPlugin={<SearchInput onChange={handleOnSearch} />}
       placeholder={text}
       itemsList={list}
       onCheck={onCheck}
       onClear={onClear}
       onSubmit={() => alert(`clicked on done! ${JSON.stringify(list)}`)}
-      onSearch={handleOnSearch}
+      // onSearch={handleOnSearch}
     />
   );
 };

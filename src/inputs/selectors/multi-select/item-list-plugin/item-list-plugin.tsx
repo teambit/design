@@ -1,5 +1,6 @@
-import { ReactNode, ReactElement } from 'react';
-import { DropdownProps } from '@teambit/design.inputs.dropdown';
+import React, { ReactElement, ReactNode } from 'react';
+import { CheckboxItem } from '@teambit/design.inputs.selectors.checkbox-item';
+import styles from './item-list-plugin.module.scss';
 
 export type ItemType = {
   /**
@@ -17,7 +18,7 @@ export type ItemType = {
   /**
    * If the Item is selected or not.
    */
-  checked: boolean;
+  checked?: boolean;
   /**
    * Make item disbaled.
    */
@@ -43,14 +44,22 @@ export type ListItemsProps = {
   onCheck?: (value: string, e: React.ChangeEvent<HTMLInputElement>) => void;
 };
 
-export type MultiSelectProps = {
-  /**
-   * add style to the dropdown container.
-   */
-  className?: string;
-  /**
-   * add search option.
-   */
-  onSearch?: React.ChangeEventHandler<HTMLInputElement>;
-} & ListItemsProps &
-  DropdownProps;
+export function ListItems({ itemsList, onCheck }: ListItemsProps) {
+  return (
+    <>
+      {itemsList.map((item, index) => (
+        <CheckboxItem
+          checked={item.checked}
+          disabled={item.disabled}
+          description={item.description}
+          icon={item.icon}
+          onInputChanged={(e) => onCheck?.(item.value, e)}
+          key={index}
+          className={styles.checkboxItem}
+        >
+          {item.element || item.value}
+        </CheckboxItem>
+      ))}
+    </>
+  );
+}
