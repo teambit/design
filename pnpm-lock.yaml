@@ -92,6 +92,9 @@ importers:
       '@teambit/toolbox.string.get-initials': registry.npmjs.org/@teambit/toolbox.string.get-initials/0.0.483
       '@teambit/toolbox.url.add-avatar-query-params': registry.npmjs.org/@teambit/toolbox.url.add-avatar-query-params/0.0.483
       '@types/react-router-dom': registry.npmjs.org/@types/react-router-dom/5.1.7
+      '@types/react-tabs': registry.npmjs.org/@types/react-tabs/2.3.2
+      '@types/react-tooltip': registry.npmjs.org/@types/react-tooltip/3.11.0
+      '@types/uuid': registry.npmjs.org/@types/uuid/3.4.9
       classnames: registry.npmjs.org/classnames/2.3.1
       core-js: registry.npmjs.org/core-js/3.23.3
       react: registry.npmjs.org/react/17.0.2
@@ -108,10 +111,7 @@ importers:
       '@types/node': registry.npmjs.org/@types/node/12.20.4
       '@types/react': registry.npmjs.org/@types/react/17.0.47
       '@types/react-dom': registry.npmjs.org/@types/react-dom/17.0.17
-      '@types/react-tabs': registry.npmjs.org/@types/react-tabs/2.3.2
-      '@types/react-tooltip': registry.npmjs.org/@types/react-tooltip/3.11.0
       '@types/testing-library__jest-dom': registry.npmjs.org/@types/testing-library__jest-dom/5.9.5
-      '@types/uuid': registry.npmjs.org/@types/uuid/3.4.9
 
   src/buttons/button-link:
     specifiers: {}
@@ -1143,7 +1143,7 @@ packages:
     version: 2.3.2
     dependencies:
       '@types/react': registry.npmjs.org/@types/react/17.0.47
-    dev: true
+    dev: false
 
   registry.npmjs.org/@types/react-tooltip/3.11.0:
     resolution: {integrity: sha512-TkXMgkZ5aAKkFE9Wvt8OlOiPtF9ufgBOL9xWlRSzLBaoL12qSOBiyMcU4/8TyED1fuWkm5VTVarScwOPLSArYw==, registry: https://node.bit.dev/, tarball: https://registry.npmjs.org/@types/react-tooltip/-/react-tooltip-3.11.0.tgz}
@@ -1151,7 +1151,7 @@ packages:
     version: 3.11.0
     dependencies:
       '@types/react': registry.npmjs.org/@types/react/17.0.47
-    dev: true
+    dev: false
 
   registry.npmjs.org/@types/react/17.0.47:
     resolution: {integrity: sha512-mk0BL8zBinf2ozNr3qPnlu1oyVTYq+4V7WA76RgxUAtf0Em/Wbid38KN6n4abEkvO4xMTBWmnP1FtQzgkEiJoA==, registry: https://node.bit.dev/, tarball: https://registry.npmjs.org/@types/react/-/react-17.0.47.tgz}
@@ -1179,7 +1179,7 @@ packages:
     resolution: {integrity: sha512-XDwyIlt/47l2kWLTzw/mtrpLdB+GPSskR2n/PIcPn+VYhVO77rGhRncIR5GPU0KRzXuqkDO+J5qqrG0Y8P6jzQ==, registry: https://node.bit.dev/, tarball: https://registry.npmjs.org/@types/uuid/-/uuid-3.4.9.tgz}
     name: '@types/uuid'
     version: 3.4.9
-    dev: true
+    dev: false
 
   registry.npmjs.org/@types/yargs-parser/21.0.0:
     resolution: {integrity: sha512-iO9ZQHkZxHn4mSakYV0vFHAVDyEOIJQrV2uZ06HxEPcx+mt8swXoZHIbaaJ2crJYFfErySgktuTZ3BeLz+XmFA==, registry: https://node.bit.dev/, tarball: https://registry.npmjs.org/@types/yargs-parser/-/yargs-parser-21.0.0.tgz}

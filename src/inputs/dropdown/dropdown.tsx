@@ -18,7 +18,7 @@ export type DropdownProps = {
    * add border to the placeholder.
    */
   placeholderBorder?: boolean;
-  
+
   /**
    * a plugin to display elements at the top section of the dropdown menu
    */
