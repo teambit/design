@@ -1,7 +1,7 @@
 import { MainRuntime } from '@teambit/cli';
 import { EnvsAspect, EnvsMain } from '@teambit/envs';
 import { ReactAspect, ReactMain, ReactEnv } from '@teambit/react';
-import { DesignReactAspect } from './react-env.aspect';
+import { DesignReactEnvAspect } from './react-env.aspect';
 import { DesignReactEnv } from './react-env.envs';
 
 export class DesignReactEnvMain {
@@ -14,11 +14,11 @@ export class DesignReactEnvMain {
   static runtime = MainRuntime;
 
   static async provider([react, envs]: [ReactMain, EnvsMain]) {
-    const designReactEnv = envs.merge(new DesignReactEnv(react.reactEnv), react.reactEnv);
+    const designReactEnv = envs.merge(new DesignReactEnv(react.reactEnv), react.reactEnv) as ReactEnv;
     envs.registerEnv(designReactEnv);
 
     return new DesignReactEnvMain(designReactEnv);
   }
 }
 
-DesignReactAspect.addRuntime(DesignReactEnvMain);
+DesignReactEnvAspect.addRuntime(DesignReactEnvMain);
