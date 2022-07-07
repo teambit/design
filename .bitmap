@@ -183,12 +183,6 @@
         "mainFile": "index.ts",
         "rootDir": "src/ui/message-card"
     },
-    "ui/navigation/link": {
-        "scope": "teambit.design",
-        "version": "1.96.7",
-        "mainFile": "index.ts",
-        "rootDir": "src/ui/navigation/link"
-    },
     "ui/owner-avatar": {
         "scope": "teambit.design",
         "version": "1.0.5",
