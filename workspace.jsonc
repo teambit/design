@@ -118,7 +118,7 @@
       "teambit.react/react": "-",
       "teambit.harmony/aspect": {}
     },
-    "src/ui, src/inputs, src/info, src/typography": {
+    "src/ui, src/inputs, src/info, src/typography, src/buttons": {
       "teambit.dependencies/dependency-resolver": {}, // (remove leftover deps config from symphony)
       "teambit.design/envs/react": {},
       "teambit.envs/envs": {
