@@ -14,9 +14,8 @@ export type ButtonsPluginProps = {
   onSubmit?: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
 } & React.HTMLAttributes<HTMLDivElement>;
 
-
-export function ButtonsPlugin({onClear, onSubmit, className, ...rest}: ButtonsPluginProps) {
-  if(!onClear && !onSubmit) return null;
+export function ButtonsPlugin({ onClear, onSubmit, className, ...rest }: ButtonsPluginProps) {
+  if (!onClear && !onSubmit) return null;
   return (
     <div {...rest} className={classnames(styles.buttonsHolder, className)}>
       {onClear && (
@@ -30,5 +29,5 @@ export function ButtonsPlugin({onClear, onSubmit, className, ...rest}: ButtonsPl
         </IconButton>
       )}
     </div>
-  )
+  );
 }

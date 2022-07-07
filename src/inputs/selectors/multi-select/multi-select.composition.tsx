@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Icon } from '@teambit/design.elements.icon';
 import { MultiSelect } from './multi-select';
-import {SearchInput} from './search-plugin'
+import { SearchInput } from './search-plugin';
 import type { ItemType } from './item-list-plugin';
 import { basicMockList, searchMockList, descriptionMockList } from './multi-select.mock';
 
