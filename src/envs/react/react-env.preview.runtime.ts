@@ -1,7 +1,7 @@
 import { PreviewRuntime } from '@teambit/preview';
 import { ReactAspect, ReactPreview } from '@teambit/react';
 import { BaseTheme } from '@teambit/design.themes.base-theme';
-import { DesignReactEnvAspect } from './react-env.aspect';
+import { DesignReactAspect } from './react-env.aspect';
 
 export class DesignReactEnvPreview {
   static runtime = PreviewRuntime;
@@ -17,4 +17,4 @@ export class DesignReactEnvPreview {
   }
 }
 
-DesignReactEnvAspect.addRuntime(DesignReactEnvPreview);
+DesignReactAspect.addRuntime(DesignReactEnvPreview);
