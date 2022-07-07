@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ComponentType } from 'react';
 import classNames from 'classnames';
 import { Drawer, DrawerProps } from '@teambit/base-ui.surfaces.drawer';
 import { Position, ContaineeProps, Containee } from '@teambit/base-ui.surfaces.abs-container';
@@ -6,7 +6,6 @@ import { elevationClass, ElevationHeight } from '@teambit/base-ui.css-components
 import { roundnessClass, Roundness } from '@teambit/base-ui.css-components.roundness';
 import { backgrounds } from '@teambit/base-ui.surfaces.background';
 import { fadeInOutClass } from '@teambit/evangelist.css-components.fade-in-out';
-import { IconButton } from '@teambit/design.ui.icon-button';
 import { Placeholder } from './placeholder';
 import styles from './dropdown.module.scss';
 
@@ -19,14 +18,15 @@ export type DropdownProps = {
    * add border to the placeholder.
    */
   placeholderBorder?: boolean;
+  
   /**
-   * a function that is trigger when clear is clicked.
+   * a plugin to display elements at the top section of the dropdown menu
    */
-  onClear?: (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => void;
+  topPlugin?: React.ReactNode;
   /**
-   * a function that is trigger when done is clicked.
+   * a plugin to display elements at the bottom section of the dropdown menu
    */
-  onSubmit?: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
+  bottomPlugin?: React.ReactNode;
 } & DrawerProps &
   DropdownMenuProps;
 
@@ -37,40 +37,28 @@ export function Dropdown({
   roundness = 'small',
   margin = 4,
   placeholder,
+  PlaceholderComponent,
   dropClass,
   placeholderBorder = true,
-  onClear,
-  onSubmit,
+  topPlugin,
+  bottomPlugin,
+  clickToggles = false,
   className,
   ...rest
 }: DropdownProps) {
-  const hasButtons = !!onClear || !!onSubmit;
-
   return (
     <Drawer
       margin={margin}
       className={classNames(!placeholderBorder && styles.removePlaceholderBorder, className)}
-      PlaceholderComponent={typeof placeholder === 'string' ? Placeholder : undefined}
+      PlaceholderComponent={typeof placeholder === 'string' ? Placeholder : PlaceholderComponent}
       placeholder={placeholder}
-      clickToggles={false}
+      clickToggles={clickToggles}
       {...rest}
     >
       <DropdownMenu position={position} elevation={elevation} roundness={roundness} className={dropClass}>
+        {topPlugin}
         {children}
-        {hasButtons && (
-          <div className={styles.buttonsHolder}>
-            {onClear && (
-              <div className={styles.clearText} onClick={onClear}>
-                Clear
-              </div>
-            )}
-            {onSubmit && (
-              <IconButton priority="cta" onClick={onSubmit}>
-                Done
-              </IconButton>
-            )}
-          </div>
-        )}
+        {bottomPlugin}
       </DropdownMenu>
     </Drawer>
   );

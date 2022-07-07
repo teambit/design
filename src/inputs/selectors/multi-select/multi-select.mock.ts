@@ -1,56 +1,55 @@
-import { ItemType } from './types';
-
+import { ItemType } from "./item-list-plugin";
 export const basicMockList: ItemType[] = [
   {
-    value: 'one',
+    value: "one",
     checked: false,
   },
   {
-    value: 'two',
+    value: "two",
     checked: false,
   },
   {
-    value: 'three',
+    value: "three",
     checked: false,
   },
   {
-    value: 'four',
+    value: "four",
     checked: false,
   },
   {
-    value: 'five',
+    value: "five",
     checked: false,
   },
   {
-    value: 'six',
+    value: "six",
     checked: false,
   },
   {
-    value: 'seven',
+    value: "seven",
     checked: false,
   },
   {
-    value: 'eight',
+    value: "eight",
     checked: false,
   },
   {
-    value: 'nine',
+    value: "nine",
     checked: false,
   },
   {
-    value: 'ten',
+    value: "ten",
     checked: false,
   },
   {
-    value: 'a',
+    value: "a",
     checked: false,
   },
   {
-    value: 'b',
+    value: "b",
     checked: false,
   },
   {
-    value: 'c',
+    value: "c",
     checked: false,
   },
 ];

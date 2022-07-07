@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { MenuItem } from '@teambit/design.inputs.selectors.menu-item';
 import { CheckboxItem } from '@teambit/design.inputs.selectors.checkbox-item';
+import {ButtonsPlugin}from './buttons-plugin'
 import { Dropdown } from './dropdown';
 
 const styleContainer = { padding: '11px 11px 70px' };
@@ -70,9 +71,10 @@ export const DropdownWithButtons = () => {
   return (
     <div style={styleContainer}>
       <Dropdown
-        placeholder="placeholder"
-        onClear={() => alert('click on clear')}
-        onSubmit={() => alert('click on submit')}
+      bottomPlugin={<ButtonsPlugin onClear={() => alert('click on clear')}
+      onSubmit={() => alert('click on submit')} />}
+      placeholder="placeholder"
+        
       >
         dropdown menu
       </Dropdown>

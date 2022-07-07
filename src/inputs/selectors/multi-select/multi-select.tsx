@@ -1,28 +1,23 @@
 import React from 'react';
-import { Dropdown } from '@teambit/design.inputs.dropdown';
-import { SearchInput } from './search-input';
-import { ListItems } from './list-items';
-import type { MultiSelectProps } from './types';
+import { Dropdown, ButtonsPlugin } from '@teambit/design.inputs.dropdown';
+import { ListItems } from './item-list-plugin';
+import type { ButtonsPluginProps } from '@teambit/design.inputs.dropdown';
+import type { DropdownProps } from '@teambit/design.inputs.dropdown';
+import type { ListItemsProps } from './item-list-plugin';
 import styles from './multi-select.module.scss';
 
-export function MultiSelect({ itemsList = [], onCheck, onSearch, ...rest }: MultiSelectProps) {
-  const selectedItems = itemsList.filter((item) => item.checked);
-  const filteredListItems = onSearch
-    ? itemsList.filter((item) => !item.checked && (item.visible || item.visible === undefined))
-    : itemsList;
 
+export type MultiSelectProps = {} & ListItemsProps & DropdownProps & ButtonsPluginProps;
+
+
+export function MultiSelect({ itemsList = [], onCheck, onSubmit, onClear, ...rest }: MultiSelectProps) {
   return (
-    <Dropdown {...rest}>
-      {onSearch && <SearchInput onChange={onSearch} />}
+    <Dropdown
+      bottomPlugin={<ButtonsPlugin onClear={onClear} onSubmit={onSubmit} />}
+      {...rest}
+    >
       <div className={styles.listContainer}>
-        {onSearch && selectedItems.length > 0 && (
-          <>
-            <p className={styles.titleList}>Selected</p>
-            <ListItems itemsList={selectedItems} onCheck={onCheck} />
-            <hr className={styles.separator} />
-          </>
-        )}
-        <ListItems itemsList={filteredListItems} onCheck={onCheck} />
+        <ListItems itemsList={itemsList} onCheck={onCheck} />
       </div>
     </Dropdown>
   );
