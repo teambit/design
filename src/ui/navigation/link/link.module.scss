@@ -1,0 +1,9 @@
+.link {
+  font-family: inherit;
+  text-decoration: none;
+  color: var(--bit-accent-color, #6c5ce7);
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

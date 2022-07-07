@@ -1,6 +1,6 @@
 import React, { ReactElement } from 'react';
 import classNames from 'classnames';
-import { Link } from '@teambit/base-react.navigation.link';
+import { Link } from '@teambit/design.ui.navigation.link';
 import { Text } from '@teambit/design.typography.text';
 import styles from './icon-text.module.scss';
 
