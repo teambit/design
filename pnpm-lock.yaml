@@ -25,7 +25,6 @@ importers:
       '@teambit/base-ui.theme.theme-provider': ^1.0.0
       '@teambit/base-ui.time.duration': 0.1.0
       '@teambit/design.surfaces.dropdown': 0.0.16
-      '@teambit/design.theme.icons-font': 2.0.4
       '@teambit/design.themes.base-theme': 0.1.0
       '@teambit/design.themes.dark-theme': 1.91.0
       '@teambit/design.themes.light-theme': 0.1.0
@@ -79,7 +78,6 @@ importers:
       '@teambit/base-ui.theme.theme-provider': registry.npmjs.org/@teambit/base-ui.theme.theme-provider/1.0.3_react-dom@17.0.2+react@17.0.2
       '@teambit/base-ui.time.duration': registry.npmjs.org/@teambit/base-ui.time.duration/0.1.0_react-dom@17.0.2+react@17.0.2
       '@teambit/design.surfaces.dropdown': registry.npmjs.org/@teambit/design.surfaces.dropdown/0.0.16_react-dom@17.0.2+react@17.0.2
-      '@teambit/design.theme.icons-font': registry.npmjs.org/@teambit/design.theme.icons-font/2.0.4_react-dom@17.0.2+react@17.0.2
       '@teambit/design.themes.base-theme': 0.1.0_acba9c3454665e7d0371d718b9614f93
       '@teambit/design.themes.dark-theme': 1.91.0_acba9c3454665e7d0371d718b9614f93
       '@teambit/design.themes.light-theme': 0.1.0_acba9c3454665e7d0371d718b9614f93
@@ -846,21 +844,6 @@ packages:
     id: registry.npmjs.org/@teambit/design.theme.icons-font/1.0.8
     name: '@teambit/design.theme.icons-font'
     version: 1.0.8
-    engines: {node: '>=12.22.0'}
-    peerDependencies:
-      react: ^16.8.0 || ^17.0.0
-      react-dom: ^16.8.0 || ^17.0.0
-    dependencies:
-      core-js: registry.npmjs.org/core-js/3.23.3
-      react: registry.npmjs.org/react/17.0.2
-      react-dom: registry.npmjs.org/react-dom/17.0.2_react@17.0.2
-    dev: false
-
-  registry.npmjs.org/@teambit/design.theme.icons-font/2.0.4_react-dom@17.0.2+react@17.0.2:
-    resolution: {integrity: sha512-DbyWvWbK8IgK3sCMlEZpsFyc8LMISoOqb9Fw8sp7lWe4TWbMylZhfBRDrtef900D4cQs+IcKW8i6IGsiwC5xug==, registry: https://node.bit.dev/, tarball: https://registry.npmjs.org/@teambit/design.theme.icons-font/-/design.theme.icons-font-2.0.4.tgz}
-    id: registry.npmjs.org/@teambit/design.theme.icons-font/2.0.4
-    name: '@teambit/design.theme.icons-font'
-    version: 2.0.4
     engines: {node: '>=12.22.0'}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0
