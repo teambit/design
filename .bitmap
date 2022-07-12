@@ -35,7 +35,7 @@
     },
     "info/icon-text": {
         "scope": "teambit.design",
-        "version": "0.0.7",
+        "version": "0.0.8",
         "mainFile": "index.ts",
         "rootDir": "src/info/icon-text"
     },
