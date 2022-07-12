@@ -10,7 +10,7 @@ jobs:
     container:
       image: docker://bitcli/bit:latest
     steps:
-      - uses: teambit/setup-action@v2.01
+      - uses: teambit/setup-action@v2.02
         with:
           name: design_scope
           BIT_TOKEN: ${{ env.BIT_TOKEN }}
