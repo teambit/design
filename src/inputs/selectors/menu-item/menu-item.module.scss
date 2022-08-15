@@ -4,6 +4,8 @@
   padding: 8px;
   text-decoration: none;
   color: var(--bit-text-color-heavy, #2b2b2b);
+  background-color: transparent;
+  transition: background-color 150ms ease-in-out, color 150ms ease-in-out, border-color 150ms ease-in-out;
 }
 
 .withIcon {
@@ -20,14 +22,14 @@
 }
 
 .interactive:hover {
-  background: var(--bit-bg-heavy, #f6f6f6);
+  background-color: var(--bit-bg-heavy, #f6f6f6);
   cursor: pointer;
 }
 
 .active {
-  background: var(--bit-accent-bg, #eceaff);
+  background-color: var(--bit-accent-bg, #eceaff);
 
   &:hover {
-    background: var(--bit-accent-bg, #eceaff);
+    background-color: var(--bit-accent-bg, #eceaff);
   }
 }

@@ -1,4 +1,4 @@
-import React, { ReactElement } from 'react';
+import React, { ReactElement, forwardRef } from 'react';
 import classNames from 'classnames';
 import styles from './menu-item.module.scss';
 
@@ -22,29 +22,24 @@ export type MenuItemsProps = {
 /**
  * Menu entry with icon.
  */
-export function MenuItem({
-  children,
-  className,
-  icon,
-  active,
-  onClick,
-  interactive = !!onClick,
-  ...rest
-}: MenuItemsProps) {
-  return (
-    <div
-      {...rest}
-      onClick={onClick}
-      className={classNames(
-        className,
-        styles.menuItem,
-        interactive && styles.interactive,
-        active && styles.active,
-        icon && styles.withIcon
-      )}
-    >
-      {icon}
-      {children}
-    </div>
-  );
-}
+export const MenuItem = forwardRef<HTMLDivElement, MenuItemsProps>(
+  ({ children, className, icon, active, onClick, interactive = !!onClick, ...rest }: MenuItemsProps, ref) => {
+    return (
+      <div
+        {...rest}
+        ref={ref}
+        onClick={onClick}
+        className={classNames(
+          className,
+          styles.menuItem,
+          interactive && styles.interactive,
+          active && styles.active,
+          icon && styles.withIcon
+        )}
+      >
+        {icon}
+        {children}
+      </div>
+    );
+  }
+);
