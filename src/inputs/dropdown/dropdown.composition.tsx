@@ -45,7 +45,7 @@ export const DropdownWithItemList = () => {
     <div style={styleContainer}>
       <Dropdown placeholder={selected || 'placeholder'} clickToggles>
         {mockList.map((value, index) => (
-          <MenuItem key={index} onClick={() => setSelected(value)}>
+          <MenuItem active={value === selected} key={index} onClick={() => setSelected(value)}>
             {value}
           </MenuItem>
         ))}

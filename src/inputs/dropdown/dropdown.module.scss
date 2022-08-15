@@ -1,17 +1,14 @@
 .dropdownPlaceholder {
   border-radius: 8px;
   justify-content: space-between;
-  border: 1px solid var(--design-border-medium-color, #ededed);
-  img {
-    width: 16px;
-  }
+  border: 1px solid var(--border-medium-color, #ededed);
   &:hover {
-    background: var(--design-surface-neutral-hover-color, #f4f5f6);
-    border: 1px solid var(--design-border-medium-hover-color, #cecece);
+    background-color: var(--surface-neutral-hover-color, #f4f5f6);
+    border: 1px solid var(--border-medium-hover-color, #cecece);
   }
   &:active {
-    background: var(--design-surface-neutral-active-color, #eeeff2);
-    border: 1px solid var(--design-border-high-color, #babec9);
+    background-color: var(--surface-neutral-active-color, #eeeff2);
+    border: 1px solid var(--border-high-color, #babec9);
   }
 }
 .removePlaceholderBorder .dropdownPlaceholder {
@@ -21,4 +18,5 @@
   padding: 8px 0;
   box-sizing: border-box;
   min-width: 220px;
+  border: 1px solid var(--border-medium-color, #ededed);
 }
