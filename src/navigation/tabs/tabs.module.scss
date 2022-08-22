@@ -1,0 +1,116 @@
+.tab {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 8px 16px;
+  font-size: var(--bit-p-xs, 14px);
+  outline: none;
+  user-select: none;
+  cursor: pointer;
+  color: #878c9a; //TODO
+  transition: color 150ms ease-in-out;
+  white-space: nowrap;
+  &:hover {
+    color: var(--bit-text-color-heavy, #2b2b2b);
+  }
+  &.active {
+    color: var(--bit-text-color-heavy, #2b2b2b);
+  }
+}
+
+.tabLink {
+  cursor: pointer;
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  text-decoration: none;
+  transition: color 150ms ease-in-out;
+  > div {
+    padding: 8px 16px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    transition: background-color 150ms ease-in-out;
+    font-size: var(--bit-p-xs, 14px);
+    white-space: nowrap;
+  }
+
+  &[data-priority='menu'] {
+    color: inherit;
+    &:hover:not(.active) {
+      > div {
+        background-color: var(--bit-bg-heavy, #f6f6f6);
+      }
+    }
+    &.active {
+      color: var(--bit-accent-color, #6c5ce7);
+    }
+  }
+
+  &[data-priority='inner'] {
+    color: var(--design-on-surface-medium-color, #707279);
+    border-radius: 8px;
+    &:hover:not(.active) {
+      color: var(--design-primary-color, #6c5ce7);
+      > div {
+        background-color: var(--design-surface-neutral-hover-color, #f4f5f6);
+      }
+    }
+    &.active {
+      color: var(--design-primary-color, #6c5ce7);
+      background-color: var(--design-surface-hover-color, #edebfc);
+    }
+  }
+}
+
+.navLinks {
+  position: relative;
+  display: flex;
+  gap: 8px;
+  &.overflow {
+    overflow-x: auto;
+  }
+}
+
+// start responsive
+.more {
+  display: flex;
+  align-items: center;
+  .dots {
+    cursor: pointer;
+    color: var(--design-on-surface-medium-color, #707279);
+    border-radius: 8px;
+    transition: background-color 300ms ease-in-out;
+    padding: 8px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &[data-priority='menu'] {
+      &:hover {
+        background-color: var(--bit-bg-heavy, #f6f6f6);
+      }
+    }
+    &[data-priority='inner'] {
+      &:hover {
+        background-color: var(--design-surface-neutral-hover-color, #f4f5f6);
+      }
+    }
+    > img {
+      width: 16px;
+    }
+  }
+}
+.secondaryTabContainer {
+  .item {
+    padding: 8px 16px;
+  }
+  .link {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+.hidden {
+  display: none;
+}
