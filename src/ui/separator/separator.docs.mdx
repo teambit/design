@@ -4,6 +4,7 @@ labels: ['separator', 'text']
 ---
 
 import { TextSeparator } from './text-separator';
+import { Separator } from './separator';
 
 ## Separator for semantic or presentational usage
 
@@ -18,35 +19,25 @@ Separating line spanning the whole line, with room for text. Behaves like a regu
 
 ### Component Usage for Semantic separator
 
-```js
-import { Separator } from '@teambit/design.ui.separator';
-
-...
-<Separator />
-...
+```js live
+<div style={{ textAlign: 'center' }}>
+  top
+  <Separator />
+  bottom
+</div>
 ```
 
 ### Component Usage for Presentational separator
 
-```js
-import { Separator } from '@teambit/design.ui.separator';
-
-...
-<Separator isPresentational />
-...
+```js live
+<div style={{ textAlign: 'center' }}>
+  top
+  <Separator isPresentational />
+  bottom
+</div>
 ```
 
 ### Component Usage for Text separator
-
-```js
-import { TextSeparator } from '@teambit/design.ui.separator';
-
-...
-<TextSeparator>text</TextSeparator>
-...
-```
-
-### Let's play with text separator!
 
 ```js live
 <TextSeparator style={{ minWidth: '200px' }}>text</TextSeparator>

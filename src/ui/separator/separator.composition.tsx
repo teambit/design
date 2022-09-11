@@ -3,11 +3,23 @@ import { Separator } from './separator';
 import { TextSeparator } from './text-separator';
 
 export const SemanticSeparator = () => {
-  return <Separator />;
+  return (
+    <div style={{ textAlign: 'center' }}>
+      top
+      <Separator />
+      bottom
+    </div>
+  );
 };
 
 export const PresentationalSeparator = () => {
-  return <Separator isPresentational />;
+  return (
+    <div style={{ textAlign: 'center' }}>
+      top
+      <Separator isPresentational />
+      bottom
+    </div>
+  );
 };
 
 export const TextSeparatorExample = () => {
