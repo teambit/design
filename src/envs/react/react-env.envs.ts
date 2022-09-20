@@ -8,6 +8,30 @@ import type { ReactEnv } from '@teambit/react';
 export class DesignReactEnv implements PackageEnv, DependenciesEnv, LinterEnv, FormatterEnv {
   constructor(protected baseEnv: ReactEnv) {}
 
+  getDependencies() {
+    const { baseEnv } = this;
+    const { devDependencies, dependencies } = baseEnv.getDependencies();
+
+    return {
+      dependencies: {
+        'core-js': dependencies['core-js'],
+      },
+      devDependencies,
+      peers: [
+        {
+          name: 'react',
+          supportedRange: '^16.8.0 || ^17.0.0',
+          version: '^17.0.0',
+        },
+        {
+          name: 'react-dom',
+          supportedRange: '^16.8.0 || ^17.0.0',
+          version: '^17.0.0',
+        },
+      ],
+    };
+  }
+
   getLinter(context: LinterContext, transformers: EslintConfigTransformer[] = []) {
     return this.baseEnv.getLinter(context, [
       (config) => {
