@@ -59,7 +59,7 @@
     },
     "inputs/selectors/multi-select": {
         "scope": "teambit.design",
-        "version": "1.1.15",
+        "version": "1.1.16",
         "mainFile": "index.ts",
         "rootDir": "src/inputs/selectors/multi-select"
     },
