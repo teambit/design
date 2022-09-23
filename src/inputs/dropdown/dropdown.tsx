@@ -37,8 +37,7 @@ export function Dropdown({
   elevation = 'low',
   roundness = 'small',
   margin = 4,
-  placeholder,
-  PlaceholderComponent,
+  placeholderContent,
   dropClass,
   placeholderBorder = true,
   topPlugin,
@@ -51,8 +50,9 @@ export function Dropdown({
     <Drawer
       margin={margin}
       className={classNames(!placeholderBorder && styles.removePlaceholderBorder, className)}
-      PlaceholderComponent={typeof placeholder === 'string' ? Placeholder : PlaceholderComponent}
-      placeholder={placeholder}
+      placeholderContent={
+        typeof placeholderContent === 'string' ? <Placeholder>{placeholderContent}</Placeholder> : placeholderContent
+      }
       clickToggles={clickToggles}
       {...rest}
     >

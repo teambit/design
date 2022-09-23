@@ -41,7 +41,7 @@
         "@teambit/base-ui.surfaces.abs-container": "^1.0.1",
         "@teambit/base-ui.surfaces.background": "1.0.2",
         "@teambit/base-ui.surfaces.card": "1.0.3",
-        "@teambit/base-ui.surfaces.drawer": "1.0.1",
+        "@teambit/base-ui.surfaces.drawer": "1.1.2",
         "@teambit/base-ui.text.heading": "^1.0.0",
         "@teambit/base-ui.text.text-sizes": "^1.0.0",
         "@teambit/base-ui.theme.accent-color": "^1.1.0",

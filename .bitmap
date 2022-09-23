@@ -41,7 +41,7 @@
     },
     "inputs/dropdown": {
         "scope": "teambit.design",
-        "version": "1.1.13",
+        "version": "1.2.0",
         "mainFile": "index.ts",
         "rootDir": "src/inputs/dropdown"
     },
@@ -59,7 +59,7 @@
     },
     "inputs/selectors/multi-select": {
         "scope": "teambit.design",
-        "version": "1.1.16",
+        "version": "1.2.0",
         "mainFile": "index.ts",
         "rootDir": "src/inputs/selectors/multi-select"
     },
@@ -71,7 +71,7 @@
     },
     "navigation/tabs": {
         "scope": "teambit.design",
-        "version": "0.0.22",
+        "version": "0.1.0",
         "mainFile": "index.ts",
         "rootDir": "src/navigation/tabs"
     },
@@ -113,13 +113,13 @@
     },
     "ui/css/menu-transition": {
         "scope": "teambit.design",
-        "version": "2.1.12",
+        "version": "2.1.13",
         "mainFile": "index.ts",
         "rootDir": "src/ui/css/menu-transition"
     },
     "ui/dropdown": {
         "scope": "teambit.design",
-        "version": "2.0.14",
+        "version": "2.1.0",
         "mainFile": "index.ts",
         "rootDir": "src/ui/dropdown"
     },

@@ -149,8 +149,7 @@ export function TabsLink({
       {priority === 'menu' && <TabLine borderPosition={borderPosition} selectedTab={selectedTab} ref={tabLineRef} />}
       <div className={classNames(styles.more, styles.hidden)} ref={moreBtnRef}>
         <Dropdown
-          // @ts-ignore
-          placeholder={
+          placeholderContent={
             <div className={styles.dots} data-priority={priority}>
               <img src="https://static.bit.dev/bit-icons/more-h.svg" />
             </div>
@@ -161,9 +160,13 @@ export function TabsLink({
           margin={8}
         >
           {links.map(({ ...link }, index) => (
-            <Link onClick={(e) => onTabSelect(index)} className={styles.link} {...link}>
+            <Link
+              onClick={(e) => onTabSelect(index)}
+              key={`dropdown-link-${link.key || link.href}`}
+              className={styles.link}
+              {...link}
+            >
               <MenuItem
-                key={`dropdown-link-${link.key || link.href}`}
                 interactive
                 active={isActiveLink(link)}
                 ref={(ref) => ref && (secondaryTabLinksRefs.current[index] = ref)}

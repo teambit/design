@@ -28,7 +28,7 @@ export const BasicMultiSelect = () => {
     updateCount();
   };
 
-  return <MultiSelect placeholder={text} itemsList={list} onCheck={onCheck} />;
+  return <MultiSelect placeholderContent={text} itemsList={list} onCheck={onCheck} />;
 };
 
 export const MultiSelectWithDescription = () => {
@@ -64,7 +64,7 @@ export const MultiSelectWithDescription = () => {
 
   return (
     <MultiSelect
-      placeholder={text}
+      placeholderContent={text}
       itemsList={list}
       onCheck={onCheck}
       onClear={onClear}
@@ -135,7 +135,7 @@ export const MultiSelectWithIcons = () => {
 
   return (
     <MultiSelect
-      placeholder={text}
+      placeholderContent={text}
       itemsList={list}
       onCheck={onCheck}
       onClear={onClear}
@@ -222,8 +222,7 @@ export const CustomMultiSelect = () => {
         }}
       />
       <MultiSelect
-        //@ts-ignore
-        placeholder={<div style={{ padding: 8, color: 'red' }}>Custom placeholder {text}</div>}
+        placeholderContent={<div style={{ padding: 8, color: 'red' }}>Custom placeholder {text}</div>}
         itemsList={list}
         onCheck={onCheck}
         onClear={onClear}
@@ -277,7 +276,7 @@ export const MultiSelectWithSearchOption = () => {
   return (
     <MultiSelect
       topPlugin={<SearchInput onChange={handleOnSearch} />}
-      placeholder={text}
+      placeholderContent={text}
       itemsList={list}
       onCheck={onCheck}
       onClear={onClear}

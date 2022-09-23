@@ -15,7 +15,7 @@ A Dropdown component that renders a complete and designed dropdown with placehol
 () => {
   const mockList = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten'];
   return (
-    <Dropdown placeholder="items list">
+    <Dropdown placeholderContent="items list">
       {mockList.map((value, index) => (
         <MenuItem key={index} onClick={() => console.log(`click on ${value}`)}>
           {value}
@@ -30,7 +30,7 @@ A Dropdown component that renders a complete and designed dropdown with placehol
 () => {
   const mockList = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten'];
   return (
-    <Dropdown placeholder="checkbox items list">
+    <Dropdown placeholderContent="checkbox items list">
       {mockList.map((value, index) => (
         <CheckboxItem key={index} onInputChanged={(e) => console.log(`click on ${value} ${e.target.checked}`)}>
           {value}

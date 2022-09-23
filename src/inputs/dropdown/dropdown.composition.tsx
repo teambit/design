@@ -3,13 +3,14 @@ import { MenuItem } from '@teambit/design.inputs.selectors.menu-item';
 import { CheckboxItem } from '@teambit/design.inputs.selectors.checkbox-item';
 import { ButtonsPlugin } from './buttons-plugin';
 import { Dropdown } from './dropdown';
+import { Placeholder } from './placeholder';
 
 const styleContainer = { padding: '11px 11px 70px' };
 
 export const ForcedOpen = () => (
   <div style={styleContainer}>
     <Dropdown
-      placeholder="placeholder"
+      placeholderContent="placeholder"
       open={true} // force open
     >
       dropdown menu
@@ -19,22 +20,23 @@ export const ForcedOpen = () => (
 
 export const Uncontrolled = () => (
   <div style={styleContainer}>
-    <Dropdown placeholder="placeholder">dropdown menu</Dropdown>
+    <Dropdown placeholderContent="placeholder">dropdown menu</Dropdown>
   </div>
 );
 
 export const DropdownWithoutBorderOnPlaceholder = () => (
   <div style={styleContainer}>
-    <Dropdown placeholder="placeholder" placeholderBorder={false}>
+    <Dropdown placeholderContent="placeholder" placeholderBorder={false}>
       dropdown menu
     </Dropdown>
   </div>
 );
 
-export const DropdownWithCustomlaceholder = () => (
+export const DropdownWithCustomPlaceholder = () => (
   <div style={styleContainer}>
-    {/* @ts-ignore */}
-    <Dropdown placeholder={<div style={{ padding: 8, color: 'red' }}>Custom placeholder</div>}>dropdown menu</Dropdown>
+    <Dropdown placeholderContent={<div style={{ padding: 8, color: 'red' }}>Custom placeholder</div>}>
+      dropdown menu
+    </Dropdown>
   </div>
 );
 
@@ -43,7 +45,7 @@ export const DropdownWithItemList = () => {
   const mockList = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten'];
   return (
     <div style={styleContainer}>
-      <Dropdown placeholder={selected || 'placeholder'} clickToggles>
+      <Dropdown placeholderContent={selected || 'placeholder'} clickToggles>
         {mockList.map((value, index) => (
           <MenuItem active={value === selected} key={index} onClick={() => setSelected(value)}>
             {value}
@@ -58,7 +60,7 @@ export const DropdownWithCheckboxList = () => {
   const mockList = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten'];
   return (
     <div style={styleContainer}>
-      <Dropdown placeholder="placeholder">
+      <Dropdown placeholderContent="placeholder">
         {mockList.map((value, index) => (
           <CheckboxItem key={index}>{value}</CheckboxItem>
         ))}
@@ -74,7 +76,7 @@ export const DropdownWithButtons = () => {
         bottomPlugin={
           <ButtonsPlugin onClear={() => alert('click on clear')} onSubmit={() => alert('click on submit')} />
         }
-        placeholder="placeholder"
+        placeholderContent="placeholder"
       >
         dropdown menu
       </Dropdown>

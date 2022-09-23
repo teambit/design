@@ -40,7 +40,7 @@ Basic usage:
     setList(newList);
   };
 
-  return <MultiSelect placeholder="Items" itemsList={list} onCheck={onCheck} />;
+  return <MultiSelect placeholderContent="Items" itemsList={list} onCheck={onCheck} />;
 };
 ```
 
