@@ -126,8 +126,7 @@ export function ContentTabs({
         <TabLine borderPosition={borderPosition} selectedTab={selectedTab} ref={tabLineRef} />
         <div className={classNames(styles.more, styles.hidden)} ref={moreBtnRef}>
           <Dropdown
-            // @ts-ignore
-            placeholder={
+            placeholderContent={
               <div className={styles.dots} data-priority="menu">
                 <img src="https://static.bit.dev/bit-icons/more-h.svg" />
               </div>

@@ -14,7 +14,7 @@ const activeOption = {
 };
 export function DropdownExample() {
   return (
-    <Dropdown menuClass={menuTransition} placeholder={false} placeholderTitle={<Item {...activeOption} />}>
+    <Dropdown menuClass={menuTransition} placeholderContent={<Item {...activeOption} />}>
       {dropdownList.map((listItem, index) => (
         <Item
           key={index}
@@ -30,11 +30,7 @@ export function DropdownExample() {
 
 export function DropdownWithoutImagesExample() {
   return (
-    <Dropdown
-      menuClass={menuTransition}
-      placeholder={false}
-      placeholderTitle={<Item name="teambit" accountType="organization" />}
-    >
+    <Dropdown menuClass={menuTransition} placeholderContent={<Item name="teambit" accountType="organization" />}>
       {dropdownList.map((listItem, index) => (
         <Item key={index} className={hoverable} name={listItem.name} isActive={activeOption.name === listItem.name} />
       ))}
@@ -44,7 +40,7 @@ export function DropdownWithoutImagesExample() {
 
 export function DropdownExampleDisabled() {
   return (
-    <Dropdown disabled placeholder={false} placeholderTitle={<Item {...activeOption} />}>
+    <Dropdown disabled placeholderContent={<Item {...activeOption} />}>
       {dropdownList.map((listItem, index) => (
         <Item
           key={index}
@@ -63,8 +59,7 @@ export function DropdownExampleWithLongNames() {
     <Dropdown
       menuClass={classNames(menuTransition, classname)}
       style={{ maxWidth: '100%' }}
-      placeholder={false}
-      placeholderTitle={<Item {...activeOption} />}
+      placeholderContent={<Item {...activeOption} />}
     >
       {dropdownListWithLongNames.map((listItem, index) => (
         <Item
