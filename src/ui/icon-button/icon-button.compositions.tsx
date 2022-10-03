@@ -19,6 +19,10 @@ export function IconOnlyButtonExample() {
   return <IconButton icon={<Icon of="error-circle" />}></IconButton>;
 }
 
+export function IconOnlyButtonWithoutBorderExample() {
+  return <IconButton border={false} icon={<Icon of="error-circle" />}></IconButton>;
+}
+
 export function TextOnlyButtonExample() {
   return <IconButton>Terminate</IconButton>;
 }

@@ -49,6 +49,10 @@
     outline: none;
     box-shadow: 0 0 0 0.125em var(--bit-accent-bg, #eceaff);
   }
+
+  &.withoutBorder {
+    border: 1px solid transparent;
+  }
 }
 
 .withIcon {

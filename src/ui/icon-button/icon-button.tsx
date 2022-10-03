@@ -21,6 +21,10 @@ export type IconButtonProps = {
    * button sizes
    */
   size?: 's' | 'm' | 'l' | null;
+  /**
+   * with or without border.
+   */
+  border?: boolean;
 } & ButtonProps;
 
 /**
@@ -34,6 +38,7 @@ export function IconButton({
   active,
   priority = 'ghost',
   size = 's',
+  border = true,
   ...rest
 }: IconButtonProps) {
   return (
@@ -46,6 +51,7 @@ export function IconButton({
         icon && !children && styles.iconOnly,
         icon && children && styles.margin,
         icon && styles.withIcon,
+        !border && styles.withoutBorder,
         className
       )}
       data-priority={priority}
