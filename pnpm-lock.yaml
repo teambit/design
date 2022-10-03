@@ -17,7 +17,7 @@ importers:
       '@teambit/base-ui.surfaces.abs-container': '>=1.0.1 <2.0.0'
       '@teambit/base-ui.surfaces.background': 1.0.2
       '@teambit/base-ui.surfaces.card': 1.0.3
-      '@teambit/base-ui.surfaces.drawer': 1.1.2
+      '@teambit/base-ui.surfaces.drawer': 1.1.3
       '@teambit/base-ui.text.heading': ^1.0.0
       '@teambit/base-ui.text.text-sizes': ^1.0.0
       '@teambit/base-ui.theme.accent-color': '>=1.1.0 <2.0.0'
@@ -44,7 +44,7 @@ importers:
       '@teambit/toolbox.string.get-initials': 0.0.483
       '@teambit/toolbox.url.add-avatar-query-params': 0.0.483
       '@testing-library/react': 11.2.2
-      '@types/jest': 26.0.20
+      '@types/jest': '>=26.0.0 <27.0.0'
       '@types/node': 12.20.4
       '@types/react': '>=17.0.8 <18.0.0'
       '@types/react-dom': '>=17.0.5 <18.0.0'
@@ -55,8 +55,8 @@ importers:
       '@types/uuid': 3.4.9
       classnames: 2.3.1
       core-js: '>=3.0.0 <4.0.0'
-      react: ^16.8.0 || ^17.0.0
-      react-dom: ^16.8.0 || ^17.0.0
+      react: '>=17.0.0 <18.0.0'
+      react-dom: '>=17.0.0 <18.0.0'
       react-tabs: 4.2.1
       react-tooltip: 3.11.6
       reset-css: 5.0.1
@@ -76,7 +76,7 @@ importers:
       '@teambit/base-ui.surfaces.abs-container': 1.0.1_sfoxds7t5ydpegc3knd667wn6m
       '@teambit/base-ui.surfaces.background': 1.0.2_sfoxds7t5ydpegc3knd667wn6m
       '@teambit/base-ui.surfaces.card': 1.0.3_sfoxds7t5ydpegc3knd667wn6m
-      '@teambit/base-ui.surfaces.drawer': 1.1.2_sfoxds7t5ydpegc3knd667wn6m
+      '@teambit/base-ui.surfaces.drawer': 1.1.3_sfoxds7t5ydpegc3knd667wn6m
       '@teambit/base-ui.text.heading': 1.0.4_sfoxds7t5ydpegc3knd667wn6m
       '@teambit/base-ui.text.text-sizes': 1.0.0_sfoxds7t5ydpegc3knd667wn6m
       '@teambit/base-ui.theme.accent-color': 1.1.0_sfoxds7t5ydpegc3knd667wn6m
@@ -102,9 +102,6 @@ importers:
       '@teambit/toolbox.string.get-initials': 0.0.483
       '@teambit/toolbox.url.add-avatar-query-params': 0.0.483
       '@types/react-router-dom': registry.npmjs.org/@types/react-router-dom/5.1.7
-      '@types/react-tabs': registry.npmjs.org/@types/react-tabs/2.3.2
-      '@types/react-tooltip': registry.npmjs.org/@types/react-tooltip/3.11.0
-      '@types/uuid': registry.npmjs.org/@types/uuid/3.4.9
       classnames: registry.npmjs.org/classnames/2.3.1
       core-js: registry.npmjs.org/core-js/3.24.1
       react: registry.npmjs.org/react/17.0.2
@@ -121,7 +118,10 @@ importers:
       '@types/node': registry.npmjs.org/@types/node/12.20.4
       '@types/react': registry.npmjs.org/@types/react/17.0.48
       '@types/react-dom': registry.npmjs.org/@types/react-dom/17.0.17
+      '@types/react-tabs': registry.npmjs.org/@types/react-tabs/2.3.2
+      '@types/react-tooltip': registry.npmjs.org/@types/react-tooltip/3.11.0
       '@types/testing-library__jest-dom': registry.npmjs.org/@types/testing-library__jest-dom/5.9.5
+      '@types/uuid': registry.npmjs.org/@types/uuid/3.4.9
 
   src/buttons/button-link:
     specifiers: {}
@@ -599,8 +599,8 @@ packages:
       react-dom: registry.npmjs.org/react-dom/17.0.2_react@17.0.2
     dev: false
 
-  /@teambit/base-ui.surfaces.drawer/1.1.2_sfoxds7t5ydpegc3knd667wn6m:
-    resolution: {integrity: sha1-x26i7Tzk/vdOUJIOwU2gQiAfQRY=, tarball: tarballs/teambit.base-ui/surfaces/drawer@1.1.2.tgz}
+  /@teambit/base-ui.surfaces.drawer/1.1.3_sfoxds7t5ydpegc3knd667wn6m:
+    resolution: {integrity: sha1-EmfvFFxPhsVm6B9oBq1W7S4wzLA=, tarball: tarballs/teambit.base-ui/surfaces/drawer@1.1.3.tgz}
     peerDependencies:
       react: '*'
       react-dom: '*'
@@ -1395,7 +1395,7 @@ packages:
     version: 2.3.2
     dependencies:
       '@types/react': registry.npmjs.org/@types/react/17.0.48
-    dev: false
+    dev: true
 
   registry.npmjs.org/@types/react-tooltip/3.11.0:
     resolution: {integrity: sha512-TkXMgkZ5aAKkFE9Wvt8OlOiPtF9ufgBOL9xWlRSzLBaoL12qSOBiyMcU4/8TyED1fuWkm5VTVarScwOPLSArYw==, registry: https://node.bit.dev/, tarball: https://registry.npmjs.org/@types/react-tooltip/-/react-tooltip-3.11.0.tgz}
@@ -1403,7 +1403,7 @@ packages:
     version: 3.11.0
     dependencies:
       '@types/react': registry.npmjs.org/@types/react/17.0.48
-    dev: false
+    dev: true
 
   registry.npmjs.org/@types/react/17.0.48:
     resolution: {integrity: sha512-zJ6IYlJ8cYYxiJfUaZOQee4lh99mFihBoqkOSEGV+dFi9leROW6+PgstzQ+w3gWTnUfskALtQPGHK6dYmPj+2A==, registry: https://node.bit.dev/, tarball: https://registry.npmjs.org/@types/react/-/react-17.0.48.tgz}
@@ -1431,7 +1431,7 @@ packages:
     resolution: {integrity: sha512-XDwyIlt/47l2kWLTzw/mtrpLdB+GPSskR2n/PIcPn+VYhVO77rGhRncIR5GPU0KRzXuqkDO+J5qqrG0Y8P6jzQ==, registry: https://node.bit.dev/, tarball: https://registry.npmjs.org/@types/uuid/-/uuid-3.4.9.tgz}
     name: '@types/uuid'
     version: 3.4.9
-    dev: false
+    dev: true
 
   registry.npmjs.org/@types/yargs-parser/21.0.0:
     resolution: {integrity: sha512-iO9ZQHkZxHn4mSakYV0vFHAVDyEOIJQrV2uZ06HxEPcx+mt8swXoZHIbaaJ2crJYFfErySgktuTZ3BeLz+XmFA==, registry: https://node.bit.dev/, tarball: https://registry.npmjs.org/@types/yargs-parser/-/yargs-parser-21.0.0.tgz}

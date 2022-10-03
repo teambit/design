@@ -37,7 +37,7 @@ export function Dropdown({
   elevation = 'low',
   roundness = 'small',
   margin = 4,
-  placeholderContent,
+  placeholderContent = '',
   dropClass,
   placeholderBorder = true,
   topPlugin,
