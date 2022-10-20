@@ -13,6 +13,14 @@ export type ButtonsPluginProps = {
    */
   onSubmit?: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
   /**
+   * disable the submit button.
+   */
+  disabledSubmit?: boolean;
+  /**
+   * text for submit button.
+   */
+  submitText?: string;
+  /**
    * loading status
    */
   loading?: boolean;
@@ -22,7 +30,16 @@ export type ButtonsPluginProps = {
   submitClassName?: string;
 } & React.HTMLAttributes<HTMLDivElement>;
 
-export function ButtonsPlugin({ onClear, onSubmit, loading, submitClassName, className, ...rest }: ButtonsPluginProps) {
+export function ButtonsPlugin({
+  onClear,
+  onSubmit,
+  disabledSubmit,
+  submitText = 'Done',
+  loading,
+  submitClassName,
+  className,
+  ...rest
+}: ButtonsPluginProps) {
   if (!onClear && !onSubmit) return null;
   return (
     <div {...rest} className={classnames(styles.buttonsHolder, className)}>
@@ -32,8 +49,14 @@ export function ButtonsPlugin({ onClear, onSubmit, loading, submitClassName, cla
         </div>
       )}
       {onSubmit && (
-        <IconButton priority="cta" onClick={onSubmit} loading={loading} className={submitClassName}>
-          Done
+        <IconButton
+          priority="cta"
+          onClick={onSubmit}
+          loading={loading}
+          disabled={disabledSubmit}
+          className={submitClassName}
+        >
+          {submitText}
         </IconButton>
       )}
     </div>

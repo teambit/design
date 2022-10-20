@@ -3,7 +3,6 @@ import { MenuItem } from '@teambit/design.inputs.selectors.menu-item';
 import { CheckboxItem } from '@teambit/design.inputs.selectors.checkbox-item';
 import { ButtonsPlugin } from './buttons-plugin';
 import { Dropdown } from './dropdown';
-import { Placeholder } from './placeholder';
 
 const styleContainer = { padding: '11px 11px 70px' };
 
