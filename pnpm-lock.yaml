@@ -44,6 +44,7 @@ importers:
       '@teambit/toolbox.string.get-initials': 0.0.483
       '@teambit/toolbox.url.add-avatar-query-params': 0.0.483
       '@testing-library/react': 11.2.2
+      '@types/classnames': 2.2.11
       '@types/jest': ^26.0.0
       '@types/node': 12.20.4
       '@types/react': ^17.0.8
@@ -114,6 +115,7 @@ importers:
       '@teambit/base-ui.theme.accent-color': 1.1.0_sfoxds7t5ydpegc3knd667wn6m
       '@teambit/base-ui.theme.dark-theme': 1.0.2_sfoxds7t5ydpegc3knd667wn6m
       '@testing-library/react': registry.npmjs.org/@testing-library/react/11.2.2_sfoxds7t5ydpegc3knd667wn6m
+      '@types/classnames': registry.npmjs.org/@types/classnames/2.2.11
       '@types/jest': registry.npmjs.org/@types/jest/26.0.20
       '@types/node': registry.npmjs.org/@types/node/12.20.4
       '@types/react': registry.npmjs.org/@types/react/17.0.48
@@ -208,6 +210,9 @@ importers:
     specifiers: {}
 
   src/ui/panels/tabs:
+    specifiers: {}
+
+  src/ui/pill-label:
     specifiers: {}
 
   src/ui/separator:
@@ -1307,6 +1312,12 @@ packages:
     resolution: {integrity: sha512-HnYpAE1Y6kRyKM/XkEuiRQhTHvkzMBurTHnpFLYLBGPIylZNPs9jJcuOOYWxPLJCSEtmZT0Y8rHDokKN7rRTig==, registry: https://node.bit.dev/, tarball: https://registry.npmjs.org/@types/aria-query/-/aria-query-4.2.2.tgz}
     name: '@types/aria-query'
     version: 4.2.2
+
+  registry.npmjs.org/@types/classnames/2.2.11:
+    resolution: {integrity: sha512-2koNhpWm3DgWRp5tpkiJ8JGc1xTn2q0l+jUNUE7oMKXUf5NpI9AIdC4kbjGNFBdHtcxBD18LAksoudAVhFKCjw==, registry: https://node.bit.dev/, tarball: https://registry.npmjs.org/@types/classnames/-/classnames-2.2.11.tgz}
+    name: '@types/classnames'
+    version: 2.2.11
+    dev: true
 
   registry.npmjs.org/@types/history/4.7.11:
     resolution: {integrity: sha512-qjDJRrmvBMiTx+jyLxvLfJU7UznFuokDv4f3WRuriHKERccVpFU+8XMQUAbDzoiJCsmexxRExQeMwwCdamSKDA==, registry: https://node.bit.dev/, tarball: https://registry.npmjs.org/@types/history/-/history-4.7.11.tgz}

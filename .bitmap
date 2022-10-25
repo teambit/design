@@ -189,6 +189,12 @@
         "mainFile": "index.ts",
         "rootDir": "src/ui/panels/tabs"
     },
+    "ui/pill-label": {
+        "scope": "teambit.design",
+        "version": "0.0.357",
+        "mainFile": "index.ts",
+        "rootDir": "src/ui/pill-label"
+    },
     "ui/separator": {
         "scope": "teambit.design",
         "version": "0.0.364",
