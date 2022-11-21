@@ -6,7 +6,6 @@ import type { Position } from '@teambit/base-ui.surfaces.abs-container';
 import { elevationClass, ElevationHeight } from '@teambit/base-ui.css-components.elevation';
 import { roundnessClass, Roundness } from '@teambit/base-ui.css-components.roundness';
 import { backgrounds } from '@teambit/base-ui.surfaces.background';
-import { fadeInOutClass } from '@teambit/evangelist.css-components.fade-in-out';
 import { Placeholder } from './placeholder';
 import styles from './dropdown.module.scss';
 
@@ -80,7 +79,6 @@ function DropdownMenu({ className, elevation = 'low', roundness = 'small', ...re
         backgrounds.layer,
         elevationClass[elevation],
         roundnessClass[roundness],
-        fadeInOutClass,
         className
       )}
     />
