@@ -1,12 +1,19 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 import classNames from 'classnames';
 import { MenuItem, MenuItemsProps } from '@teambit/design.inputs.selectors.menu-item';
 import styles from './dropdown.module.scss';
 
-export function Placeholder({ children, className, ...rest }: MenuItemsProps) {
+type PlaceholderProps = {
+  /**
+   * An optional icon element to be rendered at the end of the placeholder to replace the default arrow.
+   */
+  dropdownIcon?: ReactElement;
+} & MenuItemsProps;
+
+export function Placeholder({ dropdownIcon, children, className, ...rest }: PlaceholderProps) {
   return (
     <MenuItem className={classNames(styles.dropdownPlaceholder, className)} {...rest}>
-      {children} <FatArrowDown />
+      {children} {dropdownIcon ? dropdownIcon : <FatArrowDown />}
     </MenuItem>
   );
 }

@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { MenuItem } from '@teambit/design.inputs.selectors.menu-item';
 import { CheckboxItem } from '@teambit/design.inputs.selectors.checkbox-item';
+import { Icon } from '@teambit/design.elements.icon';
 import { ButtonsPlugin } from './buttons-plugin';
 import { Dropdown } from './dropdown';
+import { Placeholder } from './placeholder';
 
 const styleContainer = { padding: '11px 11px 70px' };
 
@@ -34,6 +36,14 @@ export const DropdownWithoutBorderOnPlaceholder = () => (
 export const DropdownWithCustomPlaceholder = () => (
   <div style={styleContainer}>
     <Dropdown placeholderContent={<div style={{ padding: 8, color: 'red' }}>Custom placeholder</div>}>
+      dropdown menu
+    </Dropdown>
+  </div>
+);
+
+export const DropdownWithCustomDropdownIcon = () => (
+  <div style={styleContainer}>
+    <Dropdown placeholderContent={<Placeholder dropdownIcon={<Icon of="settings" />}>Custom placeholder</Placeholder>}>
       dropdown menu
     </Dropdown>
   </div>
