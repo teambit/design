@@ -39,12 +39,6 @@
         "mainFile": "index.ts",
         "rootDir": "src/info/icon-text"
     },
-    "inputs/dropdown": {
-        "scope": "teambit.design",
-        "version": "1.2.12",
-        "mainFile": "index.ts",
-        "rootDir": "src/inputs/dropdown"
-    },
     "inputs/selectors/checkbox-item": {
         "scope": "teambit.design",
         "version": "1.1.11",
@@ -56,12 +50,6 @@
         "version": "1.0.15",
         "mainFile": "index.ts",
         "rootDir": "src/inputs/selectors/menu-item"
-    },
-    "inputs/selectors/multi-select": {
-        "scope": "teambit.design",
-        "version": "1.2.12",
-        "mainFile": "index.ts",
-        "rootDir": "src/inputs/selectors/multi-select"
     },
     "inputs/toggle-switch": {
         "scope": "teambit.design",
@@ -107,13 +95,13 @@
     },
     "ui/css/menu-transition": {
         "scope": "teambit.design",
-        "version": "2.1.25",
+        "version": "2.1.26",
         "mainFile": "index.ts",
         "rootDir": "src/ui/css/menu-transition"
     },
     "ui/dropdown": {
         "scope": "teambit.design",
-        "version": "2.1.12",
+        "version": "2.1.13",
         "mainFile": "index.ts",
         "rootDir": "src/ui/dropdown"
     },
