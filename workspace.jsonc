@@ -55,6 +55,7 @@
         "@teambit/design.surfaces.dropdown": "0.0.16",
         "@teambit/design.themes.base-theme": "0.1.1",
         "@teambit/design.typography.text": "0.0.15",
+        "@teambit/design.ui.icon-button": "1.1.17",
         "@teambit/design.ui.input.toggle": "1.0.20",
         "@teambit/design.ui.navigation.link": "1.96.9",
         "@teambit/design.ui.styles.ellipsis": "0.0.344",

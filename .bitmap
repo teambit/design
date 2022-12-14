@@ -117,12 +117,6 @@
         "mainFile": "index.ts",
         "rootDir": "src/ui/hoverable"
     },
-    "ui/icon-button": {
-        "scope": "teambit.design",
-        "version": "1.1.17",
-        "mainFile": "index.ts",
-        "rootDir": "src/ui/icon-button"
-    },
     "ui/input/color-picker": {
         "scope": "teambit.design",
         "version": "0.0.47",
