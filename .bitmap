@@ -81,12 +81,6 @@
         "mainFile": "index.ts",
         "rootDir": "src/themes/theme-toggler"
     },
-    "ui/avatar": {
-        "scope": "teambit.design",
-        "version": "1.0.12",
-        "mainFile": "index.ts",
-        "rootDir": "src/ui/avatar"
-    },
     "ui/color-border": {
         "scope": "teambit.design",
         "version": "1.0.26",
@@ -152,12 +146,6 @@
         "version": "1.0.26",
         "mainFile": "index.ts",
         "rootDir": "src/ui/message-card"
-    },
-    "ui/owner-avatar": {
-        "scope": "teambit.design",
-        "version": "1.0.12",
-        "mainFile": "index.ts",
-        "rootDir": "src/ui/owner-avatar"
     },
     "ui/pill-label": {
         "scope": "teambit.design",
